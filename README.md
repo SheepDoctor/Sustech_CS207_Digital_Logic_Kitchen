@@ -27,3 +27,9 @@ push操作：git push -u origin master
 pull操作：git pull origin master
 
 注意及时更新项目内容
+
+## 日志
+
+### 0.0.5
+
+路径HDL_Framework/GenshinKitchen.srcs/sources_1/new下增加input、output文件
