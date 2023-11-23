@@ -46,6 +46,13 @@ module DemoTop(
         wire [15:0] script;
 // The wire above is useful~
 
+    Input_Module input1(
+      .button(button), 
+      .switches(switches), 
+      .clk(clk), 
+      .dataIn_bits(dataIn_bits) // client signal
+      );
+
     ScriptMem script_mem_module(
       .clock(uart_clk_16),   // please use the same clock as UART module
       .reset(1'b0),           // please use the same reset as UART module
