@@ -1,0 +1,489 @@
+
+*** Running vivado
+    with args -log DemoTop.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source DemoTop.tcl
+
+
+****** Vivado v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source DemoTop.tcl -notrace
+Command: synth_design -top DemoTop -part xc7a35tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 10316 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 340.336 ; gain = 100.656
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'DemoTop' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/Project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/DemoTop.v:23]
+INFO: [Synth 8-638] synthesizing module 'ScriptMem' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/Project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptMem.v:23]
+INFO: [Synth 8-638] synthesizing module 'inst_ram' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/Project/HDL_Framework/GenshinKitchen.runs/synth_1/.Xil/Vivado-18580-DeLiAssistant/realtime/inst_ram_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'inst_ram' (1#1) [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/Project/HDL_Framework/GenshinKitchen.runs/synth_1/.Xil/Vivado-18580-DeLiAssistant/realtime/inst_ram_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'ScriptMem' (2#1) [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/Project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptMem.v:23]
+INFO: [Synth 8-638] synthesizing module 'UART' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/Project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UART.v:128]
+INFO: [Synth 8-638] synthesizing module 'UARTTransmitter' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/Project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UART.v:3]
+INFO: [Synth 8-256] done synthesizing module 'UARTTransmitter' (3#1) [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/Project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UART.v:3]
+INFO: [Synth 8-638] synthesizing module 'UARTReceiver' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/Project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UART.v:46]
+INFO: [Synth 8-256] done synthesizing module 'UARTReceiver' (4#1) [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/Project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UART.v:46]
+INFO: [Synth 8-256] done synthesizing module 'UART' (5#1) [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/Project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UART.v:128]
+WARNING: [Synth 8-3848] Net led in module/entity DemoTop does not have driver. [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/Project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/DemoTop.v:27]
+WARNING: [Synth 8-3848] Net led2 in module/entity DemoTop does not have driver. [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/Project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/DemoTop.v:28]
+WARNING: [Synth 8-3848] Net uart_clk_16 in module/entity DemoTop does not have driver. [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/Project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/DemoTop.v:36]
+WARNING: [Synth 8-3848] Net dataIn_bits in module/entity DemoTop does not have driver. [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/Project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/DemoTop.v:38]
+WARNING: [Synth 8-3848] Net pc in module/entity DemoTop does not have driver. [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/Project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/DemoTop.v:45]
+INFO: [Synth 8-256] done synthesizing module 'DemoTop' (6#1) [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/Project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/DemoTop.v:23]
+WARNING: [Synth 8-3331] design ScriptMem has unconnected port reset
+WARNING: [Synth 8-3331] design DemoTop has unconnected port led[7]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port led[6]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port led[5]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port led[4]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port led[3]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port led[2]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port led[1]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port led[0]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port led2[7]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port led2[6]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port led2[5]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port led2[4]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port led2[3]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port led2[2]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port led2[1]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port led2[0]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port button[4]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port button[3]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port button[2]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port button[1]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port button[0]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port switches[7]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port switches[6]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port switches[5]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port switches[4]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port switches[3]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port switches[2]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port switches[1]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port switches[0]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port clk
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 392.812 ; gain = 153.133
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin script_mem_module:clock to constant 0 [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/Project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/DemoTop.v:50]
+WARNING: [Synth 8-3295] tying undriven pin script_mem_module:pc[7] to constant 0 [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/Project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/DemoTop.v:50]
+WARNING: [Synth 8-3295] tying undriven pin script_mem_module:pc[6] to constant 0 [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/Project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/DemoTop.v:50]
+WARNING: [Synth 8-3295] tying undriven pin script_mem_module:pc[5] to constant 0 [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/Project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/DemoTop.v:50]
+WARNING: [Synth 8-3295] tying undriven pin script_mem_module:pc[4] to constant 0 [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/Project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/DemoTop.v:50]
+WARNING: [Synth 8-3295] tying undriven pin script_mem_module:pc[3] to constant 0 [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/Project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/DemoTop.v:50]
+WARNING: [Synth 8-3295] tying undriven pin script_mem_module:pc[2] to constant 0 [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/Project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/DemoTop.v:50]
+WARNING: [Synth 8-3295] tying undriven pin script_mem_module:pc[1] to constant 0 [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/Project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/DemoTop.v:50]
+WARNING: [Synth 8-3295] tying undriven pin script_mem_module:pc[0] to constant 0 [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/Project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/DemoTop.v:50]
+WARNING: [Synth 8-3295] tying undriven pin uart_module:clock to constant 0 [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/Project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/DemoTop.v:64]
+WARNING: [Synth 8-3295] tying undriven pin uart_module:io_dataIn_bits[7] to constant 0 [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/Project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/DemoTop.v:64]
+WARNING: [Synth 8-3295] tying undriven pin uart_module:io_dataIn_bits[6] to constant 0 [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/Project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/DemoTop.v:64]
+WARNING: [Synth 8-3295] tying undriven pin uart_module:io_dataIn_bits[5] to constant 0 [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/Project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/DemoTop.v:64]
+WARNING: [Synth 8-3295] tying undriven pin uart_module:io_dataIn_bits[4] to constant 0 [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/Project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/DemoTop.v:64]
+WARNING: [Synth 8-3295] tying undriven pin uart_module:io_dataIn_bits[3] to constant 0 [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/Project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/DemoTop.v:64]
+WARNING: [Synth 8-3295] tying undriven pin uart_module:io_dataIn_bits[2] to constant 0 [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/Project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/DemoTop.v:64]
+WARNING: [Synth 8-3295] tying undriven pin uart_module:io_dataIn_bits[1] to constant 0 [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/Project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/DemoTop.v:64]
+WARNING: [Synth 8-3295] tying undriven pin uart_module:io_dataIn_bits[0] to constant 0 [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/Project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/DemoTop.v:64]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 392.812 ; gain = 153.133
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/Project/HDL_Framework/GenshinKitchen.runs/synth_1/.Xil/Vivado-18580-DeLiAssistant/dcp1/inst_ram_in_context.xdc] for cell 'script_mem_module/ram_module'
+Finished Parsing XDC File [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/Project/HDL_Framework/GenshinKitchen.runs/synth_1/.Xil/Vivado-18580-DeLiAssistant/dcp1/inst_ram_in_context.xdc] for cell 'script_mem_module/ram_module'
+Parsing XDC File [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/Project/HDL_Framework/GenshinKitchen.srcs/constrs_1/new/cons.xdc]
+Finished Parsing XDC File [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/Project/HDL_Framework/GenshinKitchen.srcs/constrs_1/new/cons.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/Project/HDL_Framework/GenshinKitchen.srcs/constrs_1/new/cons.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/DemoTop_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/DemoTop_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 718.941 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 718.941 ; gain = 479.262
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 718.941 ; gain = 479.262
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for script_mem_module/ram_module. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 718.941 ; gain = 479.262
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "script_size" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element script_cnt_reg was removed.  [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/Project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptMem.v:36]
+INFO: [Synth 8-5544] ROM "spacing" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element spacing_reg was removed.  [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/Project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UART.v:59]
+WARNING: [Synth 8-6014] Unused sequential element clkCnt_reg was removed.  [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/Project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UART.v:143]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 718.941 ; gain = 479.262
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 4     
+	                4 Bit    Registers := 4     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 12    
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 5     
+	   7 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   5 Input      3 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 8     
+	   3 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module ScriptMem 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 2     
++---Registers : 
+	                8 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 3     
+Module UARTTransmitter 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module UARTReceiver 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 11    
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module UART 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element script_mem_module/script_cnt_reg was removed.  [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/Project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptMem.v:36]
+WARNING: [Synth 8-6014] Unused sequential element uart_module/rx/spacing_reg was removed.  [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/Project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UART.v:59]
+WARNING: [Synth 8-6014] Unused sequential element uart_module/clkCnt_reg was removed.  [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/Project/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UART.v:143]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port led[7]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port led[6]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port led[5]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port led[4]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port led[3]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port led[2]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port led[1]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port led[0]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port led2[7]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port led2[6]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port led2[5]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port led2[4]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port led2[3]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port led2[2]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port led2[1]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port led2[0]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port button[4]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port button[3]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port button[2]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port button[1]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port button[0]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port switches[7]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port switches[6]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port switches[5]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port switches[4]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port switches[3]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port switches[2]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port switches[1]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port switches[0]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port clk
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uart_module/tx/data_reg[7] )
+INFO: [Synth 8-3886] merging instance 'uart_module/tx/data_reg[6]' (FDE) to 'uart_module/tx/data_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uart_module/tx/data_reg[7] )
+INFO: [Synth 8-3886] merging instance 'uart_module/tx/data_reg[5]' (FDE) to 'uart_module/tx/data_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uart_module/tx/data_reg[7] )
+INFO: [Synth 8-3886] merging instance 'uart_module/tx/data_reg[4]' (FDE) to 'uart_module/tx/data_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uart_module/tx/data_reg[7] )
+INFO: [Synth 8-3886] merging instance 'uart_module/tx/data_reg[3]' (FDE) to 'uart_module/tx/data_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uart_module/tx/data_reg[7] )
+INFO: [Synth 8-3886] merging instance 'uart_module/tx/data_reg[2]' (FDE) to 'uart_module/tx/data_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uart_module/tx/data_reg[7] )
+INFO: [Synth 8-3886] merging instance 'uart_module/tx/data_reg[1]' (FDE) to 'uart_module/tx/data_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uart_module/tx/data_reg[7] )
+INFO: [Synth 8-3886] merging instance 'uart_module/tx/data_reg[0]' (FDE) to 'uart_module/tx/data_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uart_module/tx/data_reg[7] )
+WARNING: [Synth 8-3332] Sequential element (uart_module/tx/data_reg[7]) is unused and will be removed from module DemoTop.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:18 . Memory (MB): peak = 718.941 ; gain = 479.262
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:29 . Memory (MB): peak = 718.941 ; gain = 479.262
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:29 . Memory (MB): peak = 718.941 ; gain = 479.262
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (uart_module/rx/bit_0_reg) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (uart_module/rx/data_0_reg) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (uart_module/rx/data_1_reg) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (uart_module/rx/data_2_reg) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (uart_module/rx/data_3_reg) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (uart_module/rx/data_4_reg) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (uart_module/rx/data_5_reg) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (uart_module/rx/data_6_reg) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (uart_module/rx/data_7_reg) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (uart_module/io_dataOut_bits_reg[7]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (uart_module/io_dataOut_bits_reg[6]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (uart_module/io_dataOut_bits_reg[5]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (uart_module/io_dataOut_bits_reg[4]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (uart_module/io_dataOut_bits_reg[3]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (uart_module/io_dataOut_bits_reg[2]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (uart_module/io_dataOut_bits_reg[1]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (uart_module/io_dataOut_bits_reg[0]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (script_mem_module/script_size_reg[7]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (script_mem_module/script_size_reg[6]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (script_mem_module/script_size_reg[5]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (script_mem_module/script_size_reg[4]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (script_mem_module/script_size_reg[3]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (script_mem_module/script_size_reg[2]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (script_mem_module/script_size_reg[1]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (script_mem_module/script_size_reg[0]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (uart_module/io_dataOut_valid_reg) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (uart_module/tx/state_reg[3]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (uart_module/tx/state_reg[2]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (uart_module/tx/state_reg[1]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (uart_module/tx/state_reg[0]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (uart_module/rx/state_reg[3]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (uart_module/rx/state_reg[2]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (uart_module/rx/state_reg[1]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (uart_module/rx/state_reg[0]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (uart_module/rx/cnt_reg[2]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (uart_module/rx/cnt_reg[1]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (uart_module/rx/cnt_reg[0]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (uart_module/rx/sync_r_reg) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (uart_module/rx/sync_reg) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (script_mem_module/script_cnt_reg[7]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (script_mem_module/script_cnt_reg[6]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (script_mem_module/script_cnt_reg[5]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (script_mem_module/script_cnt_reg[4]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (script_mem_module/script_cnt_reg[3]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (script_mem_module/script_cnt_reg[2]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (script_mem_module/script_cnt_reg[1]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (script_mem_module/script_cnt_reg[0]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (uart_module/rx/spacing_reg[3]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (uart_module/rx/spacing_reg[2]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (uart_module/rx/spacing_reg[1]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (uart_module/rx/spacing_reg[0]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (uart_module/clkCnt_reg[3]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (uart_module/clkCnt_reg[2]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (uart_module/clkCnt_reg[1]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (uart_module/clkCnt_reg[0]) is unused and will be removed from module DemoTop.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:29 . Memory (MB): peak = 736.254 ; gain = 496.574
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:30 . Memory (MB): peak = 736.254 ; gain = 496.574
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:30 . Memory (MB): peak = 736.254 ; gain = 496.574
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-115] binding instance 'i_0' in module 'DemoTop' to reference 'ScriptMem' which has no pins
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:30 . Memory (MB): peak = 736.254 ; gain = 496.574
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:30 . Memory (MB): peak = 736.254 ; gain = 496.574
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:30 . Memory (MB): peak = 736.254 ; gain = 496.574
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:30 . Memory (MB): peak = 736.254 ; gain = 496.574
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |inst_ram      |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |inst_ram |     1|
+|2     |OBUF     |     1|
+|3     |OBUFT    |    16|
++------+---------+------+
+
+Report Instance Areas: 
++------+--------------------+----------+------+
+|      |Instance            |Module    |Cells |
++------+--------------------+----------+------+
+|1     |top                 |          |    33|
+|2     |  script_mem_module |ScriptMem |    16|
++------+--------------------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:30 . Memory (MB): peak = 736.254 ; gain = 496.574
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 93 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:24 . Memory (MB): peak = 736.254 ; gain = 170.445
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:30 . Memory (MB): peak = 736.254 ; gain = 496.574
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+39 Infos, 147 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:33 . Memory (MB): peak = 737.324 ; gain = 507.480
+INFO: [Common 17-1381] The checkpoint 'D:/OWEN/Undergraduate/2Autumn/DigitalLogic/Project/HDL_Framework/GenshinKitchen.runs/synth_1/DemoTop.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file DemoTop_utilization_synth.rpt -pb DemoTop_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.072 . Memory (MB): peak = 737.324 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Nov 23 13:54:15 2023...
