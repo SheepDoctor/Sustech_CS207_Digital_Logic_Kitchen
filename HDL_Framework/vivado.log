@@ -2,23 +2,20 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Fri Nov 24 10:51:55 2023
-# Process ID: 17996
+# Start of session at: Fri Nov 24 11:09:40 2023
+# Process ID: 16380
 # Current directory: C:/Users/86153/Desktop/study/digital logic/proj/DL-kitchen/HDL_Framework
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6776 C:\Users\86153\Desktop\study\digital logic\proj\DL-kitchen\HDL_Framework\GenshinKitchen.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6060 C:\Users\86153\Desktop\study\digital logic\proj\DL-kitchen\HDL_Framework\GenshinKitchen.xpr
 # Log file: C:/Users/86153/Desktop/study/digital logic/proj/DL-kitchen/HDL_Framework/vivado.log
 # Journal file: C:/Users/86153/Desktop/study/digital logic/proj/DL-kitchen/HDL_Framework\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project {C:/Users/86153/Desktop/study/digital logic/proj/DL-kitchen/HDL_Framework/GenshinKitchen.xpr}
-INFO: [Project 1-313] Project file moved from 'D:/OWEN/Undergraduate/2Autumn/DigitalLogic/Project/HDL_Framework' since last save.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/viadao/Vivado/2017.4/data/ip'.
 update_compile_order -fileset sources_1
-close [ open {C:/Users/86153/Desktop/study/digital logic/proj/DL-kitchen/HDL_Framework/GenshinKitchen.srcs/sources_1/new/clock_frequency_divider.v} w ]
-add_files {{C:/Users/86153/Desktop/study/digital logic/proj/DL-kitchen/HDL_Framework/GenshinKitchen.srcs/sources_1/new/clock_frequency_divider.v}}
-update_compile_order -fileset sources_1
 exit
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 24 11:10:00 2023...

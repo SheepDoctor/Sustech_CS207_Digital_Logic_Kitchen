@@ -351,3 +351,6 @@ selectCodeEditor("clock_frequency_divider.v", 197, 354); // cd (w, cj)
 selectCodeEditor("clock_frequency_divider.v", 172, 373); // cd (w, cj)
 selectCodeEditor("clock_frequency_divider.v", 153, 398); // cd (w, cj)
 selectCodeEditor("clock_frequency_divider.v", 96, 414); // cd (w, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v)]", 3, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v)]", 3, true); // B (D, cj) - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v)]", 3); // B (D, cj)
