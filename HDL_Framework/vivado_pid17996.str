@@ -1,0 +1,353 @@
+/*
+
+Xilinx Vivado v2017.4 (64-bit) [Major: 2017, Minor: 4]
+SW Build: 2086221 on Fri Dec 15 20:55:39 MST 2017
+IP Build: 2085800 on Fri Dec 15 22:25:07 MST 2017
+
+Process ID: 17996
+License: Customer
+
+Current time: 	Fri Nov 24 10:52:05 CST 2023
+Time zone: 	China Standard Time (Asia/Shanghai)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 20
+
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 71 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	D:/viadao/Vivado/2017.4/tps/win64/jre
+JVM executable location: 	D:/viadao/Vivado/2017.4/tps/win64/jre/bin/java.exe
+
+User name: 	86153
+User home directory: C:/Users/86153
+User working directory: C:/Users/86153/Desktop/study/digital logic/proj/DL-kitchen/HDL_Framework
+User country: 	CN
+User language: 	zh
+User locale: 	zh_CN
+
+RDI_BASEROOT: D:/viadao/Vivado
+HDI_APPROOT: D:/viadao/Vivado/2017.4
+RDI_DATADIR: D:/viadao/Vivado/2017.4/data
+RDI_BINDIR: D:/viadao/Vivado/2017.4/bin
+
+Vivado preferences file location: C:/Users/86153/AppData/Roaming/Xilinx/Vivado/2017.4/vivado.xml
+Vivado preferences directory: C:/Users/86153/AppData/Roaming/Xilinx/Vivado/2017.4/
+Vivado layouts directory: C:/Users/86153/AppData/Roaming/Xilinx/Vivado/2017.4/layouts
+PlanAhead jar file location: 	D:/viadao/Vivado/2017.4/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/86153/Desktop/study/digital logic/proj/DL-kitchen/HDL_Framework/vivado.log
+Vivado journal file location: 	C:/Users/86153/Desktop/study/digital logic/proj/DL-kitchen/HDL_Framework/vivado.jou
+Engine tmp dir: 	C:/Users/86153/Desktop/study/digital logic/proj/DL-kitchen/HDL_Framework/.Xil/Vivado-17996-Sigma
+
+GUI allocated memory:	245 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 585 MB
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// TclEventType: PROJECT_OPEN_DIALOG
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bs (cj):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\86153\Desktop\study\digital logic\proj\DL-kitchen\HDL_Framework\GenshinKitchen.xpr. Version: Vivado v2017.4 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 66 MB (+66298kb) [00:00:05]
+// [Engine Memory]: 513 MB (+386214kb) [00:00:05]
+// [Engine Memory]: 556 MB (+18432kb) [00:00:06]
+// [GUI Memory]: 71 MB (+2202kb) [00:00:06]
+// Tcl Message: open_project {C:/Users/86153/Desktop/study/digital logic/proj/DL-kitchen/HDL_Framework/GenshinKitchen.xpr} 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'D:/OWEN/Undergraduate/2Autumn/DigitalLogic/Project/HDL_Framework' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/viadao/Vivado/2017.4/data/ip'. 
+// Project name: GenshinKitchen; location: C:/Users/86153/Desktop/study/digital logic/proj/DL-kitchen/HDL_Framework; part: xc7a35tcsg324-1
+// [Engine Memory]: 607 MB (+23824kb) [00:00:07]
+dismissDialog("Open Project"); // bs (cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// HMemoryUtils.trashcanNow. Engine heap size: 607 MB. GUI used memory: 38 MB. Current time: 11/24/23 10:52:06 AM CST
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files]", 1); // B (D, cj)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v)]", 3); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v), input1 : Input_Module (Input_Module.v)]", 4, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v), input1 : Input_Module (Input_Module.v)]", 4, false, false, false, false, false, true); // B (D, cj) - Double Click
+selectCodeEditor("Input_Module.v", 250, 310); // cd (w, cj)
+selectCodeEditor("Input_Module.v", 332, 374); // cd (w, cj)
+// [GUI Memory]: 87 MB (+13359kb) [00:00:21]
+selectCodeEditor("Input_Module.v", 354, 420); // cd (w, cj)
+selectCodeEditor("Input_Module.v", 376, 381); // cd (w, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v)]", 3, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v)]", 3, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+// [GUI Memory]: 93 MB (+1058kb) [00:00:23]
+// [GUI Memory]: 102 MB (+4512kb) [00:00:24]
+selectCodeEditor("DemoTop.v", 197, 181); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 149, 270); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 205, 173); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 150, 263); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 169, 236); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 186, 201); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 195, 185); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 105, 272); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 334, 247); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 247, 244); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 248, 225); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 249, 210); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 256, 189); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 265, 198); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 282, 179); // cd (w, cj)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v)]", 3); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v), input1 : Input_Module (Input_Module.v)]", 4, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v), input1 : Input_Module (Input_Module.v)]", 4, false, false, false, false, false, true); // B (D, cj) - Double Click
+// Elapsed time: 23 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v), input1 : Input_Module (Input_Module.v)]", 4, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v), input1 : Input_Module (Input_Module.v)]", 4, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v), input1 : Input_Module (Input_Module.v)]", 4, false, false, false, false, false, true); // B (D, cj) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v), input1 : Input_Module (Input_Module.v)]", 4, false, false, false, false, true, false); // B (D, cj) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // Z (ai, cj)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // Z (ai, cj)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // Z (ai, cj)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // Z (ai, cj)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // Z (ai, cj)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // Z (ai, cj)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // Z (ai, cj)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // Z (ai, cj)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // Z (ai, cj)
+// HMemoryUtils.trashcanNow. Engine heap size: 627 MB. GUI used memory: 46 MB. Current time: 11/24/23 10:53:06 AM CST
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // Z (ai, cj)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // Z (ai, cj)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // Z (ai, cj)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // Z (ai, cj)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // Z (ai, cj)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // Z (ai, cj)
+// Elapsed time: 19 seconds
+selectMenuItem(RDIResourceCommand.RDICommands_PROPERTIES, "Source Node Properties..."); // ac (ai, cj)
+// Run Command: RDIResourceCommand.RDICommands_PROPERTIES
+selectButton((HResource) null, "Properties_settings"); // u (f, cj): TRUE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v), input1 : Input_Module (Input_Module.v)]", 4, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v), input1 : Input_Module (Input_Module.v)]", 4, false, false, false, false, true, false); // B (D, cj) - Popup Trigger
+selectMenuItem(PAResourceQtoS.SrcMenu_OPEN_SELECTED_SOURCE_FILES, "Open File"); // ac (ai, cj)
+selectCodeEditor("Input_Module.v", 340, 245); // cd (w, cj)
+selectCodeEditor("Input_Module.v", 239, 273); // cd (w, cj)
+selectCodeEditor("Input_Module.v", 230, 308); // cd (w, cj)
+selectCodeEditor("Input_Module.v", 238, 338); // cd (w, cj)
+selectCodeEditor("Input_Module.v", 321, 305); // cd (w, cj)
+selectCodeEditor("Input_Module.v", 335, 272); // cd (w, cj)
+// Elapsed time: 19 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Add Sources]", 2, false); // u (O, cj)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cj): Add Sources: addNotify
+selectButton("CANCEL", "Cancel"); // JButton (h, c)
+// [Engine Memory]: 643 MB (+5961kb) [00:02:16]
+dismissDialog("Add Sources"); // c (cj)
+// HMemoryUtils.trashcanNow. Engine heap size: 647 MB. GUI used memory: 50 MB. Current time: 11/24/23 10:54:16 AM CST
+// Elapsed time: 71 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v), script_mem_module : ScriptMem (ScriptMem.v)]", 5, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v), input1 : Input_Module (Input_Module.v)]", 4, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v), script_mem_module : ScriptMem (ScriptMem.v)]", 5, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v), input1 : Input_Module (Input_Module.v)]", 4, false); // B (D, cj)
+// Elapsed time: 48 seconds
+selectCodeEditor("Input_Module.v", 206, 289); // cd (w, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v), uart_module : UART (UART.v)]", 6, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v), uart_module : UART (UART.v)]", 6, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+selectCodeEditor("UART.v", 139, 189); // cd (w, cj)
+selectCodeEditor("UART.v", 162, 195); // cd (w, cj)
+selectCodeEditor("UART.v", 66, 367); // cd (w, cj)
+// Elapsed time: 19 seconds
+selectCodeEditor("UART.v", 168, 213); // cd (w, cj)
+selectCodeEditor("UART.v", 134, 221); // cd (w, cj)
+selectCodeEditor("UART.v", 128, 189); // cd (w, cj)
+selectCodeEditor("UART.v", 148, 204); // cd (w, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v), input1 : Input_Module (Input_Module.v)]", 4, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v)]", 3, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v)]", 3, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+selectCodeEditor("DemoTop.v", 220, 238); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 141, 326); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 233, 369); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 183, 228); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 186, 257); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 177, 272); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 185, 290); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 186, 272); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 190, 265); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 345, 311); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 246, 294); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 244, 278); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 213, 298); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 144, 327); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 171, 292); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 135, 213); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 104, 233); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 128, 248); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 473, 234); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 351, 345); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 437, 388); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 371, 428); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 439, 400); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 431, 386); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 97, 367); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 195, 262); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 199, 214); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 263, 243); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 286, 226); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 111, 159); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 102, 274); // cd (w, cj)
+// Elapsed time: 11 seconds
+selectCodeEditor("DemoTop.v", 83, 40); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 247, 329); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 215, 135); // cd (w, cj)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Add Sources]", 2, false); // u (O, cj)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis]", 3); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cj): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (h, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (C, c)
+// F (c): Create Source File: addNotify
+// Elapsed time: 20 seconds
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "clock_frequ"); // X (N, F)
+// Elapsed time: 15 seconds
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "clock_frequency_d"); // X (N, F)
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "clock_frequency_divider"); // X (N, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+dismissDialog("Create Source File"); // F (c)
+selectButton("FINISH", "Finish"); // JButton (h, c)
+// 'h' command handler elapsed time: 53 seconds
+dismissDialog("Add Sources"); // c (cj)
+// Tcl Message: close [ open {C:/Users/86153/Desktop/study/digital logic/proj/DL-kitchen/HDL_Framework/GenshinKitchen.srcs/sources_1/new/clock_frequency_divider.v} w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files {{C:/Users/86153/Desktop/study/digital logic/proj/DL-kitchen/HDL_Framework/GenshinKitchen.srcs/sources_1/new/clock_frequency_divider.v}} 
+// I (cj): Define Module: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+// TclEventType: FILE_SET_CHANGE
+selectButton("PAResourceAtoD.DefineModulesDialog_YOU_HAVE_MADE_CHANGES_TO_MODULE_Yes", "Yes"); // JButton (A, H)
+dismissDialog("Define Module"); // I (cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, clock_frequency_divider (clock_frequency_divider.v)]", 4, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, clock_frequency_divider (clock_frequency_divider.v)]", 4, false, false, false, false, false, true); // B (D, cj) - Double Click
+selectCodeEditor("clock_frequency_divider.v", 209, 386); // cd (w, cj)
+selectCodeEditor("clock_frequency_divider.v", 35, 431); // cd (w, cj)
+// HMemoryUtils.trashcanNow. Engine heap size: 667 MB. GUI used memory: 50 MB. Current time: 11/24/23 10:59:51 AM CST
+// Elapsed time: 45 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v)]", 3, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v)]", 3, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v)]", 3); // B (D, cj)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v)]", 3); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, clock_frequency_divider (clock_frequency_divider.v)]", 7, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, clock_frequency_divider (clock_frequency_divider.v)]", 7, false, false, false, false, false, true); // B (D, cj) - Double Click
+selectCodeEditor("clock_frequency_divider.v", 77, 429); // cd (w, cj)
+selectCodeEditor("clock_frequency_divider.v", 96, 452); // cd (w, cj)
+// Elapsed time: 17 seconds
+selectCodeEditor("clock_frequency_divider.v", 162, 403); // cd (w, cj)
+selectCodeEditor("clock_frequency_divider.v", 143, 433); // cd (w, cj)
+selectCodeEditor("clock_frequency_divider.v", 140, 408); // cd (w, cj)
+selectCodeEditor("clock_frequency_divider.v", 177, 389); // cd (w, cj)
+selectCodeEditor("clock_frequency_divider.v", 198, 372); // cd (w, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v), input1 : Input_Module (Input_Module.v)]", 4, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v), input1 : Input_Module (Input_Module.v)]", 4, false, false, false, false, false, true); // B (D, cj) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v)]", 3, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v)]", 3, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+selectCodeEditor("DemoTop.v", 189, 275); // cd (w, cj)
+// Elapsed time: 107 seconds
+selectCodeEditor("DemoTop.v", 54, 236); // cd (w, cj)
+// Elapsed time: 21 seconds
+selectCodeEditor("DemoTop.v", 83, 104); // cd (w, cj)
+typeControlKey((HResource) null, "DemoTop.v", 'c'); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 215, 255); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 84, 367); // cd (w, cj)
+typeControlKey((HResource) null, "DemoTop.v", 'v'); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 268, 354); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 224, 373); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 301, 411); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 330, 388); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 269, 311); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 318, 298); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 233, 248); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 303, 218); // cd (w, cj)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v)]", 3); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v)]", 3, true); // B (D, cj) - Node
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v)]", 3); // B (D, cj)
+selectCodeEditor("DemoTop.v", 234, 249); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 303, 227); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 361, 274); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 262, 229); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 309, 207); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 334, 223); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 299, 235); // cd (w, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, clock_frequency_divider (clock_frequency_divider.v)]", 4, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, clock_frequency_divider (clock_frequency_divider.v)]", 4, false, false, false, false, false, true); // B (D, cj) - Double Click
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v)]", 3); // B (D, cj)
+selectCodeEditor("clock_frequency_divider.v", 141, 403); // cd (w, cj)
+selectCodeEditor("clock_frequency_divider.v", 172, 380); // cd (w, cj)
+selectCodeEditor("clock_frequency_divider.v", 202, 365); // cd (w, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v), input1 : Input_Module (Input_Module.v)]", 4, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v), input1 : Input_Module (Input_Module.v)]", 4, false, false, false, false, false, true); // B (D, cj) - Double Click
+selectCodeEditor("Input_Module.v", 257, 275); // cd (w, cj)
+selectCodeEditor("Input_Module.v", 202, 370); // cd (w, cj)
+selectCodeEditor("Input_Module.v", 255, 425); // cd (w, cj)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v), script_mem_module : ScriptMem (ScriptMem.v)]", 5); // B (D, cj)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v), script_mem_module : ScriptMem (ScriptMem.v)]", 5); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v)]", 3, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v)]", 3, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, clock_frequency_divider (clock_frequency_divider.v)]", 4, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, clock_frequency_divider (clock_frequency_divider.v)]", 4, false, false, false, false, false, true); // B (D, cj) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, Output_module.v]", 2, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, Output_module.v]", 2, false, false, false, false, false, true); // B (D, cj) - Double Click
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v)]", 3); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v)]", 3, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v)]", 3, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v)]", 3); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v), input1 : Input_Module (Input_Module.v)]", 4, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v), input1 : Input_Module (Input_Module.v)]", 4, false, false, false, false, false, true); // B (D, cj) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v)]", 3, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v)]", 3, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+selectCodeEditor("DemoTop.v", 190, 148); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 201, 171); // cd (w, cj)
+selectCodeEditor("DemoTop.v", 218, 161); // cd (w, cj)
+// Elapsed time: 121 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, clock_frequency_divider (clock_frequency_divider.v)]", 4, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, clock_frequency_divider (clock_frequency_divider.v)]", 4, false, false, false, false, false, true); // B (D, cj) - Double Click
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v)]", 3); // B (D, cj)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v)]", 3); // B (D, cj)
+selectCodeEditor("clock_frequency_divider.v", 159, 366); // cd (w, cj)
+selectCodeEditor("clock_frequency_divider.v", 170, 379); // cd (w, cj)
+selectCodeEditor("clock_frequency_divider.v", 152, 396); // cd (w, cj)
+selectCodeEditor("clock_frequency_divider.v", 115, 411); // cd (w, cj)
+selectCodeEditor("clock_frequency_divider.v", 146, 399); // cd (w, cj)
+selectCodeEditor("clock_frequency_divider.v", 153, 380); // cd (w, cj)
+selectCodeEditor("clock_frequency_divider.v", 139, 371); // cd (w, cj)
+selectCodeEditor("clock_frequency_divider.v", 203, 353); // cd (w, cj)
+selectCodeEditor("clock_frequency_divider.v", 164, 369); // cd (w, cj)
+selectCodeEditor("clock_frequency_divider.v", 164, 376); // cd (w, cj)
+selectCodeEditor("clock_frequency_divider.v", 163, 393); // cd (w, cj)
+selectCodeEditor("clock_frequency_divider.v", 133, 403); // cd (w, cj)
+selectCodeEditor("clock_frequency_divider.v", 153, 389); // cd (w, cj)
+selectCodeEditor("clock_frequency_divider.v", 128, 368); // cd (w, cj)
+selectCodeEditor("clock_frequency_divider.v", 197, 354); // cd (w, cj)
+selectCodeEditor("clock_frequency_divider.v", 172, 373); // cd (w, cj)
+selectCodeEditor("clock_frequency_divider.v", 153, 398); // cd (w, cj)
+selectCodeEditor("clock_frequency_divider.v", 96, 414); // cd (w, cj)

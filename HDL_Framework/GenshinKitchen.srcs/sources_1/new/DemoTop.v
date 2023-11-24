@@ -46,6 +46,11 @@ module DemoTop(
         wire [15:0] script;
 // The wire above is useful~
 
+    clock_frequency_divider clock(
+    .clk(clk),
+    .uart_clk(uart_clk_16)
+    );
+    
     Input_Module input1(
       .button(button), 
       .switches(switches), 
