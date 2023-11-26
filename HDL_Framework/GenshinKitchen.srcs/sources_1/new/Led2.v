@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 2023/11/23 14:17:04
+// Create Date: 2023/11/26 21:14:19
 // Design Name: 
-// Module Name: Input_Module
+// Module Name: Led2
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,13 +20,9 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module Begin_End(
-    input [4:0] button,
-    input [7:0] switches,
-    input clk,
-    output reg [7:0] dataIn_bits = 8'b0000_0001
+module Led2(
+input [7:0] dataOut_bits,
+output [7:0] led2
     );
-    always @(posedge clk) begin
-        dataIn_bits[3:2] <= switches[7:6]; // switch
-    end
+    //to be done
 endmodule

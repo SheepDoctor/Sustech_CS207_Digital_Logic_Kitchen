@@ -51,7 +51,17 @@ module DemoTop(
     .uart_clk(uart_clk_16)
     );
     
-    Input_Module input1(
+    Led1 output1(
+    .dataIn_bits(dataIn_bits),
+    .led(led)
+    );
+    
+    Led2 output2(
+    .dataOut_bits(dataOut_bits),//feedback signal
+    .led2(led2)
+    );
+    
+    Begin_End input1(
       .button(button), 
       .switches(switches), 
       .clk(clk), 

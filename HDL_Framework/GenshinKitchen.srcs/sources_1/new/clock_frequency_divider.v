@@ -23,6 +23,8 @@
 module clock_frequency_divider(
 input clk,
 output uart_clk
+//maybe write other clks here
     );
+    assign uart_clk = clk;//guess
     //to be done
 endmodule
