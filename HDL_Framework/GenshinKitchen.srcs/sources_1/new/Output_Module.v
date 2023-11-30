@@ -24,9 +24,9 @@ module Begin_End(
     input [4:0] button,
     input [7:0] switches,
     input clk,
-    output reg [7:0] dataIn_bits = 8'b0000_0001
+    output reg [7:0] dataIn_bits
     );
     always @(posedge clk) begin
-        dataIn_bits[3:2] <= switches[7:6]; // switch
+    dataIn_bits = {4'b0000,switches[7:6],2'b01};
     end
 endmodule

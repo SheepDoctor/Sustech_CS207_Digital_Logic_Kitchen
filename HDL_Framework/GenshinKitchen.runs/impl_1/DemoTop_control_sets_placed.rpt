@@ -1,8 +1,8 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Thu Nov 23 14:48:35 2023
-| Host         : DeLiAssistant running 64-bit major release  (build 9200)
+| Date         : Thu Nov 30 17:57:39 2023
+| Host         : Sigma running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file DemoTop_control_sets_placed.rpt
 | Design       : DemoTop
 | Device       : xc7a35t
@@ -22,8 +22,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |     0 |
-| Unused register locations in slices containing registers |     0 |
+| Number of unique control sets                            |     7 |
+| Unused register locations in slices containing registers |    17 |
 +----------------------------------------------------------+-------+
 
 
@@ -33,10 +33,10 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |               0 |            0 |
+| No           | No                    | No                     |              24 |           11 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |               0 |            0 |
-| Yes          | No                    | No                     |               0 |            0 |
+| No           | Yes                   | No                     |              19 |            5 |
+| Yes          | No                    | No                     |              20 |            5 |
 | Yes          | No                    | Yes                    |               0 |            0 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
@@ -45,13 +45,27 @@ Table of Contents
 3. Detailed Control Set Information
 -----------------------------------
 
-+--------------+---------------+------------------+------------------+----------------+
-| Clock Signal | Enable Signal | Set/Reset Signal | Slice Load Count | Bel Load Count |
-+--------------+---------------+------------------+------------------+----------------+
++-----------------------------+------------------------------------+------------------------+------------------+----------------+
+|         Clock Signal        |            Enable Signal           |    Set/Reset Signal    | Slice Load Count | Bel Load Count |
++-----------------------------+------------------------------------+------------------------+------------------+----------------+
+|  clk_IBUF_BUFG              |                                    |                        |                2 |              2 |
+|  dataIn_bits_reg[3]_i_1_n_0 |                                    | uart_module/rx/spacing |                1 |              4 |
+|  dataIn_bits_reg[3]_i_1_n_0 | uart_module/rx/state[3]_i_1_n_0    |                        |                1 |              4 |
+|  dataIn_bits_reg[3]_i_1_n_0 | uart_module/rx/tick                |                        |                2 |              8 |
+|  dataIn_bits_reg[3]_i_1_n_0 | uart_module/tx/state[3]_i_1__0_n_0 |                        |                2 |              8 |
+|  clk_IBUF_BUFG              |                                    | clock/uart_clk         |                4 |             15 |
+|  dataIn_bits_reg[3]_i_1_n_0 |                                    |                        |                9 |             22 |
++-----------------------------+------------------------------------+------------------------+------------------+----------------+
 
 
 +--------+-----------------------+
 | Fanout | Number of ControlSets |
++--------+-----------------------+
+| 2      |                     1 |
+| 4      |                     2 |
+| 8      |                     2 |
+| 15     |                     1 |
+| 16+    |                     1 |
 +--------+-----------------------+
 
 

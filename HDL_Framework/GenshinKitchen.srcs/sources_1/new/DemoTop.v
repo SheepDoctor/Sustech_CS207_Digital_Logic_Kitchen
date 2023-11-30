@@ -64,7 +64,7 @@ module DemoTop(
     Begin_End input1(
       .button(button), 
       .switches(switches), 
-      .clk(clk), 
+      .clk(uart_clk_16), 
       .dataIn_bits(dataIn_bits) // client signal
       );
 

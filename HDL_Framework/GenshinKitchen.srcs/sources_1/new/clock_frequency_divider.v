@@ -22,9 +22,17 @@
 
 module clock_frequency_divider(
 input clk,
-output uart_clk
+output reg uart_clk 
 //maybe write other clks here
     );
-    assign uart_clk = clk;//guess
-    //to be done
+    
+reg [15:0] count; // 16 bits counter for dividing frequency
+always @ (posedge clk) begin
+if(count==325)begin
+uart_clk <= ~uart_clk; // 切换时钟边沿以生成50%占空比
+count<=0;
+end else begin
+count <= count+1;
+end
+end
 endmodule
