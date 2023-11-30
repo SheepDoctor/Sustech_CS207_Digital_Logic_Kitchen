@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xc7a35tcsg324-1" LaunchTime="1700722092">
+  <File Type="PWROPT-DCP" Name="DemoTop_pwropt.dcp"/>
   <File Type="ROUTE-PWR" Name="DemoTop_power_routed.rpt"/>
   <File Type="PA-TCL" Name="DemoTop.tcl"/>
-  <File Type="PWROPT-DCP" Name="DemoTop_pwropt.dcp"/>
   <File Type="ROUTE-PWR-SUM" Name="DemoTop_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="DemoTop_reports.tcl"/>
   <File Type="BG-DRC" Name="DemoTop.drc"/>
-  <File Type="OPT-HWDEF" Name="DemoTop.hwdef"/>
   <File Type="OPT-DCP" Name="DemoTop_opt.dcp"/>
+  <File Type="OPT-HWDEF" Name="DemoTop.hwdef"/>
   <File Type="OPT-DRC" Name="DemoTop_drc_opted.rpt"/>
   <File Type="PLACE-DCP" Name="DemoTop_placed.dcp"/>
   <File Type="PLACE-IO" Name="DemoTop_io_placed.rpt"/>
@@ -23,22 +23,22 @@
   <File Type="ROUTE-BLACKBOX-DCP" Name="DemoTop_routed_bb.dcp"/>
   <File Type="ROUTE-DRC" Name="DemoTop_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="DemoTop_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="DemoTop_drc_routed.rpx"/>
   <File Type="BITSTR-MSK" Name="DemoTop.msk"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="DemoTop_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="DemoTop_drc_routed.rpx"/>
   <File Type="BG-BGN" Name="DemoTop.bgn"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="DemoTop_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="DemoTop_methodology_drc_routed.rpt"/>
   <File Type="BITSTR-RBT" Name="DemoTop.rbt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="DemoTop_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="DemoTop_methodology_drc_routed.rpx"/>
   <File Type="BG-BIN" Name="DemoTop.bin"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="DemoTop_methodology_drc_routed.pb"/>
   <File Type="ROUTE-PWR-RPX" Name="DemoTop_power_routed.rpx"/>
   <File Type="ROUTE-STATUS" Name="DemoTop_route_status.rpt"/>
   <File Type="ROUTE-STATUS-PB" Name="DemoTop_route_status.pb"/>
   <File Type="ROUTE-TIMINGSUMMARY" Name="DemoTop_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="DemoTop_timing_summary_routed.pb"/>
   <File Type="ROUTE-TIMING-RPX" Name="DemoTop_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-CLK" Name="DemoTop_clock_utilization_routed.rpt"/>
   <File Type="RDI-RDI" Name="DemoTop.vdi"/>
+  <File Type="ROUTE-CLK" Name="DemoTop_clock_utilization_routed.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="DemoTop_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="DemoTop_postroute_physopt_bb.dcp"/>
   <File Type="BITSTR-NKY" Name="DemoTop.nky"/>
