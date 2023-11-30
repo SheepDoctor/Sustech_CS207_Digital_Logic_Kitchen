@@ -26,7 +26,34 @@ module Begin_End(
     input clk,
     output reg [7:0] dataIn_bits
     );
+    reg [1:0] switch; // A variable to judge if switches[7:6] have been changed.
     always @(posedge clk) begin
-    dataIn_bits = {4'b0000,switches[7:6],2'b01};
+    if (switch[1:0] != switches[7:6]) begin
+        dataIn_bits <= {4'b0000,switches[7:6],2'b01}; // xxxx_0101 or xxxx_1001 present start or end.
+        switch[1:0] <= switches[7:6];
+    end
+    else
+        switch[1:0] <= switches[7:6];
     end
 endmodule
+
+module TargetMove(
+    input [4:0] button,
+    input [7:0] switches,
+    input clk,
+    input dataIn_ready,
+    output reg [7:0] dataIn_bits
+);
+    reg [5:0] switch;
+    always @(posedge clk) begin
+        if (dataIn_ready) begin
+            if (switch[5:0] != switches[5:0]) begin
+                dataIn_bits <= {switches[5:0],2'b11}; // xxxx_xx11 present the target machine.
+                switch[5:0] <= switches[5:0];
+            end
+            else
+                switch[5:0] <= switches[5:0];
+        end
+    end
+endmodule
+

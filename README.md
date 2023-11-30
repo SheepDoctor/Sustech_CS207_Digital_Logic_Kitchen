@@ -16,6 +16,18 @@
 
 ## NOTES
 
+## WEEK 12 WORK
+
+董 Output Led 显示
+
+赵、祝 Input 各个函数操作
+
+## BONUS IDEA
+
+1.分频器优化
+
+2.滑动变阻器调节目标位置
+
 ### VScode中git命令
 
 往git中增加所有文件：git add .
