@@ -9,3 +9,14 @@
 # Log file: G:/学习资料/DLKitchen/HDL_Framework/vivado.log
 # Journal file: G:/学习资料/DLKitchen/HDL_Framework\vivado.jou
 #-----------------------------------------------------------
+start_gui
+open_project G:/学习资料/DLKitchen/HDL_Framework/GenshinKitchen.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/86153/Desktop/study/digital logic/proj/DL-kitchen/HDL_Framework' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/Vivado/Vivado/2017.4/data/ip'.
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Dec  3 16:19:54 2023...

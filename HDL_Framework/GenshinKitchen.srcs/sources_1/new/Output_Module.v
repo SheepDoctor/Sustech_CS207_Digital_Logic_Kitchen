@@ -21,7 +21,6 @@
 
 
 module Begin_End(
-    input [4:0] button,
     input [7:0] switches,
     input clk,
     output reg [7:0] dataIn_bits
@@ -38,7 +37,6 @@ module Begin_End(
 endmodule
 
 module TargetMove(
-    input [4:0] button,
     input [7:0] switches,
     input clk,
     input dataIn_ready,
@@ -57,3 +55,86 @@ module TargetMove(
     end
 endmodule
 
+module Get(
+    input [4:0] button,
+    input clk,
+    input dataIn_ready,
+    input [7:0] dataOut_bits,
+    input dataOut_valid,
+    output reg [7:0] dataIn_bits
+);
+    always @(posedge clk , posedge button[0]) begin
+        if (dataOut_valid == 1'b1) begin
+            if(dataOut_bits[5:2] == 4'b1001 & dataIn_ready)
+            dataIn_bits <= 8'b0000_0110;
+        end
+    end
+endmodule
+
+module Put(
+    input [4:0] button,
+    input clk,
+    input dataIn_ready,
+    input [7:0] dataOut_bits,
+    input dataOut_valid,
+    output reg [7:0] dataIn_bits
+);
+    always @(posedge clk , posedge button[1]) begin
+        if (dataOut_valid == 1'b1) begin
+            if(dataOut_bits[5:2] == 4'b110x & dataIn_ready)
+            dataIn_bits <= 8'b0000_1010;
+        end
+    end
+endmodule
+
+module Interact(
+    input [4:0] button,
+    input clk,
+    input dataIn_ready,
+    input [7:0] dataOut_bits,
+    input dataOut_valid,
+    output reg [7:0] dataIn_bits
+);
+    reg continue = 1'b1;
+    always @(posedge clk , posedge button[2]) begin
+        if (continue) begin
+            if (dataOut_valid == 1'b1) begin
+                if(dataOut_bits[5:2] == 4'b1xx1 & dataIn_ready)
+                dataIn_bits <= 8'b0001_0010;
+            end
+            continue <= button[2];
+        end
+    end
+endmodule
+
+module Move(
+    input [4:0] button,
+    input clk,
+    input dataIn_ready,
+    input [7:0] dataOut_bits,
+    input dataOut_valid,
+    output reg [7:0] dataIn_bits
+);
+    always @(posedge clk , posedge button[3]) begin
+        if (dataOut_valid == 1'b1) begin
+            if(dataOut_bits[5:2] == 4'b0xxx & dataIn_ready)
+            dataIn_bits <= 8'b0010_0010;
+        end
+    end
+endmodule
+
+module Throw(
+    input [4:0] button,
+    input clk,
+    input dataIn_ready,
+    input [7:0] dataOut_bits,
+    input dataOut_valid,
+    output reg [7:0] dataIn_bits
+);
+    always @(posedge clk , posedge button[4]) begin
+        if (dataOut_valid == 1'b1) begin
+            if(dataOut_bits[5:2] == 4'bx1xx & dataIn_ready)
+            dataIn_bits <= 8'b0100_0010;
+        end
+    end
+endmodule
