@@ -62,12 +62,63 @@ module DemoTop(
     );
     
     Begin_End input1(
-      .button(button), 
       .switches(switches), 
       .clk(uart_clk_16), 
       .dataIn_bits(dataIn_bits) // client signal
       );
 
+    Get input2(
+    .button(button),
+    .clk(uart_clk_16),
+    .dataIn_ready(dataIn_ready),
+    .dataOut_bits(dataOut_bits),
+    .dataOut_valid(dataOut_valid),
+    .dataIn_bits(dataIn_bits)
+    );
+
+    TargetMove input3(
+    .switches(switches),
+    .clk(uart_clk_16),
+    .dataIn_ready(dataIn_ready),
+    .dataIn_bits(dataIn_bits)
+    );
+
+    Put input4(
+    .button(button),
+    .clk(uart_clk_16),
+    .dataIn_ready(dataIn_ready),
+    .dataOut_bits(dataOut_bits),
+    .dataOut_valid(dataOut_valid),
+    .dataIn_bits(dataIn_bits)
+    );
+    
+    Interact input5(
+     .button(button),
+     .clk(uart_clk_16),
+     .dataIn_ready(dataIn_ready),
+     .dataOut_bits(dataOut_bits),
+     .dataOut_valid(dataOut_valid),
+     .dataIn_bits(dataIn_bits)
+    );
+    
+    Move input6(
+    .button(button),
+    .clk(uart_clk_16),
+    .dataIn_ready(dataIn_ready),
+    .dataOut_bits(dataOut_bits),
+    .dataOut_valid(dataOut_valid),
+    .dataIn_bits(dataIn_bits)   
+    );
+    
+    Throw input7(
+    .button(button),
+    .clk(uart_clk_16),
+    .dataIn_ready(dataIn_ready),
+    .dataOut_bits(dataOut_bits),
+    .dataOut_valid(dataOut_valid),
+    .dataIn_bits(dataIn_bits)       
+    );
+    
     ScriptMem script_mem_module(
       .clock(uart_clk_16),   // please use the same clock as UART module
       .reset(1'b0),           // please use the same reset as UART module
