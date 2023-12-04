@@ -19,24 +19,41 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-
+// control the beginning and the ending of the game
 module Begin_End(
     input [7:0] switches,
     input clk,
     output reg [7:0] dataIn_bits
     );
-    reg [1:0] switch; // A variable to judge if switches[7:6] have been changed.
+    reg [1:0] state; // A variable to judge if switches[7:6] have been changed.
+    reg [1:0] n_state;
+    parameter S0 = 2'b00,S1 = 2'b01,S2 = 2'b10;// * important:need to be put in param.v *
     initial begin
-    switch = 2'b00;
+    state = S0;
+    n_state = S0;
     end
+    
     always @(posedge clk) begin
-    if (switch[1:0] != switches[7:6]) begin
+    state <= n_state;
+    end
+    
+    always @(state,switches[7:6]) begin
+    case(state)
+    S0: if(switches[6]) n_state = S1; else n_state = S0;
+    S1: if(switches[7]) n_state = S2; else n_state = S1;
+    S2: if(switches[6]) n_state = S1; else n_state = S2;
+    endcase
+    if(switches[7]|switches[6]) dataIn_bits = {4'b0000,n_state,2'b01};
+    end
+    
+/*    always @(posedge clk) begin
+    if (state[1:0] != switches[7:6]) begin
         dataIn_bits <= {4'b0000,switches[7:6],2'b01}; // xxxx_0101 or xxxx_1001 present start or end.
-        switch[1:0] <= switches[7:6];
+        state[1:0] <= switches[7:6];
     end
     else
-        switch[1:0] <= switches[7:6];
-    end
+        state[1:0] <= switches[7:6];
+    end */
 endmodule
 
 module TargetMove(

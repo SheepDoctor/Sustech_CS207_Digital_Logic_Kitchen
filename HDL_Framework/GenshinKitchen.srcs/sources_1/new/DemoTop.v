@@ -67,7 +67,7 @@ module DemoTop(
       .dataIn_bits(dataIn_bits) // client signal
       );
 
-    Get input2(
+/*    Get input2(
     .button(button),
     .clk(uart_clk_16),
     .dataIn_ready(dataIn_ready),
@@ -118,7 +118,7 @@ module DemoTop(
     .dataOut_valid(dataOut_valid),
     .dataIn_bits(dataIn_bits)       
     );
-    
+    */
     ScriptMem script_mem_module(
       .clock(uart_clk_16),   // please use the same clock as UART module
       .reset(1'b0),           // please use the same reset as UART module
