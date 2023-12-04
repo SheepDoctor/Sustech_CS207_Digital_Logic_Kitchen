@@ -144,3 +144,5 @@ selectCodeEditor("Output_module.v", 267, 398); // cd (w, cj)
 selectCodeEditor("Output_module.v", 284, 366); // cd (w, cj)
 selectCodeEditor("Output_module.v", 144, 411); // cd (w, cj)
 selectCodeEditor("Output_module.v", 350, 235); // cd (w, cj)
+closeMainWindow("GenshinKitchen - [C:/Users/86153/Desktop/study/digital logic/proj/DL-kitchen/HDL_Framework/GenshinKitchen.xpr] - Vivado 2017.4"); // cj
+// am (cj): Save Project: addNotify

@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Mon Dec  4 11:18:51 2023
+# Process ID: 6912
+# Current directory: C:/Users/86153/Desktop/study/digital logic/proj/DL-kitchen/HDL_Framework
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16828 C:\Users\86153\Desktop\study\digital logic\proj\DL-kitchen\HDL_Framework\GenshinKitchen.xpr
+# Log file: C:/Users/86153/Desktop/study/digital logic/proj/DL-kitchen/HDL_Framework/vivado.log
+# Journal file: C:/Users/86153/Desktop/study/digital logic/proj/DL-kitchen/HDL_Framework\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/86153/Desktop/study/digital logic/proj/DL-kitchen/HDL_Framework/GenshinKitchen.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/viadao/Vivado/2017.4/data/ip'.
+update_compile_order -fileset sources_1
+exit
