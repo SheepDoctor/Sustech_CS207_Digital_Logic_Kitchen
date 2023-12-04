@@ -72,5 +72,5 @@
 #.xci: IP-core property file with core container disabled
 #*.dcp (checkpoint files: better be ignored!)
 #!*.dcp
-
+.vs/
 # End of https://www.toptal.com/developers/gitignore/api/xilinxvivado,vivado
