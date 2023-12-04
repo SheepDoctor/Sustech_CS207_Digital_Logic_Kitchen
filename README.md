@@ -1,4 +1,3 @@
-
 # Welcome to Genshin Kitchen!
 
 ## 小组成员
@@ -35,9 +34,9 @@
 
 commit操作：git commit -m "版本号、注释"
 
-push操作：git push -u origin main
+push操作：git push -u origin
 
-pull操作：git pull origin main
+pull操作：git pull origin
 
 注意及时更新项目内容
 
