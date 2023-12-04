@@ -1,0 +1,146 @@
+/*
+
+Xilinx Vivado v2017.4 (64-bit) [Major: 2017, Minor: 4]
+SW Build: 2086221 on Fri Dec 15 20:55:39 MST 2017
+IP Build: 2085800 on Fri Dec 15 22:25:07 MST 2017
+
+Process ID: 6912
+License: Customer
+
+Current time: 	Mon Dec 04 11:19:01 CST 2023
+Time zone: 	China Standard Time (Asia/Shanghai)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 20
+
+Screen size: 1707x1067
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 66 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	D:/viadao/Vivado/2017.4/tps/win64/jre
+JVM executable location: 	D:/viadao/Vivado/2017.4/tps/win64/jre/bin/java.exe
+
+User name: 	86153
+User home directory: C:/Users/86153
+User working directory: C:/Users/86153/Desktop/study/digital logic/proj/DL-kitchen/HDL_Framework
+User country: 	CN
+User language: 	zh
+User locale: 	zh_CN
+
+RDI_BASEROOT: D:/viadao/Vivado
+HDI_APPROOT: D:/viadao/Vivado/2017.4
+RDI_DATADIR: D:/viadao/Vivado/2017.4/data
+RDI_BINDIR: D:/viadao/Vivado/2017.4/bin
+
+Vivado preferences file location: C:/Users/86153/AppData/Roaming/Xilinx/Vivado/2017.4/vivado.xml
+Vivado preferences directory: C:/Users/86153/AppData/Roaming/Xilinx/Vivado/2017.4/
+Vivado layouts directory: C:/Users/86153/AppData/Roaming/Xilinx/Vivado/2017.4/layouts
+PlanAhead jar file location: 	D:/viadao/Vivado/2017.4/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/86153/Desktop/study/digital logic/proj/DL-kitchen/HDL_Framework/vivado.log
+Vivado journal file location: 	C:/Users/86153/Desktop/study/digital logic/proj/DL-kitchen/HDL_Framework/vivado.jou
+Engine tmp dir: 	C:/Users/86153/Desktop/study/digital logic/proj/DL-kitchen/HDL_Framework/.Xil/Vivado-6912-Sigma
+
+GUI allocated memory:	246 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 580 MB
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bs (cj):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\86153\Desktop\study\digital logic\proj\DL-kitchen\HDL_Framework\GenshinKitchen.xpr. Version: Vivado v2017.4 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 58 MB (+58018kb) [00:00:05]
+// [Engine Memory]: 534 MB (+408975kb) [00:00:05]
+// [GUI Memory]: 66 MB (+5519kb) [00:00:06]
+// Tcl Message: open_project {C:/Users/86153/Desktop/study/digital logic/proj/DL-kitchen/HDL_Framework/GenshinKitchen.xpr} 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/viadao/Vivado/2017.4/data/ip'. 
+// Project name: GenshinKitchen; location: C:/Users/86153/Desktop/study/digital logic/proj/DL-kitchen/HDL_Framework; part: xc7a35tcsg324-1
+// [Engine Memory]: 588 MB (+27628kb) [00:00:07]
+dismissDialog("Open Project"); // bs (cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// HMemoryUtils.trashcanNow. Engine heap size: 588 MB. GUI used memory: 42 MB. Current time: 12/4/23 11:19:03 AM CST
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v)]", 1); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v), output1 : Led1 (Input_Module.v)]", 3, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v), output1 : Led1 (Input_Module.v)]", 3, false, false, false, false, false, true); // B (D, cj) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v), input1 : Begin_End (Output_module.v)]", 5, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, DemoTop (DemoTop.v), input1 : Begin_End (Output_module.v)]", 5, false, false, false, false, false, true); // B (D, cj) - Double Click
+selectCodeEditor("Output_module.v", 146, 143); // cd (w, cj)
+// [GUI Memory]: 70 MB (+450kb) [00:00:30]
+// Elapsed time: 17 seconds
+selectCodeEditor("Output_module.v", 271, 213); // cd (w, cj)
+selectCodeEditor("Output_module.v", 229, 223); // cd (w, cj)
+selectCodeEditor("Output_module.v", 145, 234); // cd (w, cj)
+// Elapsed time: 14 seconds
+selectCodeEditor("Output_module.v", 149, 277); // cd (w, cj)
+// Elapsed time: 12 seconds
+selectCodeEditor("Output_module.v", 367, 280); // cd (w, cj)
+selectCodeEditor("Output_module.v", 79, 351); // cd (w, cj)
+selectCodeEditor("Output_module.v", 355, 293); // cd (w, cj)
+selectCodeEditor("Output_module.v", 345, 278); // cd (w, cj)
+selectCodeEditor("Output_module.v", 168, 313); // cd (w, cj)
+// [GUI Memory]: 73 MB (+362kb) [00:01:29]
+selectCodeEditor("Output_module.v", 252, 273); // cd (w, cj)
+typeControlKey((HResource) null, "Output_module.v", 'c'); // cd (w, cj)
+selectCodeEditor("Output_module.v", 55, 290); // cd (w, cj)
+typeControlKey((HResource) null, "Output_module.v", 'v'); // cd (w, cj)
+selectCodeEditor("Output_module.v", 117, 368); // cd (w, cj)
+selectCodeEditor("Output_module.v", 161, 363); // cd (w, cj)
+selectCodeEditor("Output_module.v", 199, 403); // cd (w, cj)
+selectCodeEditor("Output_module.v", 169, 351); // cd (w, cj)
+// [GUI Memory]: 80 MB (+3264kb) [00:01:56]
+selectCodeEditor("Output_module.v", 144, 333); // cd (w, cj)
+typeControlKey((HResource) null, "Output_module.v", 'v'); // cd (w, cj)
+selectCodeEditor("Output_module.v", 353, 332); // cd (w, cj)
+typeControlKey((HResource) null, "Output_module.v", 'v'); // cd (w, cj)
+selectCodeEditor("Output_module.v", 117, 427); // cd (w, cj)
+selectCodeEditor("Output_module.v", 145, 295); // cd (w, cj)
+typeControlKey((HResource) null, "Output_module.v", 'v'); // cd (w, cj)
+selectCodeEditor("Output_module.v", 169, 317); // cd (w, cj)
+// [GUI Memory]: 86 MB (+1469kb) [00:02:33]
+selectCodeEditor("Output_module.v", 358, 291); // cd (w, cj)
+typeControlKey((HResource) null, "Output_module.v", 'v'); // cd (w, cj)
+selectCodeEditor("Output_module.v", 115, 454); // cd (w, cj)
+selectCodeEditor("Output_module.v", 143, 419); // cd (w, cj)
+selectCodeEditor("Output_module.v", 87, 455); // cd (w, cj)
+selectCodeEditor("Output_module.v", 167, 293); // cd (w, cj)
+selectCodeEditor("Output_module.v", 142, 279); // cd (w, cj)
+typeControlKey((HResource) null, "Output_module.v", 'v'); // cd (w, cj)
+selectCodeEditor("Output_module.v", 413, 282); // cd (w, cj)
+typeControlKey((HResource) null, "Output_module.v", 'v'); // cd (w, cj)
+selectCodeEditor("Output_module.v", 116, 365); // cd (w, cj)
+// [GUI Memory]: 91 MB (+1043kb) [00:03:16]
+selectCodeEditor("Output_module.v", 143, 331); // cd (w, cj)
+typeControlKey((HResource) null, "Output_module.v", 'v'); // cd (w, cj)
+selectCodeEditor("Output_module.v", 378, 329); // cd (w, cj)
+typeControlKey((HResource) null, "Output_module.v", 'v'); // cd (w, cj)
+selectCodeEditor("Output_module.v", 101, 430); // cd (w, cj)
+selectCodeEditor("Output_module.v", 71, 449); // cd (w, cj)
+selectCodeEditor("Output_module.v", 97, 439); // cd (w, cj)
+selectCodeEditor("Output_module.v", 113, 427); // cd (w, cj)
+selectCodeEditor("Output_module.v", 267, 398); // cd (w, cj)
+selectCodeEditor("Output_module.v", 284, 366); // cd (w, cj)
+selectCodeEditor("Output_module.v", 144, 411); // cd (w, cj)
+selectCodeEditor("Output_module.v", 350, 235); // cd (w, cj)
