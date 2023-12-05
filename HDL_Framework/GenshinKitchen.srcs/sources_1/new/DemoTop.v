@@ -33,26 +33,34 @@ module DemoTop(
     );
 
 // The wire below is useful!
-        wire uart_clk_16;
-        
-        wire [7:0] dataIn_bits;
-        wire dataIn_ready;
+wire uart_clk_16;
 
-        wire [7:0] dataOut_bits;
-        wire dataOut_valid;
-
-        wire script_mode;
-        wire [7:0] pc;
-        wire [15:0] script;
+wire [7:0] dataIn_bits;
+wire dataIn_ready;
+wire [7:0] dataOut_bits;
+wire dataOut_valid;
+wire script_mode;
+wire [7:0] pc;
+wire [15:0] script;
 // The wire above is useful~
+wire [7:0] led1in;
+wire [7:0] led2in;
+// Self-Defined wires
 
     clock_frequency_divider clock(
     .clk(clk),
     .uart_clk(uart_clk_16)
     );
-    
+
+    UnPackSignal outdata(
+      .clk(uart_clk_16),
+      .dataOut_bits(dataOut_bits),
+      .dataOut_valid(dataOut_valid),
+      .led2(led2in)
+    );
+
     Led1 output1(
-    .dataIn_bits(dataIn_bits),
+    .data(dataOut_bits),
     .led(led)
     );
     

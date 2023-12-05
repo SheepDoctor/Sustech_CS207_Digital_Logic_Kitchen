@@ -27,3 +27,10 @@ output [7:0] led2
 assign led2 = dataOut_bits;
     //to be done
 endmodule
+
+module Led1(
+    input [7:0] dataIn_bits,
+    output [7:0] led
+    );
+    assign led = dataIn_bits;
+endmodule
