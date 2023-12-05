@@ -75,7 +75,7 @@ wire [7:0] led2in;
       .dataIn_bits(dataIn_bits) // client signal
       );
 
-/*    Get input2(
+ /*   Get input2(
     .button(button),
     .clk(uart_clk_16),
     .dataIn_ready(dataIn_ready),
@@ -125,8 +125,8 @@ wire [7:0] led2in;
     .dataOut_bits(dataOut_bits),
     .dataOut_valid(dataOut_valid),
     .dataIn_bits(dataIn_bits)       
-    );
-    */
+    );*/
+    
     ScriptMem script_mem_module(
       .clock(uart_clk_16),   // please use the same clock as UART module
       .reset(1'b0),           // please use the same reset as UART module
