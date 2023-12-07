@@ -56,23 +56,29 @@ wire slow_clk;
     );
 /*    
     reset reset(
-    .clk(uart_clk_16),
+    .clk(slow_clk),
     .dataIn_ready(dataIn_ready),
     .dataIn_bits(dataIn_bits)
     );
-    */
+    
     set_ready set (
     .clk(slow_clk),
     .rst_n(rst_n),
     .dataIn_ready(dataIn_ready)
-    );
+    );*/
     
     Begin_End input1(
-    .clk(slow_clk),
-      .switches(switches), 
+        .switches(switches[7:6]), 
       .dataIn_ready(dataIn_ready), 
       .dataIn_bits(dataIn_bits) // client signal
       );
+
+    TargetMove input3(
+        .switches(switches[5:0]),
+    .dataIn_ready(dataIn_ready),
+    .dataIn_bits(dataIn_bits)
+    );
+    
   /*    
     UnPackSignal outdata(
       .clk(uart_clk_16),
@@ -105,13 +111,6 @@ wire slow_clk;
     .dataIn_ready(dataIn_ready),
     .dataOut_bits(dataOut_bits),
     .dataOut_valid(dataOut_valid),
-    .dataIn_bits(dataIn_bits)
-    );
-
-    TargetMove input3(
-    .switches(switches),
-    .clk(uart_clk_16),
-    .dataIn_ready(dataIn_ready),
     .dataIn_bits(dataIn_bits)
     );
 
