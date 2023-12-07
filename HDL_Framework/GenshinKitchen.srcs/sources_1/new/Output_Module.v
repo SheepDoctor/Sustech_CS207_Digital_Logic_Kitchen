@@ -21,47 +21,52 @@
 
 // control the beginning and the ending of the game
 module Begin_End(
-    input clk,
-    input [7:0] switches,
+    input [1:0] switches,
     input dataIn_ready,
     output reg [7:0] dataIn_bits
     );
-    
-    always @(posedge clk,posedge switches[7]) begin
-    if(dataIn_ready&switches[7]) dataIn_bits <= 8'b0000_1001;
+  always @(switches[1:0]) begin
+            case (switches[1:0])
+            2'b01: dataIn_bits = 8'b0000_0101;
+            2'b10: dataIn_bits = 8'b0000_1001;
+            default: dataIn_bits = 8'b0000_0000;
+            endcase
+        end
+endmodule
+
+module TargetMove(
+    input [5:0] switches,
+    input dataIn_ready,
+    output reg [7:0] dataIn_bits
+);
+
+    always @(switches[5:0]) begin
+    if(dataIn_ready)
+         case(switches[5:0])
+         6'b000001: dataIn_bits = 8'b0000_0111; // xxxx_xx11 present the target machine.
+         6'b000010: dataIn_bits = 8'b0000_1011;
+         6'b000011: dataIn_bits = 8'b0000_1111;
+         6'b000100: dataIn_bits = 8'b0001_0011;
+         6'b000101: dataIn_bits = 8'b0001_0111;
+         6'b000110: dataIn_bits = 8'b0001_1011;
+         6'b000111: dataIn_bits = 8'b0001_1111;
+         6'b001000: dataIn_bits = 8'b0010_0011;
+         6'b001001: dataIn_bits = 8'b0010_0111;
+         6'b001010: dataIn_bits = 8'b0010_1011;
+         6'b001011: dataIn_bits = 8'b0010_1111;
+         6'b001100: dataIn_bits = 8'b0011_0011;
+         6'b001101: dataIn_bits = 8'b0011_0111;
+         6'b001110: dataIn_bits = 8'b0011_1011;
+         6'b001111: dataIn_bits = 8'b0011_1111;
+         6'b010000: dataIn_bits = 8'b0100_0011;
+         6'b010001: dataIn_bits = 8'b0100_0111;
+         6'b010010: dataIn_bits = 8'b0100_1011;
+         6'b010011: dataIn_bits = 8'b0100_1111;
+         6'b010100: dataIn_bits = 8'b0101_0011;
+         default: dataIn_bits = 8'b0000_0000;
+         endcase
+         else dataIn_bits = 8'b0000_0000;
     end
-    
-    always @(posedge clk,posedge switches[6]) begin
-    if(dataIn_ready&switches[6]) dataIn_bits <= 8'b0000_0101;
-    end
-  /*  reg [1:0] state; // A variable to judge if switches[7:6] have been changed.
-    reg [1:0] n_state;
-    parameter S0 = 2'b00,S1 = 2'b01,S2 = 2'b10;// * important:need to be put in param.v *
-    initial begin
-    state = S0;
-    end
-    
-    always @(posedge clk) begin
-    state <= n_state;
-    end
-    
-    always @(state,switches[7:6]) begin
-    case(state)
-    S0: if(switches[6]) n_state = S1; else n_state = S0;
-    S1: if(switches[7]) n_state = S2; else n_state = S1;
-    S2: if(switches[6]) n_state = S1; else n_state = S2;
-    endcase
-    if(switches[7]|switches[6]) dataIn_bits = {4'b0000,n_state,2'b01};
-    end
-    
-    always @(posedge clk) begin
-    if (state[1:0] != switches[7:6]) begin
-        dataIn_bits <= {4'b0000,switches[7:6],2'b01}; // xxxx_0101 or xxxx_1001 present start or end.
-        state[1:0] <= switches[7:6];
-    end
-    else
-        state[1:0] <= switches[7:6];
-    end */
 endmodule
 
 /*module TargetMove(
