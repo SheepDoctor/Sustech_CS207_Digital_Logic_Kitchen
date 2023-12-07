@@ -18,10 +18,10 @@ module Input_sim();
         forever begin
             #5 clk = ~clk;
         end
-        #15 dataOut_bits <= 8'b0000_0101;
-        #30 dataOut_bits <= 8'b0000_1001;
-        #45 dataOut_bits <= 8'b0001_0001;
-        #60 dataOut_bits <= 8'b0010_0001;
-        #100 $finish;
+        #25 dataOut_bits <= 8'b0000_0101;
+        #50 dataOut_bits <= 8'b0000_1001;
+        #75 dataOut_bits <= 8'b0001_0001;
+        #100 dataOut_bits <= 8'b0010_0001;
+        #125 $finish;
     join
 endmodule

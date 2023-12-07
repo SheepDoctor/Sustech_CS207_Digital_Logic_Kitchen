@@ -1,6 +1,6 @@
 webtalk_init -webtalk_dir D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DLProject/HDL_Framework/GenshinKitchen.sim/sim_1/behav/xsim/xsim.dir/Input_sim_behav/webtalk/
 webtalk_register_client -client project
-webtalk_add_data -client project -key date_generated -value "Thu Dec  7 16:49:10 2023" -context "software_version_and_target_device"
+webtalk_add_data -client project -key date_generated -value "Thu Dec  7 17:05:37 2023" -context "software_version_and_target_device"
 webtalk_add_data -client project -key product_version -value "XSIM v2017.4 (64-bit)" -context "software_version_and_target_device"
 webtalk_add_data -client project -key build_version -value "2086221" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_platform -value "WIN64" -context "software_version_and_target_device"
@@ -14,7 +14,7 @@ webtalk_add_data -client project -key target_package -value "not_applicable" -co
 webtalk_add_data -client project -key target_speed -value "not_applicable" -context "software_version_and_target_device"
 webtalk_add_data -client project -key random_id -value "c6540507-fdb2-409e-9a14-bd66f84c6b21" -context "software_version_and_target_device"
 webtalk_add_data -client project -key project_id -value "6bf56228a5c649ff9546cb7f4f01d313" -context "software_version_and_target_device"
-webtalk_add_data -client project -key project_iteration -value "16" -context "software_version_and_target_device"
+webtalk_add_data -client project -key project_iteration -value "21" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_name -value "Microsoft Windows 8 or later , 64-bit" -context "user_environment"
 webtalk_add_data -client project -key os_release -value "major release  (build 9200)" -context "user_environment"
 webtalk_add_data -client project -key cpu_name -value "12th Gen Intel(R) Core(TM) i7-12700H" -context "user_environment"
@@ -24,9 +24,9 @@ webtalk_add_data -client project -key system_ram -value "16.000 GB" -context "us
 webtalk_register_client -client xsim
 webtalk_add_data -client xsim -key Command -value "xsim" -context "xsim\\command_line_options"
 webtalk_add_data -client xsim -key trace_waveform -value "true" -context "xsim\\usage"
-webtalk_add_data -client xsim -key runtime -value "100 ns" -context "xsim\\usage"
+webtalk_add_data -client xsim -key runtime -value "125 ns" -context "xsim\\usage"
 webtalk_add_data -client xsim -key iteration -value "0" -context "xsim\\usage"
 webtalk_add_data -client xsim -key Simulation_Time -value "0.00_sec" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Simulation_Memory -value "8680_KB" -context "xsim\\usage"
-webtalk_transmit -clientid 3087289434 -regid "" -xml D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DLProject/HDL_Framework/GenshinKitchen.sim/sim_1/behav/xsim/xsim.dir/Input_sim_behav/webtalk/usage_statistics_ext_xsim.xml -html D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DLProject/HDL_Framework/GenshinKitchen.sim/sim_1/behav/xsim/xsim.dir/Input_sim_behav/webtalk/usage_statistics_ext_xsim.html -wdm D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DLProject/HDL_Framework/GenshinKitchen.sim/sim_1/behav/xsim/xsim.dir/Input_sim_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
+webtalk_add_data -client xsim -key Simulation_Memory -value "8688_KB" -context "xsim\\usage"
+webtalk_transmit -clientid 3493584026 -regid "" -xml D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DLProject/HDL_Framework/GenshinKitchen.sim/sim_1/behav/xsim/xsim.dir/Input_sim_behav/webtalk/usage_statistics_ext_xsim.xml -html D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DLProject/HDL_Framework/GenshinKitchen.sim/sim_1/behav/xsim/xsim.dir/Input_sim_behav/webtalk/usage_statistics_ext_xsim.html -wdm D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DLProject/HDL_Framework/GenshinKitchen.sim/sim_1/behav/xsim/xsim.dir/Input_sim_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
 webtalk_terminate
