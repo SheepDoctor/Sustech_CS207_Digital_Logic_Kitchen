@@ -22,22 +22,38 @@
 //transfer clk into uart_clk
 module clock_frequency_divider(
 input clk,
-output reg uart_clk 
+output reg uart_clk, 
+output reg slow_clk
 //maybe write other clks here
     );
-parameter period = 650;    // 100000000/650 Hz stable
-reg [15:0] count; // 16 bits counter for dividing frequency
+parameter period1 = 650, period2 = 10000000;    // 100000000/650 Hz stable and 10Hz stable
+reg [15:0] count1;// 16 bits counter for dividing frequency
+reg [31:0] count2; 
 initial begin
-count<=0;
+count1<=0;
 uart_clk<=0;
 end
 always @ (posedge clk) begin
-if(count==(period>>1)-1) begin
+if(count1==(period1>>1)-1) begin
 uart_clk <= ~uart_clk; // invert clock
-count<=0;
+count1<=0;
 end 
 else begin
-count <= count+1;
+count1 <= count1+1;
+end
+end
+
+initial begin
+count2<=0;
+slow_clk<=0;
+end
+always @ (posedge clk) begin
+if(count2==(period2>>1)-1) begin
+slow_clk <= ~slow_clk; // invert clock
+count2<=0;
+end 
+else begin
+count2 <= count2+1;
 end
 end
 endmodule

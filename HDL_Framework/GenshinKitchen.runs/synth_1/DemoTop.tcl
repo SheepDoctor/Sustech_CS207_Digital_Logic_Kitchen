@@ -16,30 +16,31 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param xicom.use_bs_reader 1
 create_project -in_memory -part xc7a35tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/Users/86153/Desktop/Proj/DL-Kitchen/HDL_Framework/GenshinKitchen.cache/wt [current_project]
-set_property parent.project_path C:/Users/86153/Desktop/Proj/DL-Kitchen/HDL_Framework/GenshinKitchen.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/86153/Desktop/CS207-Project/DL-Kitchen/HDL_Framework/GenshinKitchen.cache/wt [current_project]
+set_property parent.project_path C:/Users/86153/Desktop/CS207-Project/DL-Kitchen/HDL_Framework/GenshinKitchen.xpr [current_project]
 set_property XPM_LIBRARIES XPM_MEMORY [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo c:/Users/86153/Desktop/Proj/DL-Kitchen/HDL_Framework/GenshinKitchen.cache/ip [current_project]
+set_property ip_output_repo c:/Users/86153/Desktop/CS207-Project/DL-Kitchen/HDL_Framework/GenshinKitchen.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
-  C:/Users/86153/Desktop/Proj/DL-Kitchen/HDL_Framework/GenshinKitchen.srcs/sources_1/new/Input_Module.v
-  C:/Users/86153/Desktop/Proj/DL-Kitchen/HDL_Framework/GenshinKitchen.srcs/sources_1/new/Led2.v
-  C:/Users/86153/Desktop/Proj/DL-Kitchen/HDL_Framework/GenshinKitchen.srcs/sources_1/new/Output_Module.v
-  C:/Users/86153/Desktop/Proj/DL-Kitchen/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptMem.v
-  C:/Users/86153/Desktop/Proj/DL-Kitchen/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UART.v
-  C:/Users/86153/Desktop/Proj/DL-Kitchen/HDL_Framework/GenshinKitchen.srcs/sources_1/new/clock_frequency_divider.v
-  C:/Users/86153/Desktop/Proj/DL-Kitchen/HDL_Framework/GenshinKitchen.srcs/sources_1/new/DemoTop.v
+  C:/Users/86153/Desktop/CS207-Project/DL-Kitchen/HDL_Framework/GenshinKitchen.srcs/sources_1/new/Led2.v
+  C:/Users/86153/Desktop/CS207-Project/DL-Kitchen/HDL_Framework/GenshinKitchen.srcs/sources_1/new/Output_Module.v
+  C:/Users/86153/Desktop/CS207-Project/DL-Kitchen/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptMem.v
+  C:/Users/86153/Desktop/CS207-Project/DL-Kitchen/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UART.v
+  C:/Users/86153/Desktop/CS207-Project/DL-Kitchen/HDL_Framework/GenshinKitchen.srcs/sources_1/new/clock_frequency_divider.v
+  C:/Users/86153/Desktop/CS207-Project/DL-Kitchen/HDL_Framework/GenshinKitchen.srcs/sources_1/new/reset.v
+  C:/Users/86153/Desktop/CS207-Project/DL-Kitchen/HDL_Framework/GenshinKitchen.srcs/sources_1/new/DemoTop.v
 }
-read_ip -quiet C:/Users/86153/Desktop/Proj/DL-Kitchen/HDL_Framework/GenshinKitchen.srcs/sources_1/ip/inst_ram/inst_ram.xci
-set_property used_in_implementation false [get_files -all c:/Users/86153/Desktop/Proj/DL-Kitchen/HDL_Framework/GenshinKitchen.srcs/sources_1/ip/inst_ram/inst_ram_ooc.xdc]
+read_ip -quiet C:/Users/86153/Desktop/CS207-Project/DL-Kitchen/HDL_Framework/GenshinKitchen.srcs/sources_1/ip/inst_ram/inst_ram.xci
+set_property used_in_implementation false [get_files -all c:/Users/86153/Desktop/CS207-Project/DL-Kitchen/HDL_Framework/GenshinKitchen.srcs/sources_1/ip/inst_ram/inst_ram_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -49,8 +50,8 @@ set_property used_in_implementation false [get_files -all c:/Users/86153/Desktop
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/86153/Desktop/Proj/DL-Kitchen/HDL_Framework/GenshinKitchen.srcs/constrs_1/new/cons.xdc
-set_property used_in_implementation false [get_files C:/Users/86153/Desktop/Proj/DL-Kitchen/HDL_Framework/GenshinKitchen.srcs/constrs_1/new/cons.xdc]
+read_xdc C:/Users/86153/Desktop/CS207-Project/DL-Kitchen/HDL_Framework/GenshinKitchen.srcs/constrs_1/new/cons.xdc
+set_property used_in_implementation false [get_files C:/Users/86153/Desktop/CS207-Project/DL-Kitchen/HDL_Framework/GenshinKitchen.srcs/constrs_1/new/cons.xdc]
 
 
 synth_design -top DemoTop -part xc7a35tcsg324-1

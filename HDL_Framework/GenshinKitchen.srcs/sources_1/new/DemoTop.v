@@ -28,6 +28,7 @@ module DemoTop(
     output [7:0] led2,
     
     input clk,
+    input rst_n,
     input rx,
     output tx
     );
@@ -45,37 +46,59 @@ wire [15:0] script;
 // The wire above is useful~
 wire [7:0] led1in;
 wire [7:0] led2in;
+wire slow_clk;
 // Self-Defined wires
 
     clock_frequency_divider clock(
     .clk(clk),
-    .uart_clk(uart_clk_16)
+    .uart_clk(uart_clk_16),
+    .slow_clk(slow_clk)
     );
-
+/*    
+    reset reset(
+    .clk(uart_clk_16),
+    .dataIn_ready(dataIn_ready),
+    .dataIn_bits(dataIn_bits)
+    );
+    */
+    set_ready set (
+    .clk(slow_clk),
+    .rst_n(rst_n),
+    .dataIn_ready(dataIn_ready)
+    );
+    
+    Begin_End input1(
+    .clk(slow_clk),
+      .switches(switches), 
+      .dataIn_ready(dataIn_ready), 
+      .dataIn_bits(dataIn_bits) // client signal
+      );
+  /*    
     UnPackSignal outdata(
       .clk(uart_clk_16),
       .dataOut_bits(dataOut_bits),
       .dataOut_valid(dataOut_valid),
       .led2(led2in)
-    );
+    );*/
 
     Led1 output1(
-    .data(dataOut_bits),
+    .dataIn_bits(dataIn_bits),
     .led(led)
     );
     
     Led2 output2(
-    .dataOut_bits(dataOut_bits),//feedback signal
+     .dataIn_ready(dataIn_ready),
+     .dataOut_ready(dataOut_valid),//feedback signal
     .led2(led2)
     );
-    
+ /*   
     Begin_End input1(
       .switches(switches), 
-      .clk(uart_clk_16), 
+      .dataIn_ready(dataIn_ready), 
       .dataIn_bits(dataIn_bits) // client signal
       );
 
- /*   Get input2(
+    Get input2(
     .button(button),
     .clk(uart_clk_16),
     .dataIn_ready(dataIn_ready),

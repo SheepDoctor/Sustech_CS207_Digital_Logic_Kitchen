@@ -1,0 +1,42 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+<<<<<<< HEAD
+# Start of session at: Mon Dec  4 23:21:45 2023
+# Process ID: 17656
+# Current directory: D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DLProject/HDL_Framework
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent21896 D:\OWEN\Undergraduate\2Autumn\DigitalLogic\DLProject\HDL_Framework\GenshinKitchen.xpr
+# Log file: D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DLProject/HDL_Framework/vivado.log
+# Journal file: D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DLProject/HDL_Framework\vivado.jou
+=======
+# Start of session at: Mon Dec  4 22:38:52 2023
+# Process ID: 9196
+# Current directory: C:/Users/86153/Desktop/Proj/DL-Kitchen/HDL_Framework
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7912 C:\Users\86153\Desktop\Proj\DL-Kitchen\HDL_Framework\GenshinKitchen.xpr
+# Log file: C:/Users/86153/Desktop/Proj/DL-Kitchen/HDL_Framework/vivado.log
+# Journal file: C:/Users/86153/Desktop/Proj/DL-Kitchen/HDL_Framework\vivado.jou
+>>>>>>> 02a34693d5a505abf14f0fb1d389ae4f22e5a441
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/86153/Desktop/Proj/DL-Kitchen/HDL_Framework/GenshinKitchen.xpr
+update_compile_order -fileset sources_1
+<<<<<<< HEAD
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+=======
+launch_runs impl_1 -jobs 10
+wait_on_run impl_1
+reset_run impl_1
+launch_runs impl_1 -jobs 10
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 10
+wait_on_run impl_1
+reset_run impl_1
+launch_runs impl_1 -jobs 10
+wait_on_run impl_1
+>>>>>>> 02a34693d5a505abf14f0fb1d389ae4f22e5a441

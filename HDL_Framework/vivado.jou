@@ -2,41 +2,127 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-<<<<<<< HEAD
-# Start of session at: Mon Dec  4 23:21:45 2023
-# Process ID: 17656
-# Current directory: D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DLProject/HDL_Framework
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent21896 D:\OWEN\Undergraduate\2Autumn\DigitalLogic\DLProject\HDL_Framework\GenshinKitchen.xpr
-# Log file: D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DLProject/HDL_Framework/vivado.log
-# Journal file: D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DLProject/HDL_Framework\vivado.jou
-=======
-# Start of session at: Mon Dec  4 22:38:52 2023
-# Process ID: 9196
-# Current directory: C:/Users/86153/Desktop/Proj/DL-Kitchen/HDL_Framework
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7912 C:\Users\86153\Desktop\Proj\DL-Kitchen\HDL_Framework\GenshinKitchen.xpr
-# Log file: C:/Users/86153/Desktop/Proj/DL-Kitchen/HDL_Framework/vivado.log
-# Journal file: C:/Users/86153/Desktop/Proj/DL-Kitchen/HDL_Framework\vivado.jou
->>>>>>> 02a34693d5a505abf14f0fb1d389ae4f22e5a441
+# Start of session at: Thu Dec  7 12:56:23 2023
+# Process ID: 1604
+# Current directory: C:/Users/86153/Desktop/CS207-Project/DL-Kitchen/HDL_Framework
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6728 C:\Users\86153\Desktop\CS207-Project\DL-Kitchen\HDL_Framework\GenshinKitchen.xpr
+# Log file: C:/Users/86153/Desktop/CS207-Project/DL-Kitchen/HDL_Framework/vivado.log
+# Journal file: C:/Users/86153/Desktop/CS207-Project/DL-Kitchen/HDL_Framework\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/86153/Desktop/Proj/DL-Kitchen/HDL_Framework/GenshinKitchen.xpr
+open_project C:/Users/86153/Desktop/CS207-Project/DL-Kitchen/HDL_Framework/GenshinKitchen.xpr
 update_compile_order -fileset sources_1
-<<<<<<< HEAD
+close [ open C:/Users/86153/Desktop/CS207-Project/DL-Kitchen/HDL_Framework/GenshinKitchen.srcs/sources_1/new/reset.v w ]
+add_files C:/Users/86153/Desktop/CS207-Project/DL-Kitchen/HDL_Framework/GenshinKitchen.srcs/sources_1/new/reset.v
 update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-=======
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+wait_on_run synth_1
+reset_run inst_ram_synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+wait_on_run synth_1
 launch_runs impl_1 -jobs 10
 wait_on_run impl_1
 reset_run impl_1
+launch_runs impl_1 -jobs 10
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/86153/Desktop/CS207-Project/DL-Kitchen/HDL_Framework/GenshinKitchen.runs/impl_1/DemoTop.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/86153/Desktop/CS207-Project/DL-Kitchen/HDL_Framework/GenshinKitchen.runs/impl_1/DemoTop.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+wait_on_run synth_1
+launch_runs impl_1 -jobs 10
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/86153/Desktop/CS207-Project/DL-Kitchen/HDL_Framework/GenshinKitchen.runs/impl_1/DemoTop.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+wait_on_run synth_1
+launch_runs impl_1 -jobs 10
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/86153/Desktop/CS207-Project/DL-Kitchen/HDL_Framework/GenshinKitchen.runs/impl_1/DemoTop.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+wait_on_run synth_1
+launch_runs impl_1 -jobs 10
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/86153/Desktop/CS207-Project/DL-Kitchen/HDL_Framework/GenshinKitchen.runs/impl_1/DemoTop.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+wait_on_run synth_1
+launch_runs impl_1 -jobs 10
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/86153/Desktop/CS207-Project/DL-Kitchen/HDL_Framework/GenshinKitchen.runs/impl_1/DemoTop.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+disconnect_hw_server
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+wait_on_run synth_1
 launch_runs impl_1 -jobs 10
 wait_on_run impl_1
 reset_run synth_1
+launch_runs synth_1 -jobs 10
+wait_on_run synth_1
 launch_runs impl_1 -jobs 10
 wait_on_run impl_1
-reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/86153/Desktop/CS207-Project/DL-Kitchen/HDL_Framework/GenshinKitchen.runs/impl_1/DemoTop.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/86153/Desktop/CS207-Project/DL-Kitchen/HDL_Framework/GenshinKitchen.runs/impl_1/DemoTop.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+wait_on_run synth_1
 launch_runs impl_1 -jobs 10
 wait_on_run impl_1
->>>>>>> 02a34693d5a505abf14f0fb1d389ae4f22e5a441
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/86153/Desktop/CS207-Project/DL-Kitchen/HDL_Framework/GenshinKitchen.runs/impl_1/DemoTop.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]

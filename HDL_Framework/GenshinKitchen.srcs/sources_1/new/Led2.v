@@ -21,10 +21,12 @@
 
 // show feedback signal
 module Led2(
-input [7:0] dataOut_bits,
+input dataIn_ready,
+input dataOut_ready,
 output [7:0] led2
     );
-assign led2 = dataOut_bits;
+assign led2[7] = dataIn_ready;
+assign led2[6] = dataOut_ready;
     //to be done
 endmodule
 

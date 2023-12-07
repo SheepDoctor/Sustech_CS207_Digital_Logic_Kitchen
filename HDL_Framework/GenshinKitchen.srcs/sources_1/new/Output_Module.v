@@ -21,11 +21,20 @@
 
 // control the beginning and the ending of the game
 module Begin_End(
-    input [7:0] switches,
     input clk,
+    input [7:0] switches,
+    input dataIn_ready,
     output reg [7:0] dataIn_bits
     );
-    reg [1:0] state; // A variable to judge if switches[7:6] have been changed.
+    
+    always @(posedge clk,posedge switches[7]) begin
+    if(dataIn_ready&switches[7]) dataIn_bits <= 8'b0000_1001;
+    end
+    
+    always @(posedge clk,posedge switches[6]) begin
+    if(dataIn_ready&switches[6]) dataIn_bits <= 8'b0000_0101;
+    end
+  /*  reg [1:0] state; // A variable to judge if switches[7:6] have been changed.
     reg [1:0] n_state;
     parameter S0 = 2'b00,S1 = 2'b01,S2 = 2'b10;// * important:need to be put in param.v *
     initial begin
@@ -45,7 +54,7 @@ module Begin_End(
     if(switches[7]|switches[6]) dataIn_bits = {4'b0000,n_state,2'b01};
     end
     
-/*    always @(posedge clk) begin
+    always @(posedge clk) begin
     if (state[1:0] != switches[7:6]) begin
         dataIn_bits <= {4'b0000,switches[7:6],2'b01}; // xxxx_0101 or xxxx_1001 present start or end.
         state[1:0] <= switches[7:6];

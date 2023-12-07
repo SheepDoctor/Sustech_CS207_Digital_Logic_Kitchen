@@ -1,9 +1,11 @@
 set_property IOSTANDARD LVCMOS33 [get_ports clk]
 set_property IOSTANDARD LVCMOS33 [get_ports rx]
 set_property IOSTANDARD LVCMOS33 [get_ports tx]
+set_property IOSTANDARD LVCMOS33 [get_ports rst_n]
 set_property PACKAGE_PIN P17 [get_ports clk]
 set_property PACKAGE_PIN N5 [get_ports rx]
 set_property PACKAGE_PIN T4 [get_ports tx]
+set_property PACKAGE_PIN P15 [get_ports rst_n]
 
 set_property IOSTANDARD LVCMOS33 [get_ports {led[4]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {led[3]}]
