@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 // control the beginning and the ending of the game
-Module output(
+module Output(
     input clk,
     input [7:0] switches,
     input [4:0] button,
@@ -30,7 +30,140 @@ Module output(
     input dataOut_valid,
     output reg dataIn_bits
 );
-    parameter S0 = 2'b00, S_start = 2'b01,In_Start = 8'b0000_0101,In_End = 8'b0000_1001,In_Get = 5'b00001,
+wire [12:0]signal;
+assign signal = {switches,button};
+parameter S_start = 4'b000,S_end = 4'b001,S_choose = 4'b010,S_get = 4'b011,S_put = 4'b100,S_interact = 4'b101,S_move = 4'b110,S_throw = 4'b111;
+reg [3:0] state;
+reg [3:0] n_state;
+always @(posedge clk, negedge rst_n) begin
+    if(~rst_n)
+    state <= S_end;
+    else 
+    state <= n_state;
+end
+always@(state,signal) begin
+case(state)
+
+S_end:begin
+casex(signal) 
+13'b01xx_xxxx_xxxx_x:begin 
+n_state = S_start;
+dataIn_bits = 8'b0000_0101;
+end
+default:n_state = S_end;
+endcase 
+end
+
+S_start:begin
+casex(signal) 
+13'b10_xxxxxx_xxxxx:begin 
+n_state = S_end;
+dataIn_bits = 8'b0000_1001;
+end
+13'b0x_000001_xxxxx:begin 
+n_state = S_choose;
+dataIn_bits = 8'b0000_0111;
+end
+13'b0x_000010_xxxxx:begin 
+n_state = S_choose;
+dataIn_bits = 8'b0000_1011;
+end
+13'b0x_000011_xxxxx:begin 
+n_state = S_choose;
+dataIn_bits = 8'b0000_1111;
+end
+13'b0x_000100_xxxxx:begin 
+n_state = S_choose;
+dataIn_bits = 8'b0001_0011;
+end
+13'b0x_000101_xxxxx:begin 
+n_state = S_choose;
+dataIn_bits = 8'b0001_0111;
+end
+13'b0x_000110_xxxxx:begin 
+n_state = S_choose;
+dataIn_bits = 8'b0001_1011;
+end
+13'b0x_000111_xxxxx:begin 
+n_state = S_choose;
+dataIn_bits = 8'b0001_1111;
+end
+13'b0x_001000_xxxxx:begin 
+n_state = S_choose;
+dataIn_bits = 8'b0010_0011;
+end
+13'b0x_001001_xxxxx:begin 
+n_state = S_choose;
+dataIn_bits = 8'b0010_0111;
+end
+13'b0x_001010_xxxxx:begin 
+n_state = S_choose;
+dataIn_bits = 8'b0010_1011;
+end
+13'b0x_001011_xxxxx:begin 
+n_state = S_choose;
+dataIn_bits = 8'b0010_1111;
+end
+13'b0x_001100_xxxxx:begin 
+n_state = S_choose;
+dataIn_bits = 8'b0011_0011;
+end
+13'b0x_001101_xxxxx:begin 
+n_state = S_choose;
+dataIn_bits = 8'b0011_0111;
+end
+13'b0x_001110_xxxxx:begin 
+n_state = S_choose;
+dataIn_bits = 8'b0011_1011;
+end
+13'b0x_001111_xxxxx:begin 
+n_state = S_choose;
+dataIn_bits = 8'b0011_1111;
+end
+13'b0x_010000_xxxxx:begin 
+n_state = S_choose;
+dataIn_bits = 8'b0100_0011;
+end
+13'b0x_010001_xxxxx:begin 
+n_state = S_choose;
+dataIn_bits = 8'b0100_0111;
+end
+13'b0x_010010_xxxxx:begin 
+n_state = S_choose;
+dataIn_bits = 8'b0100_1011;
+end
+13'b0x_010011_xxxxx:begin 
+n_state = S_choose;
+dataIn_bits = 8'b0100_1111;
+end
+13'b0x_010100_xxxxx:begin 
+n_state = S_choose;
+dataIn_bits = 8'b0101_0011;
+end
+default:n_state = S_start;
+endcase 
+end
+
+S_choose:begin
+end
+S_get:begin
+end
+
+S_put:begin
+end
+
+S_interact:begin
+end
+
+S_move:begin
+end
+
+S_throw:begin
+end
+
+endcase
+end
+  /*  parameter S0 = 2'b00, S_start = 2'b01,In_Start = 8'b0000_0101,In_End = 8'b0000_1001,In_Get = 5'b00001,
     In_Put = 5'b00010,In_Interact = 5'b00100,In_Move = 5'b01000,In_Throw=5'b10000;
 
     reg [1:0]state; // state[12:5] is the switches signal; state[4:0] is the button signal.
@@ -47,7 +180,7 @@ Module output(
         S0: begin 
             if (switches[6]) begin
             n_state = S_start; 
-            dataIn_bits = In_Start
+            dataIn_bits = In_Start;
             end
             else n_state = S0;
         end
@@ -86,7 +219,7 @@ Module output(
             default: dataIn_bits = 8'b0000_0010;
         endcase
     end
-
+*/
 endmodule
 
 

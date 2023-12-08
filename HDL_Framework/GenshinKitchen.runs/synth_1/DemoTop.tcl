@@ -36,7 +36,6 @@ read_verilog -library xil_defaultlib {
   C:/Users/86153/Desktop/CS207-Project/DL-Kitchen/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptMem.v
   C:/Users/86153/Desktop/CS207-Project/DL-Kitchen/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UART.v
   C:/Users/86153/Desktop/CS207-Project/DL-Kitchen/HDL_Framework/GenshinKitchen.srcs/sources_1/new/clock_frequency_divider.v
-  C:/Users/86153/Desktop/CS207-Project/DL-Kitchen/HDL_Framework/GenshinKitchen.srcs/sources_1/new/reset.v
   C:/Users/86153/Desktop/CS207-Project/DL-Kitchen/HDL_Framework/GenshinKitchen.srcs/sources_1/new/DemoTop.v
 }
 read_ip -quiet C:/Users/86153/Desktop/CS207-Project/DL-Kitchen/HDL_Framework/GenshinKitchen.srcs/sources_1/ip/inst_ram/inst_ram.xci

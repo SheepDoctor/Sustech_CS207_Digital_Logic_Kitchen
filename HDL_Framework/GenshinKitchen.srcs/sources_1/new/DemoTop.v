@@ -54,30 +54,24 @@ wire slow_clk;
     .uart_clk(uart_clk_16),
     .slow_clk(slow_clk)
     );
-/*    
-    reset reset(
-    .clk(slow_clk),
-    .dataIn_ready(dataIn_ready),
-    .dataIn_bits(dataIn_bits)
-    );
     
+/*    
     set_ready set (
     .clk(slow_clk),
     .rst_n(rst_n),
     .dataIn_ready(dataIn_ready)
     );*/
     
-    Begin_End input1(
-        .switches(switches[7:6]), 
-      .dataIn_ready(dataIn_ready), 
-      .dataIn_bits(dataIn_bits) // client signal
-      );
-
-    TargetMove input3(
-        .switches(switches[5:0]),
+    Output func(
+    .clk(slow_clk),
+    .switches(switches[7:6]), 
+    .button(button),
     .dataIn_ready(dataIn_ready),
-    .dataIn_bits(dataIn_bits)
-    );
+    .rst_n(rst_n),
+    .dataOut_bits(dataOut_bits),
+    .dataOut_valid(dataOut_valid), 
+    .dataIn_bits(dataIn_bits) // client signal
+      );
     
   /*    
     UnPackSignal outdata(
@@ -98,57 +92,6 @@ wire slow_clk;
      .dataOut_ready(dataOut_valid),//feedback signal
     .led2(led2)
     );
- /*   
-    Begin_End input1(
-      .switches(switches), 
-      .dataIn_ready(dataIn_ready), 
-      .dataIn_bits(dataIn_bits) // client signal
-      );
-
-    Get input2(
-    .button(button),
-    .clk(uart_clk_16),
-    .dataIn_ready(dataIn_ready),
-    .dataOut_bits(dataOut_bits),
-    .dataOut_valid(dataOut_valid),
-    .dataIn_bits(dataIn_bits)
-    );
-
-    Put input4(
-    .button(button),
-    .clk(uart_clk_16),
-    .dataIn_ready(dataIn_ready),
-    .dataOut_bits(dataOut_bits),
-    .dataOut_valid(dataOut_valid),
-    .dataIn_bits(dataIn_bits)
-    );
-    
-    Interact input5(
-     .button(button),
-     .clk(uart_clk_16),
-     .dataIn_ready(dataIn_ready),
-     .dataOut_bits(dataOut_bits),
-     .dataOut_valid(dataOut_valid),
-     .dataIn_bits(dataIn_bits)
-    );
-    
-    Move input6(
-    .button(button),
-    .clk(uart_clk_16),
-    .dataIn_ready(dataIn_ready),
-    .dataOut_bits(dataOut_bits),
-    .dataOut_valid(dataOut_valid),
-    .dataIn_bits(dataIn_bits)   
-    );
-    
-    Throw input7(
-    .button(button),
-    .clk(uart_clk_16),
-    .dataIn_ready(dataIn_ready),
-    .dataOut_bits(dataOut_bits),
-    .dataOut_valid(dataOut_valid),
-    .dataIn_bits(dataIn_bits)       
-    );*/
     
     ScriptMem script_mem_module(
       .clock(uart_clk_16),   // please use the same clock as UART module
