@@ -20,18 +20,89 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 // control the beginning and the ending of the game
+Module output(
+    input clk,
+    input [7:0] switches,
+    input [4:0] button,
+    input dataIn_ready,
+    input rst_n,
+    input [7:0] dataOut_bits,
+    input dataOut_valid,
+    output reg dataIn_bits
+);
+    parameter S0 = 2'b00, S_start = 2'b01,In_Start = 8'b0000_0101,In_End = 8'b0000_1001,In_Get = 5'b00001,
+    In_Put = 5'b00010,In_Interact = 5'b00100,In_Move = 5'b01000,In_Throw=5'b10000;
+
+    reg [1:0]state; // state[12:5] is the switches signal; state[4:0] is the button signal.
+    reg [1:0]n_state;
+    reg [5:0] target;
+    always @(posedge clk, negedge rst_n) begin
+        if(~rst_n)
+        state <= S0;
+        else 
+        state <= n_state;
+    end
+    always @(switches[7:6]) begin
+        case(state)
+        S0: begin 
+            if (switches[6]) begin
+            n_state = S_start; 
+            dataIn_bits = In_Start
+            end
+            else n_state = S0;
+        end
+        S_start: begin 
+            if (switches[7]) begin
+                n_state = S0;
+                dataIn_bits = In_End;
+            end
+        end
+        endcase
+    end
+    always @(switches[4:0]) begin
+        case(state)
+        S0: n_state = S0;
+        S_start: begin
+            if(switches[4:0] < 5'b10101) begin
+                target = switches[4:0];
+                dataIn_bits = {1'b0,target,2'b11}; //0xxx_xx11 the mid 5 xxxxx is the target's number;
+            end
+            else target = 5'b00000;
+        end
+        endcase
+    end
+    always @(button) begin
+        case(state)
+        S0: n_state = S0;
+        S_start: begin
+            case(button)
+            In_Get: dataIn_bits = {1'b0,In_Get,2'b10};
+            In_Put: dataIn_bits = {1'b0,In_Put,2'b10};
+            In_Interact: dataIn_bits = {1'b0,In_Interact,2'b10};
+            In_Move: dataIn_bits = {1'b0,In_Move,2'b10};
+            In_Throw: dataIn_bits = {1'b0,In_Throw,2'b10};
+            endcase
+        end
+            default: dataIn_bits = 8'b0000_0010;
+        endcase
+    end
+
+endmodule
+
+
+
 module Begin_End(
     input [1:0] switches,
     input dataIn_ready,
     output reg [7:0] dataIn_bits
     );
-  always @(switches[1:0]) begin
-            case (switches[1:0])
-            2'b01: dataIn_bits = 8'b0000_0101;
-            2'b10: dataIn_bits = 8'b0000_1001;
-            default: dataIn_bits = 8'b0000_0000;
-            endcase
-        end
+    always @(switches[1:0]) begin
+        case (switches[1:0])
+        2'b01: dataIn_bits = 8'b0000_0101;
+        2'b10: dataIn_bits = 8'b0000_1001;
+        default: dataIn_bits = 8'b0000_0000;
+        endcase
+    end
 endmodule
 
 module TargetMove(
@@ -64,10 +135,10 @@ module TargetMove(
          6'b010011: dataIn_bits = 8'b0100_1111;
          6'b010100: dataIn_bits = 8'b0101_0011;
          default: dataIn_bits = 8'b0000_0000;
-         endcase
-         else dataIn_bits = 8'b0000_0000;
+    endcase
+    else dataIn_bits = 8'b0000_0000;
     end
-endmodule
+    endmodule
 
 /*module TargetMove(
     input [7:0] switches,
@@ -76,7 +147,7 @@ endmodule
     output reg [7:0] dataIn_bits
 );
     reg [5:0] switch;
-    always @(posedge clk)
+always @(posedge clk)
     switch[5:0] <= switches[5:0];
 
     always @(switches[5:0]) begin
