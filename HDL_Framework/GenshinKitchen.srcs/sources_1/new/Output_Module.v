@@ -28,55 +28,24 @@ module Output(
     input rst_n,
     input [7:0] dataOut_bits,
     input dataOut_valid,
-    output reg dataIn_bits
+    output reg [7:0]dataIn_bits
 );
 parameter S_start = 3'b000,S_end = 3'b001,S_choose = 3'b010,S_get = 3'b011,S_put = 3'b100,S_interact = 3'b101,S_move = 3'b110,S_throw = 3'b111;
 reg [2:0] state;
-reg [2:0] n_state;
 always @(posedge clk, negedge rst_n) begin
-    if(~rst_n) begin
+    if(~rst_n) 
     state <= S_end;
-    dataIn_bits <= 8'b0000_0000;
-    end
-    else 
-    state <= n_state;
 end
-always@(state,switches,button) begin
+always@(switches,button) begin
 case(state)
 
-S_end:begin
-casex({switches,button}) 
-13'b01xx_xxxx_xxxx_x: {n_state,dataIn_bits} = {S_start,8'b0000_0101};
-default:{n_state,dataIn_bits} = {S_end,8'b0000_0000};
-endcase 
-end
+S_end:
+if(~switches[7]&switches[6]) {state,dataIn_bits} = {S_start,8'b0000_0101};
+else {state,dataIn_bits} = {S_end,8'b0000_0000};
 
-S_start:begin
-casex({switches,button}) 
-13'b10_xxxxxx_xxxxx:{n_state,dataIn_bits} = {S_end,8'b0000_1001};
-13'b0x_000001_xxxxx:{n_state,dataIn_bits} = {S_choose,8'b0000_0111};
-13'b0x_000010_xxxxx:{n_state,dataIn_bits} = {S_choose,8'b0000_1011};
-13'b0x_000011_xxxxx:{n_state,dataIn_bits} = {S_choose,8'b0000_1111};
-13'b0x_000100_xxxxx:{n_state,dataIn_bits} = {S_choose,8'b0001_0011};
-13'b0x_000101_xxxxx:{n_state,dataIn_bits} = {S_choose,8'b0001_0111};
-13'b0x_000110_xxxxx:{n_state,dataIn_bits} = {S_choose,8'b0001_1011};
-13'b0x_000111_xxxxx:{n_state,dataIn_bits} = {S_choose,8'b0001_1111};
-13'b0x_001000_xxxxx:{n_state,dataIn_bits} = {S_choose,8'b0010_0011};
-13'b0x_001001_xxxxx:{n_state,dataIn_bits} = {S_choose,8'b0010_0111};
-13'b0x_001010_xxxxx:{n_state,dataIn_bits} = {S_choose,8'b0010_1011};
-13'b0x_001011_xxxxx:{n_state,dataIn_bits} = {S_choose,8'b0010_1111};
-13'b0x_001100_xxxxx:{n_state,dataIn_bits} = {S_choose,8'b0011_0011};
-13'b0x_001101_xxxxx:{n_state,dataIn_bits} = {S_choose,8'b0011_0111};
-13'b0x_001110_xxxxx:{n_state,dataIn_bits} = {S_choose,8'b0011_1011};
-13'b0x_001111_xxxxx:{n_state,dataIn_bits} = {S_choose,8'b0011_1111};
-13'b0x_010000_xxxxx:{n_state,dataIn_bits} = {S_choose,8'b0100_0011};
-13'b0x_010001_xxxxx:{n_state,dataIn_bits} = {S_choose,8'b0100_0111};
-13'b0x_010010_xxxxx:{n_state,dataIn_bits} = {S_choose,8'b0100_1011};
-13'b0x_010011_xxxxx:{n_state,dataIn_bits} = {S_choose,8'b0100_1111};
-13'b0x_010100_xxxxx:{n_state,dataIn_bits} = {S_choose,8'b0101_0011};
-default:{n_state,dataIn_bits} = {S_start,8'b0000_0000};
-endcase 
-end
+S_start:
+if(switches[7]&~switches[6]) {state,dataIn_bits} = {S_end,8'b0000_1001};
+else {state,dataIn_bits} = {S_choose,switches[5:0],2'b11};
 
 S_choose:begin
 end

@@ -63,7 +63,7 @@ wire slow_clk;
     );*/
     
     Output func(
-    .clk(slow_clk),
+    .clk(clk),
     .switches(switches[7:6]), 
     .button(button),
     .dataIn_ready(dataIn_ready),
@@ -95,7 +95,7 @@ wire slow_clk;
     
     ScriptMem script_mem_module(
       .clock(uart_clk_16),   // please use the same clock as UART module
-      .reset(1'b0),           // please use the same reset as UART module
+      .reset(rst_n),           // please use the same reset as UART module
       
       .dataOut_bits(dataOut_bits), // please connect to io_dataOut_bits of UART module
       .dataOut_valid(dataOut_valid), // please connect to io_dataOut_valid of UART module
@@ -109,7 +109,7 @@ wire slow_clk;
         
     UART uart_module(
           .clock(uart_clk_16),     // uart clock. Please use 16 x BultRate. (e.g. 9600 * 16 = 153600Hz��
-          .reset(1'b0),               // reset
+          .reset(rst_n),               // reset
           
           .io_pair_rx(rx),          // rx, connect to R5 please
           .io_pair_tx(tx),         // tx, connect to T4 please
