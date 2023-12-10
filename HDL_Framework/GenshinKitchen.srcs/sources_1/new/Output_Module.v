@@ -32,20 +32,23 @@ module Output(
 );
 parameter S_start = 3'b000,S_end = 3'b001,S_choose = 3'b010,S_get = 3'b011,S_put = 3'b100,S_interact = 3'b101,S_move = 3'b110,S_throw = 3'b111;
 reg [2:0] state;
+reg [2:0] n_state;
 always @(posedge clk, negedge rst_n) begin
     if(~rst_n) 
-    state <= S_end;
+    n_state <= S_end;
+    else
+    state <= n_state;
 end
 always@(switches,button) begin
 case(state)
 
 S_end:
-if(~switches[7]&switches[6]) {state,dataIn_bits} = {S_start,8'b0000_0101};
-else {state,dataIn_bits} = {S_end,8'b0000_0000};
+if(~switches[7]&switches[6]) {n_state,dataIn_bits} = {S_start,8'b0000_0101};
+else {n_state,dataIn_bits} = {S_end,8'b0000_0000};
 
 S_start:
-if(switches[7]&~switches[6]) {state,dataIn_bits} = {S_end,8'b0000_1001};
-else {state,dataIn_bits} = {S_choose,switches[5:0],2'b11};
+if(switches[7]&~switches[6]) {n_state,dataIn_bits} = {S_end,8'b0000_1001};
+else {n_state,dataIn_bits} = {S_choose,switches[5:0],2'b11};
 
 S_choose:begin
 end
