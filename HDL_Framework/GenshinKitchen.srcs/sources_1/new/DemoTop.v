@@ -64,7 +64,7 @@ wire slow_clk;
     
     Output func(
     .clk(slow_clk),
-    .switches(switches[7:6]), 
+    .switches(switches), 
     .button(button),
     .dataIn_ready(dataIn_ready),
     .rst_n(rst_n),

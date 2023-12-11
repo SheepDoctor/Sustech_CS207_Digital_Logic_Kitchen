@@ -33,8 +33,12 @@ module Output(
 parameter S_start = 3'b000,S_end = 3'b001;
 reg [2:0] state;
 reg [2:0] n_state;
+initial begin
+    dataIn_bits = 8'b1111_0000;
+end
 always @(posedge clk, negedge rst_n) begin
-    if(~rst_n) 
+    if(~rst_n)
+    state <= S_end; 
     n_state <= S_end;
     else
     state <= n_state;
