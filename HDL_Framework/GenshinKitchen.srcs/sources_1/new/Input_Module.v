@@ -5,23 +5,45 @@ Description:Input module basically deal with the input siganl(Or output) form th
 it cantains modules encoding the signal  used for scripts
 and modules converting the signal to led signals
 */
-parameter ignore = 2'b00;
-parameter feedback = 2'b00;
-parameter script_loading = 2'b00;
-parameter unused = 2'b00;
+
 module Receiver (
     input clk,
-    input script_mode,
     input dataOut_ready,
     input [7:0] dataOut_bits,
-    output [7:0] led
+    output [7:0] led,
+    output [7:0] led2
 );
+    wire [7:0] size;
     wire [1:0] verify;
     wire [1:0] channal;
     wire [3:0] signal;
-    GetInfo getInfo(clk, dataOut_ready, dataOut_bits, verify, channal, signal);
-    FeedbackSignal feedbackSignal(clk, script_mode, dataOut_ready, dataOut_bits, led);
-    
+
+    GetInfo get(
+        .clk(clk), 
+        .dataOut_ready(dataOut_ready), 
+        .dataOut_bits(dataOut_bits), 
+        .verify(verify), 
+        .channal(channal), 
+        .signal(signal));
+    // 01 channel: Feedback signal from Client to Board
+    FeedbackSignal feedbackSignal(
+        .clk(clk), 
+        .dataOut_ready(dataOut_ready), 
+        .dataOut_bits(dataOut_bits), 
+        .led(led),
+        .verify(verify),
+        .channal(channal),
+        .signal(signal));
+    // 10 channel: Change into Script loading mode
+    ScriptLoadingMode scriptLoadingMode(
+        .clk(clk), 
+        .dataOut_ready(dataOut_ready), 
+        .dataOut_bits(dataOut_bits), 
+        .led2(led2),
+        .size(size),
+        .verify(verify),
+        .channal(channal),
+        .signal(signal));
 endmodule
 
 /*
@@ -37,25 +59,42 @@ input clk,
 input script_mode,
 input dataOut_ready,
 input [7:0] dataOut_bits,
+input [1:0] verify,
+input [1:0] channal,
+input [3:0] signal,
 output reg [7:0] led
 );
-wire [1:0] verify;
-wire [1:0] channal;
-wire [3:0] signal;
-
-GetInfo get(clk, dataOut_ready, dataOut_bits, verify, channal, signal);
 
 always @(posedge clk) begin
-    
     if(dataOut_ready)
-        if(script_mode != 1'b1)
-            if(verify == 2'b00)
-                if(channal == 2'b01) begin
-                    led <= {4'b0000, signal};
-                end
+        if(verify == 2'b00) begin
+            if(channal == 2'b01) begin
+                led <= {4'b0000, signal};
+            end
+        end
     else 
         // fantastic effiects to be added
         led <= 8'b0000_0000;
+end
+endmodule
+
+module ScriptLoadingMode (
+    input clk,
+    input dataOut_ready,
+    input [7:0] dataOut_bits,
+    input [1:0] verify,
+    input [1:0] channal,
+    input [3:0] signal,
+    output reg [7:0] led2,
+    output reg [7:0] size
+);
+always @(posedge clk) begin
+    if(dataOut_ready)
+        if(channal == 2'b10) begin
+            led2 <= dataOut_bits;
+        end
+    else 
+        led2 <= 8'b0000_0000;
 end
 endmodule
 
@@ -68,13 +107,11 @@ module GetInfo (
     input clk,
     input dataOut_ready,
     input [7:0] dataOut_bits,
-    output reg [1:0] verify,
-    output reg [1:0] channal,
-    output reg [3:0] signal
+    output [1:0] verify,
+    output [1:0] channal,
+    output [3:0] signal
 );
-always @(posedge clk) begin
-    verify <= dataOut_bits[7:6];
-    channal <= dataOut_bits[1:0];
-    signal <= dataOut_bits[5:2];
-end
+    assign verify = dataOut_bits[7:6];
+    assign signal = dataOut_bits[5:2];
+    assign channal = dataOut_bits[1:0];
 endmodule

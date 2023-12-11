@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/86153/Desktop/CS207-Project/DL-Kitchen/HDL_Framework/GenshinKitchen.srcs/constrs_1/new/cons.xdc rfile:../../../GenshinKitchen.srcs/constrs_1/new/cons.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DLProject/HDL_Framework/GenshinKitchen.srcs/constrs_1/new/cons.xdc rfile:../../../GenshinKitchen.srcs/constrs_1/new/cons.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:5 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN P17 [get_ports clk]
 set_property src_info {type:XDC file:1 line:6 export:INPUT save:INPUT read:READ} [current_design]

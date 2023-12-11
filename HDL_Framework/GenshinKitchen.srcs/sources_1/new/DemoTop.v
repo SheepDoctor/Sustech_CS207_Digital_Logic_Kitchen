@@ -32,7 +32,7 @@ module DemoTop(
     input rx,
     output tx
     );
-
+assign led = 8'b1010_1010;
 // The wire below is useful!
 wire uart_clk_16;
 
@@ -55,12 +55,13 @@ wire slow_clk;
     .slow_clk(slow_clk)
     );
     
-/*    
+    /*    
     set_ready set (
     .clk(slow_clk),
     .rst_n(rst_n),
     .dataIn_ready(dataIn_ready)
-    );*/
+    );
+    */
     
     Output func(
     .clk(slow_clk),
@@ -73,26 +74,27 @@ wire slow_clk;
     .dataIn_bits(dataIn_bits) // client signal
       );
     
-  /*    
-    UnPackSignal outdata(
+      
+    Receiver receiver(
       .clk(uart_clk_16),
       .dataOut_bits(dataOut_bits),
-      .dataOut_valid(dataOut_valid),
-      .led2(led2in)
-    );*/
+      .dataOut_ready(dataOut_valid),
+      .led(led),
+      .led2(led2)
+    );
 
-  
+  /*
     Led1 output1(
     .dataIn_bits(dataIn_bits),
     .led(led)
     );
     
     Led2 output2(
-     .dataIn_ready(dataIn_ready),
-     .dataOut_ready(dataOut_valid),//feedback signal
+    .dataIn_ready(dataIn_ready),
+    .dataOut_ready(dataOut_valid),//feedback signal
     .led2(led2)
     );
-    
+  */
     ScriptMem script_mem_module(
       .clock(uart_clk_16),   // please use the same clock as UART module
       .reset(rst_n),           // please use the same reset as UART module
