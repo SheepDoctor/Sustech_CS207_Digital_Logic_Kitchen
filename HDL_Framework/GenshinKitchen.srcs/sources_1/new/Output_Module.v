@@ -33,9 +33,6 @@ module Output(
 parameter S_start = 3'b000,S_end = 3'b001;
 reg [2:0] state;
 reg [2:0] n_state;
-initial begin
-    dataIn_bits = 8'b1111_0000;
-end
 always @(posedge clk, negedge rst_n) begin
     if(~rst_n)
     state <= S_end; 
@@ -48,9 +45,11 @@ case(state)
 
 S_end:
 if(~switches[7]&switches[6]) {n_state,dataIn_bits} = {S_start,8'b0000_0101};
-else {n_state,dataIn_bits} = {S_end,8'b0000_0000};
+else {n_state,dataIn_bits} = {S_end,8'b0000_1001};
 
 S_start:
+if(~dataIn_ready) n_state = S_start;
+else begin
 if(switches[7]&~switches[6]) {n_state,dataIn_bits} = {S_end,8'b0000_1001};
 else if(button[0]) {n_state,dataIn_bits} = {S_start,8'b0000_0110};
 else if(button[1]) {n_state,dataIn_bits} = {S_start,8'b0000_1010};
@@ -58,6 +57,7 @@ else if(button[2]) {n_state,dataIn_bits} = {S_start,8'b0001_0010};
 else if(button[3]) {n_state,dataIn_bits} = {S_start,8'b0010_0010};
 else if(button[4]) {n_state,dataIn_bits} = {S_start,8'b0100_0010};
 else {n_state,dataIn_bits} = {S_start,switches[5:0],2'b11};
+end
 
 endcase
 end
