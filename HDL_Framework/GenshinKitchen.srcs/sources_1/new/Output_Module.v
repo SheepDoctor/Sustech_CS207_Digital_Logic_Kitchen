@@ -39,12 +39,11 @@ end
 always @(posedge clk, negedge rst_n) begin
     if(~rst_n)
     state <= S_end; 
-    n_state <= S_end;
     else
     state <= n_state;
 end
 
-always@(switches,button) begin
+always@(state,switches,button) begin
 case(state)
 
 S_end:
@@ -58,7 +57,7 @@ else if(button[1]) {n_state,dataIn_bits} = {S_start,8'b0000_1010};
 else if(button[2]) {n_state,dataIn_bits} = {S_start,8'b0001_0010};
 else if(button[3]) {n_state,dataIn_bits} = {S_start,8'b0010_0010};
 else if(button[4]) {n_state,dataIn_bits} = {S_start,8'b0100_0010};
-else {n_state,dataIn_bits} = {S_switches[5:0],2'b11};
+else {n_state,dataIn_bits} = {S_start,switches[5:0],2'b11};
 
 endcase
 end
