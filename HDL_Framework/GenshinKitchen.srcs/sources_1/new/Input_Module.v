@@ -65,7 +65,7 @@ input [3:0] signal,
 output reg [7:0] led
 );
 
-always @(posedge clk) begin
+always @(posedge dataOut_ready) begin
     if(dataOut_ready)
         if(verify == 2'b00) begin
             if(channal == 2'b01) begin
@@ -88,7 +88,7 @@ module ScriptLoadingMode (
     output reg [7:0] led2,
     output reg [7:0] size
 );
-always @(posedge clk) begin
+always @(posedge dataOut_ready) begin
     if(dataOut_ready)
         if(channal == 2'b10) begin
             led2 <= dataOut_bits;

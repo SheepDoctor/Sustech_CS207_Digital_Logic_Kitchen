@@ -60,6 +60,7 @@ else if(button[1]) {n_state,dataIn_bits} = {S_action,8'b0000_1010};
 else if(button[2]) {n_state,dataIn_bits} = {S_action,8'b0001_0010};
 else if(button[3]) {n_state,dataIn_bits} = {S_action,8'b0010_0010};
 else if(button[4]) {n_state,dataIn_bits} = {S_action,8'b0100_0010};
+else if(switches[5:0]>20) {n_state,dataIn_bits} = {S_action,8'b0000_0000};
 else {n_state,dataIn_bits} = {S_action,switches[5:0],2'b11};
 end
 

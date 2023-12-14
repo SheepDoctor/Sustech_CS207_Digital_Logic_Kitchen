@@ -32,7 +32,7 @@ module DemoTop(
     input rx,
     output tx
     );
-assign led = 8'b1010_1010;
+
 // The wire below is useful!
 wire uart_clk_16;
 
@@ -55,13 +55,12 @@ wire slow_clk;
     .slow_clk(slow_clk)
     );
     
-    /*    
+/*    
     set_ready set (
     .clk(slow_clk),
     .rst_n(rst_n),
     .dataIn_ready(dataIn_ready)
-    );
-    */
+    );*/
     
     Output func(
     .clk(slow_clk),
@@ -73,8 +72,7 @@ wire slow_clk;
     .dataOut_valid(dataOut_valid), 
     .dataIn_bits(dataIn_bits) // client signal
       );
-    
-      
+    /**/
     Receiver receiver(
       .clk(uart_clk_16),
       .dataOut_bits(dataOut_bits),
@@ -82,7 +80,7 @@ wire slow_clk;
       .led(led),
       .led2(led2)
     );
-
+  
   /*
     Led1 output1(
     .dataIn_bits(dataIn_bits),
@@ -90,14 +88,14 @@ wire slow_clk;
     );
     
     Led2 output2(
-    .dataIn_ready(dataIn_ready),
-    .dataOut_ready(dataOut_valid),//feedback signal
+     .dataIn_ready(dataIn_ready),
+     .dataOut_ready(dataOut_valid),//feedback signal
     .led2(led2)
-    );
-  */
+    );*/
+    
     ScriptMem script_mem_module(
       .clock(uart_clk_16),   // please use the same clock as UART module
-      .reset(rst_n),           // please use the same reset as UART module
+      .reset(1'b0),           // please use the same reset as UART module
       
       .dataOut_bits(dataOut_bits), // please connect to io_dataOut_bits of UART module
       .dataOut_valid(dataOut_valid), // please connect to io_dataOut_valid of UART module
@@ -110,14 +108,14 @@ wire slow_clk;
     );
         
     UART uart_module(
-          .clock(uart_clk_16),     // uart clock. Please use 16 x BultRate. (e.g. 9600 * 16 = 153600Hz��
-          .reset(rst_n),               // reset
+          .clock(uart_clk_16),     // uart clock. Please use 16 x BultRate. (e.g. 9600 * 16 = 153600Hz  
+          .reset(1'b0),               // reset
           
           .io_pair_rx(rx),          // rx, connect to R5 please
           .io_pair_tx(tx),         // tx, connect to T4 please
           
           .io_dataIn_bits(dataIn_bits),     // (a) byte from DevelopmentBoard => GenshinKitchen
-          .io_dataIn_ready(dataIn_ready),   // referring (a)��pulse 1 after a byte tramsmit success.
+          .io_dataIn_ready(dataIn_ready),   // referring (a)  pulse 1 after a byte tramsmit success.
           
           .io_dataOut_bits(dataOut_bits),     // (b) byte from GenshinKitchen => DevelopmentBoard, only available if io_dataOut_valid=1
           .io_dataOut_valid(dataOut_valid)  // referring (b)
