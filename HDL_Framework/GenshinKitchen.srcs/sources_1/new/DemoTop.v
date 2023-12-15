@@ -66,12 +66,12 @@ wire slow_clk;
     .clk(slow_clk),
     .switches(switches), 
     .button(button),
-    .dataIn_ready(dataIn_ready),
     .rst_n(rst_n),
+    .led(led[3:0]),
     .dataOut_bits(dataOut_bits),
-    .dataOut_valid(dataOut_valid), 
     .dataIn_bits(dataIn_bits) // client signal
       );
+    
     /**/
     Receiver receiver(
       .clk(uart_clk_16),
