@@ -16,6 +16,13 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+<<<<<<< HEAD
+=======
+set_param xicom.use_bs_reader 1
+set_param synth.incrementalSynthesisCache C:/Users/Owen/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-15716-DeLiAssistant/incrSyn
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
+>>>>>>> 7883f3c976f5e1c7f15fe78ff5a44eab828b8248
 create_project -in_memory -part xc7a35tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -33,7 +40,10 @@ read_verilog -library xil_defaultlib {
   D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DLProject/HDL_Framework/GenshinKitchen.srcs/sources_1/new/Input_Module.v
   D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DLProject/HDL_Framework/GenshinKitchen.srcs/sources_1/new/Output_Module.v
   D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DLProject/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptMem.v
+<<<<<<< HEAD
   D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DLProject/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptMode.v
+=======
+>>>>>>> 7883f3c976f5e1c7f15fe78ff5a44eab828b8248
   D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DLProject/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UART.v
   D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DLProject/HDL_Framework/GenshinKitchen.srcs/sources_1/new/clock_frequency_divider.v
   D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DLProject/HDL_Framework/GenshinKitchen.srcs/sources_1/new/DemoTop.v

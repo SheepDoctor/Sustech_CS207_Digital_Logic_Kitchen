@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <GenRun Id="synth_1" LaunchPart="xc7a35tcsg324-1" LaunchTime="1702736363">
+=======
+<GenRun Id="synth_1" LaunchPart="xc7a35tcsg324-1" LaunchTime="1702561114">
+>>>>>>> 7883f3c976f5e1c7f15fe78ff5a44eab828b8248
   <File Type="PA-TCL" Name="DemoTop.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="DemoTop_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="DemoTop_reports.tcl"/>
@@ -32,6 +36,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+<<<<<<< HEAD
     <File Path="$PSRCDIR/sources_1/new/ScriptMode.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -39,6 +44,8 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+=======
+>>>>>>> 7883f3c976f5e1c7f15fe78ff5a44eab828b8248
     <File Path="$PSRCDIR/sources_1/new/UART.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -68,6 +75,17 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+<<<<<<< HEAD
+=======
+    <File Path="$PSRCDIR/sources_1/new/ScriptMode.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+>>>>>>> 7883f3c976f5e1c7f15fe78ff5a44eab828b8248
     <File Path="$PSRCDIR/sources_1/new/reset.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>

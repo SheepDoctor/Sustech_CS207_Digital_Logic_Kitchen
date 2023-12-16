@@ -60,6 +60,7 @@ proc step_failed { step } {
   close $ch
 }
 
+<<<<<<< HEAD
 
 start_step init_design
 set ACTIVE_STEP init_design
@@ -145,6 +146,31 @@ if {$rc} {
   return -code error $RESULT
 } else {
   end_step route_design
+=======
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
+
+start_step write_bitstream
+set ACTIVE_STEP write_bitstream
+set rc [catch {
+  create_msg_db write_bitstream.pb
+  set_param xicom.use_bs_reader 1
+  set_param synth.incrementalSynthesisCache C:/Users/Owen/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-15716-DeLiAssistant/incrSyn
+  open_checkpoint DemoTop_routed.dcp
+  set_property webtalk.parent_dir D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DLProject/HDL_Framework/GenshinKitchen.cache/wt [current_project]
+  set_property XPM_LIBRARIES XPM_MEMORY [current_project]
+  catch { write_mem_info -force DemoTop.mmi }
+  write_bitstream -force DemoTop.bit 
+  catch {write_debug_probes -quiet -force DemoTop}
+  catch {file copy -force DemoTop.ltx debug_nets.ltx}
+  close_msg_db -file write_bitstream.pb
+} RESULT]
+if {$rc} {
+  step_failed write_bitstream
+  return -code error $RESULT
+} else {
+  end_step write_bitstream
+>>>>>>> 7883f3c976f5e1c7f15fe78ff5a44eab828b8248
   unset ACTIVE_STEP 
 }
 
