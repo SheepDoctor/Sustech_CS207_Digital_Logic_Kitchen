@@ -1,5 +1,7 @@
 `timescale 1ns / 1ps
-
+/*
+solving pc problem: rename pc and assign value to pc in a independent always block
+*/
 module ScriptMode(
     input rst_n,
     input clk,
@@ -10,6 +12,7 @@ module ScriptMode(
     input [7:0] size, // size of the script file
     input script_mode,
     input [15:0] script, // contains instructions
+
     output dataIn_bits ,
     output reg [7:0] pc
     );
@@ -65,11 +68,11 @@ module ScriptMode(
 
     // setting status
     // data changes when the dataflow mode change
-    always @(posedge dataIn_ready) begin
-        io <= 1;
-    end
-    always @(posedge dataOut_ready) begin
-        io <= 0;
+    always @(posedge dataIn_ready, posedge dataOut_ready) begin
+        if(dataIn_ready)
+            io <= 1;
+        else if(dataOut_ready)
+            io <= 0;
     end
 
     // dealing with inst, encode
@@ -83,25 +86,26 @@ module ScriptMode(
         end
     end
 
+    reg [7:0] pc1, pc2, pc3, pc4;
     // jump instruction and game start and end
     always @(inst) begin
         if({op_code, func} == 5'b01000) begin
             if(i_sign == 3'b001) begin
-                pc = pc + i_num;
+                pc1 = pc + i_num;
             end
         end
         else if({op_code, func} == 5'b01001) begin
             if(i_sign == 3'b000) begin
-                pc = pc + i_num;
+                pc1 = pc + i_num;
             end
         end
         else if({op_code, func} == 5'b10001) begin
             start = 2'b10;
-            pc = pc + 2;
+            pc1 = pc + 2;
         end
         else if({op_code, func} == 5'b10010) begin
             start = 2'b01;
-            pc = pc + 2;
+            pc1 = pc + 2;
         end
     end
 
@@ -114,28 +118,28 @@ module ScriptMode(
                 case (moveCounter)
                     1: begin movement = 5'b00000; place = {start, i_num[5:0]}; moveCounter = moveCounter + 1; end // select a place
                     2: begin movement = 5'b01000; place = {start, i_num[5:0]}; moveCounter = moveCounter + 1; end// move
-                    3: begin movement = 5'b00001; place = {start, i_num[5:0]}; moveCounter = 1; pc = pc + 2; end// get the item
+                    3: begin movement = 5'b00001; place = {start, i_num[5:0]}; moveCounter = 1; pc2 = pc + 2; end// get the item
                 endcase
             end
             else if({op_code, func} == 5'b00101) begin
                 case (moveCounter)
                     1: begin movement = 5'b00000; place = {start, i_num[5:0]}; moveCounter = moveCounter + 1; end// select a place
                     2: begin movement = 5'b01000; place = {start, i_num[5:0]}; moveCounter = moveCounter + 1; end// move
-                    3: begin movement = 5'b00010; place = {start, i_num[5:0]}; moveCounter = 1; pc = pc + 2; end // put the item
+                    3: begin movement = 5'b00010; place = {start, i_num[5:0]}; moveCounter = 1; pc2 = pc + 2; end // put the item
                 endcase
             end
             else if({op_code, func} == 5'b00110) begin
                 case (moveCounter)
                     1: begin movement = 5'b00000; place = {start, i_num[5:0]}; moveCounter = moveCounter + 1; end // select a place
                     2: begin movement = 5'b01000; place = {start, i_num[5:0]}; moveCounter = moveCounter + 1; end // move
-                    3: begin movement = 5'b00100; place = {start, i_num[5:0]}; moveCounter = 1; pc = pc + 2; end // interact the item
+                    3: begin movement = 5'b00100; place = {start, i_num[5:0]}; moveCounter = 1; pc2 = pc + 2; end // interact the item
                 endcase
             end
             else if({op_code, func} == 5'b00111) begin
                 case (moveCounter)
                     1: begin movement = 5'b00000; place = {start, i_num[5:0]}; moveCounter = moveCounter + 1; end // select a place
                     2: begin movement = 5'b01000; place = {start, i_num[5:0]}; moveCounter = moveCounter + 1; end// move
-                    3: begin movement = 5'b10000; place = {start, i_num[5:0]}; moveCounter = 1; pc = pc + 2; end // throw the item
+                    3: begin movement = 5'b10000; place = {start, i_num[5:0]}; moveCounter = 1; pc2 = pc + 2; end // throw the item
                 endcase
             end
         end
@@ -146,7 +150,7 @@ module ScriptMode(
     always @(posedge slow_clk) begin
         if({op_code, func} == 5'b01100 && i_num > 0) begin
             if(watingCounter == i_num) begin
-                pc = pc + 2;
+                pc3 = pc + 2;
                 watingCounter = 0;
             end
             watingCounter = watingCounter + 1;
@@ -157,8 +161,23 @@ module ScriptMode(
     always @(posedge clk) begin
         if({op_code, func} == 5'b01101) begin
             if(i_sign) begin
-                pc = pc + 2;
+                pc4 = pc + 2;
             end
         end
+    end
+
+    always @(*) begin
+        case({op_code, func})
+            5'b01000: pc = pc1;
+            5'b01001: pc = pc1;
+            5'b10001: pc = pc1;
+            5'b10010: pc = pc1;
+            5'b00100: pc = pc2;
+            5'b00101: pc = pc2;
+            5'b00110: pc = pc2;
+            5'b00111: pc = pc2;
+            5'b01100: pc = pc3;
+            5'b01101: pc = pc4;
+        endcase
     end
 endmodule

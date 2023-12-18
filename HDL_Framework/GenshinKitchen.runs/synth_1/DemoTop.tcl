@@ -16,40 +16,31 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-<<<<<<< HEAD
-=======
-set_param xicom.use_bs_reader 1
-set_param synth.incrementalSynthesisCache C:/Users/Owen/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-15716-DeLiAssistant/incrSyn
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
->>>>>>> 7883f3c976f5e1c7f15fe78ff5a44eab828b8248
+set_msg_config -id {Common 17-41} -limit 10000000
 create_project -in_memory -part xc7a35tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DLProject/HDL_Framework/GenshinKitchen.cache/wt [current_project]
-set_property parent.project_path D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DLProject/HDL_Framework/GenshinKitchen.xpr [current_project]
+set_property webtalk.parent_dir D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.cache/wt [current_project]
+set_property parent.project_path D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.xpr [current_project]
 set_property XPM_LIBRARIES XPM_MEMORY [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo d:/OWEN/Undergraduate/2Autumn/DigitalLogic/DLProject/HDL_Framework/GenshinKitchen.cache/ip [current_project]
+set_property ip_output_repo d:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
-  D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DLProject/HDL_Framework/GenshinKitchen.srcs/sources_1/new/Input_Module.v
-  D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DLProject/HDL_Framework/GenshinKitchen.srcs/sources_1/new/Output_Module.v
-  D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DLProject/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptMem.v
-<<<<<<< HEAD
-  D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DLProject/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptMode.v
-=======
->>>>>>> 7883f3c976f5e1c7f15fe78ff5a44eab828b8248
-  D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DLProject/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UART.v
-  D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DLProject/HDL_Framework/GenshinKitchen.srcs/sources_1/new/clock_frequency_divider.v
-  D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DLProject/HDL_Framework/GenshinKitchen.srcs/sources_1/new/DemoTop.v
+  D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/sources_1/imports/GenshinKitchen.srcs/sources_1/new/Input_Module.v
+  D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/sources_1/imports/GenshinKitchen.srcs/sources_1/new/Output_Module.v
+  D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/sources_1/imports/GenshinKitchen.srcs/sources_1/new/ScriptMem.v
+  D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/sources_1/imports/GenshinKitchen.srcs/sources_1/new/ScriptMode.v
+  D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/sources_1/imports/GenshinKitchen.srcs/sources_1/new/UART.v
+  D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/sources_1/imports/GenshinKitchen.srcs/sources_1/new/clock_frequency_divider.v
+  D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/sources_1/new/DemoTop.v
 }
-read_ip -quiet D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DLProject/HDL_Framework/GenshinKitchen.srcs/sources_1/ip/inst_ram/inst_ram.xci
-set_property used_in_implementation false [get_files -all d:/OWEN/Undergraduate/2Autumn/DigitalLogic/DLProject/HDL_Framework/GenshinKitchen.srcs/sources_1/ip/inst_ram/inst_ram_ooc.xdc]
+read_ip -quiet D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/ip/inst_ram/inst_ram.xci
+set_property used_in_implementation false [get_files -all d:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/ip/inst_ram/inst_ram_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -59,8 +50,8 @@ set_property used_in_implementation false [get_files -all d:/OWEN/Undergraduate/
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DLProject/HDL_Framework/GenshinKitchen.srcs/constrs_1/new/cons.xdc
-set_property used_in_implementation false [get_files D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DLProject/HDL_Framework/GenshinKitchen.srcs/constrs_1/new/cons.xdc]
+read_xdc D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/constrs_1/new/cons.xdc
+set_property used_in_implementation false [get_files D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/constrs_1/new/cons.xdc]
 
 
 synth_design -top DemoTop -part xc7a35tcsg324-1

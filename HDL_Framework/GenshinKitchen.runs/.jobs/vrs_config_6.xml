@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<Runs Version="1" Minor="0">
-	<Run Id="inst_ram_synth_1" LaunchDir="C:/Users/86153/Desktop/CS207-Project/DL-Kitchen/HDL_Framework/GenshinKitchen.runs/inst_ram_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
-	<Run Id="synth_1" LaunchDir="C:/Users/86153/Desktop/CS207-Project/DL-Kitchen/HDL_Framework/GenshinKitchen.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
-		<Parent Id="inst_ram_synth_1"/>
-	</Run>
-</Runs>
-

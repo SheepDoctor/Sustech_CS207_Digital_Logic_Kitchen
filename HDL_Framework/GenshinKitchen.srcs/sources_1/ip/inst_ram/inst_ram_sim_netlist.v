@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-// Date        : Mon Dec 11 20:50:56 2023
+// Date        : Sat Dec 16 23:16:59 2023
 // Host        : DeLiAssistant running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DLProject/HDL_Framework/GenshinKitchen.srcs/sources_1/ip/inst_ram/inst_ram_sim_netlist.v
+//               D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/ip/inst_ram/inst_ram_sim_netlist.v
 // Design      : inst_ram
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
