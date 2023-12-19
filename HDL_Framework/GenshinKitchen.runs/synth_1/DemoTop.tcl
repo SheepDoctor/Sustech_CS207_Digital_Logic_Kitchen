@@ -16,7 +16,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_msg_config -id {Common 17-41} -limit 10000000
 create_project -in_memory -part xc7a35tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -31,13 +30,13 @@ set_property target_language Verilog [current_project]
 set_property ip_output_repo d:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
-  D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/sources_1/imports/GenshinKitchen.srcs/sources_1/new/Input_Module.v
-  D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/sources_1/imports/GenshinKitchen.srcs/sources_1/new/Output_Module.v
-  D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/sources_1/imports/GenshinKitchen.srcs/sources_1/new/ScriptMem.v
-  D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/sources_1/imports/GenshinKitchen.srcs/sources_1/new/ScriptMode.v
-  D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/sources_1/imports/GenshinKitchen.srcs/sources_1/new/UART.v
-  D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/sources_1/imports/GenshinKitchen.srcs/sources_1/new/clock_frequency_divider.v
-  D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/sources_1/new/DemoTop.v
+  D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/Input_Module.v
+  D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/Output_Module.v
+  D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptMem.v
+  D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/ScriptMode.v
+  D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UART.v
+  D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/clock_frequency_divider.v
+  D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/new/DemoTop.v
 }
 read_ip -quiet D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/ip/inst_ram/inst_ram.xci
 set_property used_in_implementation false [get_files -all d:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/ip/inst_ram/inst_ram_ooc.xdc]

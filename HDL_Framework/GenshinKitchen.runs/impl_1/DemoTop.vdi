@@ -2,8 +2,8 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Sat Dec 16 23:17:48 2023
-# Process ID: 12488
+# Start of session at: Tue Dec 19 16:59:34 2023
+# Process ID: 29036
 # Current directory: D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.runs/impl_1
 # Command line: vivado.exe -log DemoTop.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source DemoTop.tcl -notrace
 # Log file: D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.runs/impl_1/DemoTop.vdi
@@ -27,7 +27,7 @@ No Unisim elements were transformed.
 
 8 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 547.297 ; gain = 315.785
+link_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 548.871 ; gain = 317.785
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
@@ -43,23 +43,14 @@ ERROR: [DRC MDRV-1] Multiple Driver Nets: Net receiver/scriptLoadingMode/led_OBU
 ERROR: [DRC MDRV-1] Multiple Driver Nets: Net receiver/scriptLoadingMode/led_OBUF[5] has multiple drivers: receiver/feedbackSignal/led_reg[5]/Q, and receiver/scriptLoadingMode/led2_reg[5]/Q.
 ERROR: [DRC MDRV-1] Multiple Driver Nets: Net receiver/scriptLoadingMode/led_OBUF[6] has multiple drivers: receiver/feedbackSignal/led_reg[6]/Q, and receiver/scriptLoadingMode/led2_reg[6]/Q.
 ERROR: [DRC MDRV-1] Multiple Driver Nets: Net receiver/scriptLoadingMode/led_OBUF[7] has multiple drivers: receiver/feedbackSignal/led_reg[7]/Q, and receiver/scriptLoadingMode/led2_reg[7]/Q.
-ERROR: [DRC MDRV-1] Multiple Driver Nets: Net scriptMode/Q[0] has multiple drivers: scriptMode/pc_reg[0]/Q, scriptMode/pc_reg[0]__1/Q, scriptMode/pc_reg[0]__0/Q, and scriptMode/pc_reg[0]__2/Q.
-ERROR: [DRC MDRV-1] Multiple Driver Nets: Net scriptMode/Q[1] has multiple drivers: scriptMode/pc_reg[1]__2/Q, scriptMode/pc_reg[1]__0/Q, scriptMode/pc_reg[1]__1/Q, and scriptMode/pc_reg[1]/Q.
-ERROR: [DRC MDRV-1] Multiple Driver Nets: Net scriptMode/Q[2] has multiple drivers: scriptMode/pc_reg[2]__0/Q, scriptMode/pc_reg[2]/Q, scriptMode/pc_reg[2]__1/Q, and scriptMode/pc_reg[2]__2/Q.
-ERROR: [DRC MDRV-1] Multiple Driver Nets: Net scriptMode/Q[3] has multiple drivers: scriptMode/pc_reg[3]/Q, scriptMode/pc_reg[3]__2/Q, scriptMode/pc_reg[3]__1/Q, and scriptMode/pc_reg[3]__0/Q.
-ERROR: [DRC MDRV-1] Multiple Driver Nets: Net scriptMode/Q[4] has multiple drivers: scriptMode/pc_reg[4]__1/Q, scriptMode/pc_reg[4]__0/Q, scriptMode/pc_reg[4]__2/Q, and scriptMode/pc_reg[4]/Q.
-ERROR: [DRC MDRV-1] Multiple Driver Nets: Net scriptMode/Q[5] has multiple drivers: scriptMode/pc_reg[5]__1/Q, scriptMode/pc_reg[5]/Q, scriptMode/pc_reg[5]__2/Q, and scriptMode/pc_reg[5]__0/Q.
-ERROR: [DRC MDRV-1] Multiple Driver Nets: Net scriptMode/Q[6] has multiple drivers: scriptMode/pc_reg[6]/Q, scriptMode/pc_reg[6]__2/Q, scriptMode/pc_reg[6]__1/Q, and scriptMode/pc_reg[6]__0/Q.
-ERROR: [DRC MDRV-1] Multiple Driver Nets: Net scriptMode/Q[7] has multiple drivers: scriptMode/pc_reg[7]/Q, scriptMode/pc_reg[7]__0/Q, scriptMode/pc_reg[7]__1/Q, and scriptMode/pc_reg[7]__2/Q.
-ERROR: [DRC MDRV-1] Multiple Driver Nets: Net scriptMode/io has multiple drivers: scriptMode/io_reg/Q, and scriptMode/io_reg__0/Q.
-INFO: [Project 1-461] DRC finished with 17 Errors
+INFO: [Project 1-461] DRC finished with 8 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 ERROR: [Vivado_Tcl 4-78] Error(s) found during DRC. Opt_design not run.
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.668 . Memory (MB): peak = 562.191 ; gain = 14.895
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.405 . Memory (MB): peak = 563.371 ; gain = 14.500
 INFO: [Common 17-83] Releasing license: Implementation
-13 Infos, 0 Warnings, 0 Critical Warnings and 18 Errors encountered.
+13 Infos, 0 Warnings, 0 Critical Warnings and 9 Errors encountered.
 opt_design failed
 ERROR: [Common 17-39] 'opt_design' failed due to earlier errors.
 
-INFO: [Common 17-206] Exiting Vivado at Sat Dec 16 23:17:59 2023...
+INFO: [Common 17-206] Exiting Vivado at Tue Dec 19 16:59:43 2023...
