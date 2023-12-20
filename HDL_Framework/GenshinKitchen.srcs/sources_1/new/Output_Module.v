@@ -26,55 +26,11 @@ module Output(
     input [4:0] button,
     input rst_n,
     input [3:0] led,
-    input button_get,
-    input button_put,
-    output reg [1:0]count1,
-    output reg [1:0]count2,
     output reg [7:0]dataIn_bits
 );
-parameter S_start = 3'b000,S_end = 3'b001,S_action = 3'b010,S_target = 3'b011,has = 1'b1, no = 1'b0;
+parameter S_start = 3'b000,S_end = 3'b001,S_action = 3'b010,S_target = 3'b011;
 reg [2:0] state;
 reg [2:0] n_state;
-reg [1:0]count3;
-reg [1:0]count4;
-reg [1:0]count5;
-reg now;
-reg next;
-reg button1,button2;
-reg lEd;
-
-always @(posedge clk, negedge rst_n) begin
-    if(~rst_n) begin
-    now <= no; 
-    lEd <= 1'b0;
-    end
-    else
-    now <= next;
-    lEd <= led[1];
-end
-
-always@(lEd) begin
-case(now)
-no:
-if(lEd) begin
-if(switches==10) {next,count1}={has,count1-1};
-else if(switches==12) {next,count2}={has,count2-1};
-else if(switches==13) {next,count3}={has,count3-1};
-else if(switches==15) {next,count4}={has,count4-1};
-else if(switches==16) {next,count5}={has,count5-1};
-end
-else next = no;
-has:
-if(~lEd) begin
-if(switches==10) {next,count1}={no,count1+1};
-else if(switches==12) {next,count2}={no,count2+1};
-else if(switches==13) {next,count3}={no,count3+1};
-else if(switches==15) {next,count4}={no,count4+1};
-else if(switches==16) {next,count5}={no,count5+1};
-end
-else next = has;
-endcase
-end
 
 always @(posedge clk, negedge rst_n) begin
     if(~rst_n) begin
