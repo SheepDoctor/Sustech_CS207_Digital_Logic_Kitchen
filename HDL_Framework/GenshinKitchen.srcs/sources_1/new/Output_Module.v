@@ -59,15 +59,8 @@ if(switches[7]&~switches[6]) {n_state,dataIn_bits} = {S_end,8'b0000_1001};
 else if(led[0]&~led[1]&led[3]&button[0]) {n_state,dataIn_bits} = {S_action,8'b0000_0110};//get
 
 else if(switches[5:0]>6&led[0]&led[1]&button[1]) begin
-if(~led[3]|(switches==9|switches==11|switches==14|switches==17|switches==19)) {n_state,dataIn_bits} = {S_action,8'b0000_1010};//put
-else begin
-if(switches==10&~count1==2'b11) {n_state,dataIn_bits} = {S_action,8'b0000_1010};
-else if(switches==12&~count2==2'b11) {n_state,dataIn_bits} = {S_action,8'b0000_1010};
-else if(switches==13&~count3==2'b11) {n_state,dataIn_bits} = {S_action,8'b0000_1010};
-else if(switches==15&~count4==2'b11) {n_state,dataIn_bits} = {S_action,8'b0000_1010};
-else if(switches==16&~count5==2'b11) {n_state,dataIn_bits} = {S_action,8'b0000_1010};
-else {n_state,dataIn_bits} = {S_target,8'b0000_0010};
-end
+if(~led[3]) {n_state,dataIn_bits} = {S_action,8'b0000_1010};//put
+else if(switches==9|switches==10|switches==11|switches==12|switches==13|switches==14|switches==15|switches==16|switches==17|switches==19) {n_state,dataIn_bits} = {S_action,8'b0000_1010};
 end
 
 else if(led[0]&button[2]) {n_state,dataIn_bits} = {S_action,8'b0001_0010};//interact
