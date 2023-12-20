@@ -48,28 +48,15 @@ wire [7:0] led1in;
 wire [7:0] led2in;
 wire [3:0] signal;
 wire slow_clk;
-wire but1,but2;
-wire [1:0] count1;
-wire [1:0] count2;
 wire [7:0] size;
 // Self-Defined wires
-/*
-    button_shifter button1(slow_clk,button[0],but1);
-    button_shifter button2(slow_clk,button[1],but2);*/
-    
+ 
     clock_frequency_divider clock(
     .clk(clk),
     .uart_clk(uart_clk_16),
     .slow_clk(slow_clk)
     );
     
-    /*    
-    set_ready set (
-    .clk(slow_clk),
-    .rst_n(rst_n),
-    .dataIn_ready(dataIn_ready)
-    );*/
-
     /*
     Output func(
     .clk(slow_clk),
@@ -77,13 +64,9 @@ wire [7:0] size;
     .button(button),
     .rst_n(rst_n),
     .led(signal),
-    .button_get(but1),
-    .button_put(but2),
-    .count1(count1),
-    .count2(count2),
     .dataIn_bits(dataIn_bits) // client signal
       );
-      );*/
+     */
       
     Receiver receiver(
       .clk(uart_clk_16),
@@ -93,18 +76,6 @@ wire [7:0] size;
       .size(size)
     );
   
-  /*
-    Led1 output1(
-    .dataIn_bits(dataIn_bits),
-    .led(led)
-    );
-    
-    Led2 output2(
-     .dataIn_ready(dataIn_ready),
-     .dataOut_ready(dataOut_valid),//feedback signal
-    .led2(led2)
-    );*/
-
     ScriptMode scriptMode(
       .rst_n(rst_n),
       .clk(clk),
