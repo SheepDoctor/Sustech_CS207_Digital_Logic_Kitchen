@@ -46,11 +46,17 @@ wire [15:0] script;
 // The wire above is useful~
 wire [7:0] led1in;
 wire [7:0] led2in;
+wire [3:0] signal;
 wire slow_clk;
-
+wire but1,but2;
+wire [1:0] count1;
+wire [1:0] count2;
 wire [7:0] size;
 // Self-Defined wires
-
+/*
+    button_shifter button1(slow_clk,button[0],but1);
+    button_shifter button2(slow_clk,button[1],but2);*/
+    
     clock_frequency_divider clock(
     .clk(clk),
     .uart_clk(uart_clk_16),
@@ -69,11 +75,14 @@ wire [7:0] size;
     .clk(slow_clk),
     .switches(switches), 
     .button(button),
-    .dataIn_ready(dataIn_ready),
     .rst_n(rst_n),
-    .dataOut_bits(dataOut_bits),
-    .dataOut_valid(dataOut_valid), 
+    .led(signal),
+    .button_get(but1),
+    .button_put(but2),
+    .count1(count1),
+    .count2(count2),
     .dataIn_bits(dataIn_bits) // client signal
+      );
       );*/
       
     Receiver receiver(
