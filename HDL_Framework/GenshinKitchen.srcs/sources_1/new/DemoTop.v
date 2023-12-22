@@ -51,6 +51,11 @@ wire slow_clk;
 wire [7:0] size;
 // Self-Defined wires
 
+// assign led = script[15:8];
+// assign led2 = script[7:0];
+
+// assign end
+
     clock_frequency_divider clock(
     .clk(clk),
     .uart_clk(uart_clk_16),
@@ -75,7 +80,7 @@ wire [7:0] size;
     .dataOut_valid(dataOut_valid), 
     .dataIn_bits(dataIn_bits) // client signal
       );*/
-      
+    /*
     Receiver receiver(
       .clk(uart_clk_16),
       .dataOut_bits(dataOut_bits),
@@ -83,8 +88,8 @@ wire [7:0] size;
       .led(led),
       .size(size)
     );
-  
-  /*
+  */
+  /*  
     Led1 output1(
     .dataIn_bits(dataIn_bits),
     .led(led)
@@ -93,7 +98,7 @@ wire [7:0] size;
     Led2 output2(
      .dataIn_ready(dataIn_ready),
      .dataOut_ready(dataOut_valid),//feedback signal
-    .led2(led2)
+    .led2({script_mode, 7'b0000000});
     );*/
 
     ScriptMode scriptMode(
@@ -107,6 +112,8 @@ wire [7:0] size;
       .size(size),
       .script_mode(script_mode),
       .script(script),
+      .led(led),
+      .led2(led2),
       .pc(pc)
     );
     

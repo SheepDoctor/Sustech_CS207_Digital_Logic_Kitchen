@@ -33,15 +33,15 @@ module Receiver (
         .channal(channal),
         .signal(signal));
     // 10 channel: Change into Script loading mode
-    ScriptLoadingMode scriptLoadingMode(
-        .clk(clk), 
-        .dataOut_ready(dataOut_ready), 
-        .dataOut_bits(dataOut_bits), 
-        .led2(led),
-        .size(size),
-        .verify(verify),
-        .channal(channal),
-        .signal(signal));
+    // ScriptLoadingMode scriptLoadingMode(
+    //     .clk(clk), 
+    //     .dataOut_ready(dataOut_ready), 
+    //     .dataOut_bits(dataOut_bits), 
+    //     .led2(led),
+    //     .size(size),
+    //     .verify(verify),
+    //     .channal(channal),
+    //     .signal(signal));
 endmodule
 
 /*
@@ -77,25 +77,25 @@ end
 
 endmodule
 
-module ScriptLoadingMode (
-    input clk,
-    input dataOut_ready,
-    input [7:0] dataOut_bits,
-    input [1:0] verify,
-    input [1:0] channal,
-    input [3:0] signal,
-    output reg [7:0] led2,
-    output reg [7:0] size
-);
-always @(posedge dataOut_ready) begin
-    if(dataOut_ready)
-        if(channal == 2'b10) begin
-            led2 <= dataOut_bits;
-        end
-    else 
-        led2 <= 8'b0000_0000;
-end
-endmodule
+// module ScriptLoadingMode (
+//     input clk,
+//     input dataOut_ready,
+//     input [7:0] dataOut_bits,
+//     input [1:0] verify,
+//     input [1:0] channal,
+//     input [3:0] signal,
+//     output reg [7:0] led2,
+//     output reg [7:0] size
+// );
+// always @(posedge dataOut_ready) begin
+//     if(dataOut_ready)
+//         if(channal == 2'b10) begin
+//             led2 <= dataOut_bits;
+//         end
+//     else 
+//         led2 <= 8'b0000_0000;
+// end
+// endmodule
 
 
 /*
