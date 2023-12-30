@@ -1,0 +1,6 @@
+xpm_memory.sv,systemverilog,xil_defaultlib,F:/Vivado/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv,incdir="../../../../GenshinKitchen.srcs/sources_1/bd/pll108MHz/ipshared/4868"incdir="../../../../GenshinKitchen.srcs/sources_1/bd/pll108MHz/ipshared/4868"
+xpm_VCOMP.vhd,vhdl,xpm,F:/Vivado/Vivado/2017.4/data/ip/xpm/xpm_VCOMP.vhd,incdir="../../../../GenshinKitchen.srcs/sources_1/bd/pll108MHz/ipshared/4868"incdir="../../../../GenshinKitchen.srcs/sources_1/bd/pll108MHz/ipshared/4868"
+pll108MHz_clk_wiz_0_0_clk_wiz.v,verilog,xil_defaultlib,../../../bd/pll108MHz/ip/pll108MHz_clk_wiz_0_0_1/pll108MHz_clk_wiz_0_0_clk_wiz.v,incdir="../../../../GenshinKitchen.srcs/sources_1/bd/pll108MHz/ipshared/4868"incdir="../../../../GenshinKitchen.srcs/sources_1/bd/pll108MHz/ipshared/4868"
+pll108MHz_clk_wiz_0_0.v,verilog,xil_defaultlib,../../../bd/pll108MHz/ip/pll108MHz_clk_wiz_0_0_1/pll108MHz_clk_wiz_0_0.v,incdir="../../../../GenshinKitchen.srcs/sources_1/bd/pll108MHz/ipshared/4868"incdir="../../../../GenshinKitchen.srcs/sources_1/bd/pll108MHz/ipshared/4868"
+pll108MHz.v,verilog,xil_defaultlib,../../../bd/pll108MHz/sim/pll108MHz.v,incdir="../../../../GenshinKitchen.srcs/sources_1/bd/pll108MHz/ipshared/4868"incdir="../../../../GenshinKitchen.srcs/sources_1/bd/pll108MHz/ipshared/4868"
+glbl.v,Verilog,xil_defaultlib,glbl.v
