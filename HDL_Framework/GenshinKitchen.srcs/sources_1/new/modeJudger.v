@@ -1,6 +1,5 @@
 module modeJudger(
 input [7:0]dataIn_bits,
-input [7:0]dataOut_bits,
 input clk,
 input rst_n,
 output reg switchMode
@@ -15,11 +14,11 @@ always @(posedge clk, negedge rst_n) begin
         else
         state <= n_state;
 end
-always@(state,dataOut_bits,dataIn_bits) begin
+always@(state,dataIn_bits) begin
 case(state)
 user:
-casex(dataOut_bits)
-8'bxxxx_xx10:{n_state,switchMode} = {script,1'b1};
+casex(dataIn_bits)
+8'bxxxx_0101:{n_state,switchMode} = {script,1'b1};
 default:{n_state,switchMode} = {user,1'b0};
 endcase
 script:
