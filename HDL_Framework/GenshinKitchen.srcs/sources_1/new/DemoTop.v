@@ -63,6 +63,7 @@ wire [7:0]dataIn_script;
 wire switchMode;
 // Self-Defined wires
 
+<<<<<<< HEAD
 // assign led = script[15:8];
 // assign led2 = script[7:0];
 
@@ -77,6 +78,8 @@ wire switchMode;
       .vga_vs(vga_vs)
     );
 
+=======
+>>>>>>> parent of f23bb53 (script DONE!!!!!)
     clock_frequency_divider clock(
     .clk(clk),
     .uart_clk(uart_clk_16),
@@ -115,10 +118,18 @@ wire switchMode;
     .switches(switches), 
     .button(button),
     .rst_n(rst_n),
+<<<<<<< HEAD
     .led(signal),
     .dataIn_bits(dataIn_user) // client signal
       );
     
+=======
+    .dataOut_bits(dataOut_bits),
+    .dataOut_valid(dataOut_valid), 
+    .dataIn_bits(dataIn_bits) // client signal
+      );*/
+      
+>>>>>>> parent of f23bb53 (script DONE!!!!!)
     Receiver receiver(
       .clk(uart_clk_16),
       .dataOut_bits(dataOut_bits),
@@ -126,6 +137,21 @@ wire switchMode;
       .led(led),
       .size(size)
     );
+<<<<<<< HEAD
+=======
+  
+  /*
+    Led1 output1(
+    .dataIn_bits(dataIn_bits),
+    .led(led)
+    );
+    
+    Led2 output2(
+     .dataIn_ready(dataIn_ready),
+     .dataOut_ready(dataOut_valid),//feedback signal
+    .led2(led2)
+    );*/
+>>>>>>> parent of f23bb53 (script DONE!!!!!)
 
     ScriptMode scriptMode(
       .reset(rst_n),

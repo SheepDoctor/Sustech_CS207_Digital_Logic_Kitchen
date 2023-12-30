@@ -2,8 +2,13 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+<<<<<<< HEAD
 # Start of session at: Fri Dec 29 23:51:22 2023
 # Process ID: 6204
+=======
+# Start of session at: Tue Dec 19 16:58:42 2023
+# Process ID: 5560
+>>>>>>> parent of f23bb53 (script DONE!!!!!)
 # Current directory: D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.runs/synth_1
 # Command line: vivado.exe -log DemoTop.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source DemoTop.tcl
 # Log file: D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.runs/synth_1/DemoTop.vds
@@ -15,9 +20,15 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
+<<<<<<< HEAD
 INFO: Helper process launched with PID 26500 
 ---------------------------------------------------------------------------------
 Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 340.586 ; gain = 100.410
+=======
+INFO: Helper process launched with PID 26972 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 341.258 ; gain = 99.551
+>>>>>>> parent of f23bb53 (script DONE!!!!!)
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'DemoTop' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/new/DemoTop.v:23]
 INFO: [Synth 8-638] synthesizing module 'clock_frequency_divider' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/clock_frequency_divider.v:23]
@@ -25,6 +36,7 @@ INFO: [Synth 8-638] synthesizing module 'clock_frequency_divider' [D:/OWEN/Under
 	Parameter period2 bound to: 10000000 - type: integer 
 	Parameter period3 bound to: 500000 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'clock_frequency_divider' (1#1) [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/clock_frequency_divider.v:23]
+<<<<<<< HEAD
 INFO: [Synth 8-638] synthesizing module 'modeSwitcher' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/new/modeSwitcher.v:23]
 INFO: [Synth 8-256] done synthesizing module 'modeSwitcher' (2#1) [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/new/modeSwitcher.v:23]
 INFO: [Synth 8-638] synthesizing module 'modeJudger' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/new/modeJudger.v:1]
@@ -39,12 +51,26 @@ INFO: [Synth 8-638] synthesizing module 'seven_segment_tube' [D:/OWEN/Undergradu
 INFO: [Synth 8-155] case statement is not full and has no default [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/new/seven_segment_tube.v:65]
 INFO: [Synth 8-155] case statement is not full and has no default [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/new/seven_segment_tube.v:116]
 INFO: [Synth 8-256] done synthesizing module 'seven_segment_tube' (4#1) [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/new/seven_segment_tube.v:45]
+=======
+INFO: [Synth 8-638] synthesizing module 'Receiver' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/Input_Module.v:9]
+INFO: [Synth 8-638] synthesizing module 'GetInfo' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/Input_Module.v:105]
+INFO: [Synth 8-256] done synthesizing module 'GetInfo' (2#1) [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/Input_Module.v:105]
+INFO: [Synth 8-638] synthesizing module 'FeedbackSignal' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/Input_Module.v:55]
+INFO: [Synth 8-256] done synthesizing module 'FeedbackSignal' (3#1) [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/Input_Module.v:55]
+WARNING: [Synth 8-350] instance 'feedbackSignal' of module 'FeedbackSignal' requires 8 connections, but only 7 given [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/Input_Module.v:27]
+INFO: [Synth 8-638] synthesizing module 'ScriptLoadingMode' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/Input_Module.v:80]
+WARNING: [Synth 8-3848] Net size in module/entity ScriptLoadingMode does not have driver. [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/Input_Module.v:88]
+INFO: [Synth 8-256] done synthesizing module 'ScriptLoadingMode' (4#1) [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/Input_Module.v:80]
+INFO: [Synth 8-256] done synthesizing module 'Receiver' (5#1) [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/Input_Module.v:9]
+INFO: [Synth 8-638] synthesizing module 'ScriptMode' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/ScriptMode.v:5]
+>>>>>>> parent of f23bb53 (script DONE!!!!!)
 INFO: [Synth 8-638] synthesizing module 'Output' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/Output_Module.v:23]
 	Parameter S_start bound to: 3'b000 
 	Parameter S_end bound to: 3'b001 
 	Parameter S_action bound to: 3'b010 
 	Parameter S_target bound to: 3'b011 
 INFO: [Synth 8-155] case statement is not full and has no default [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/Output_Module.v:44]
+<<<<<<< HEAD
 WARNING: [Synth 8-567] referenced signal 'led' should be on the sensitivity list [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/Output_Module.v:43]
 INFO: [Synth 8-256] done synthesizing module 'Output' (5#1) [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/Output_Module.v:23]
 INFO: [Synth 8-638] synthesizing module 'Receiver' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/Input_Module.v:9]
@@ -70,11 +96,48 @@ INFO: [Synth 8-256] done synthesizing module 'UART' (13#1) [D:/OWEN/Undergraduat
 WARNING: [Synth 8-3848] Net led2 in module/entity DemoTop does not have driver. [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/new/DemoTop.v:28]
 WARNING: [Synth 8-3848] Net signal in module/entity DemoTop does not have driver. [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/new/DemoTop.v:54]
 INFO: [Synth 8-256] done synthesizing module 'DemoTop' (14#1) [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/new/DemoTop.v:23]
+=======
+INFO: [Synth 8-256] done synthesizing module 'Output' (6#1) [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/Output_Module.v:23]
+WARNING: [Synth 8-689] width (1) of port connection 'dataIn_bits' does not match port width (8) of module 'Output' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/ScriptMode.v:60]
+WARNING: [Synth 8-567] referenced signal 'op_code' should be on the sensitivity list [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/ScriptMode.v:91]
+WARNING: [Synth 8-567] referenced signal 'func' should be on the sensitivity list [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/ScriptMode.v:91]
+WARNING: [Synth 8-567] referenced signal 'i_sign' should be on the sensitivity list [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/ScriptMode.v:91]
+WARNING: [Synth 8-567] referenced signal 'pc' should be on the sensitivity list [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/ScriptMode.v:91]
+WARNING: [Synth 8-567] referenced signal 'i_num' should be on the sensitivity list [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/ScriptMode.v:91]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/ScriptMode.v:118]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/ScriptMode.v:125]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/ScriptMode.v:132]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/ScriptMode.v:139]
+WARNING: [Synth 8-567] referenced signal 'op_code' should be on the sensitivity list [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/ScriptMode.v:115]
+WARNING: [Synth 8-567] referenced signal 'func' should be on the sensitivity list [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/ScriptMode.v:115]
+WARNING: [Synth 8-567] referenced signal 'start' should be on the sensitivity list [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/ScriptMode.v:115]
+WARNING: [Synth 8-567] referenced signal 'i_num' should be on the sensitivity list [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/ScriptMode.v:115]
+WARNING: [Synth 8-567] referenced signal 'pc' should be on the sensitivity list [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/ScriptMode.v:115]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/ScriptMode.v:170]
+INFO: [Synth 8-256] done synthesizing module 'ScriptMode' (7#1) [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/ScriptMode.v:5]
+WARNING: [Synth 8-689] width (8) of port connection 'dataIn_bits' does not match port width (1) of module 'ScriptMode' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/new/DemoTop.v:106]
+INFO: [Synth 8-638] synthesizing module 'ScriptMem' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptMem.v:23]
+INFO: [Synth 8-638] synthesizing module 'inst_ram' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.runs/synth_1/.Xil/Vivado-5560-DeLiAssistant/realtime/inst_ram_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'inst_ram' (8#1) [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.runs/synth_1/.Xil/Vivado-5560-DeLiAssistant/realtime/inst_ram_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'ScriptMem' (9#1) [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptMem.v:23]
+INFO: [Synth 8-638] synthesizing module 'UART' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UART.v:128]
+INFO: [Synth 8-638] synthesizing module 'UARTTransmitter' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UART.v:3]
+INFO: [Synth 8-256] done synthesizing module 'UARTTransmitter' (10#1) [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UART.v:3]
+INFO: [Synth 8-638] synthesizing module 'UARTReceiver' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UART.v:46]
+INFO: [Synth 8-256] done synthesizing module 'UARTReceiver' (11#1) [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UART.v:46]
+INFO: [Synth 8-256] done synthesizing module 'UART' (12#1) [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UART.v:128]
+WARNING: [Synth 8-3848] Net led2 in module/entity DemoTop does not have driver. [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/new/DemoTop.v:28]
+WARNING: [Synth 8-3848] Net dataOut_ready in module/entity DemoTop does not have driver. [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/new/DemoTop.v:104]
+INFO: [Synth 8-256] done synthesizing module 'DemoTop' (13#1) [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/new/DemoTop.v:23]
+>>>>>>> parent of f23bb53 (script DONE!!!!!)
 WARNING: [Synth 8-3331] design ScriptMem has unconnected port reset
 WARNING: [Synth 8-3331] design Output has unconnected port led[2]
 WARNING: [Synth 8-3331] design GetInfo has unconnected port clk
 WARNING: [Synth 8-3331] design GetInfo has unconnected port dataOut_ready
+<<<<<<< HEAD
 WARNING: [Synth 8-3331] design ScriptMode has unconnected port dataIn_ready
+=======
+>>>>>>> parent of f23bb53 (script DONE!!!!!)
 WARNING: [Synth 8-3331] design ScriptMode has unconnected port size[7]
 WARNING: [Synth 8-3331] design ScriptMode has unconnected port size[6]
 WARNING: [Synth 8-3331] design ScriptMode has unconnected port size[5]
@@ -83,6 +146,34 @@ WARNING: [Synth 8-3331] design ScriptMode has unconnected port size[3]
 WARNING: [Synth 8-3331] design ScriptMode has unconnected port size[2]
 WARNING: [Synth 8-3331] design ScriptMode has unconnected port size[1]
 WARNING: [Synth 8-3331] design ScriptMode has unconnected port size[0]
+<<<<<<< HEAD
+=======
+WARNING: [Synth 8-3331] design ScriptLoadingMode has unconnected port size[7]
+WARNING: [Synth 8-3331] design ScriptLoadingMode has unconnected port size[6]
+WARNING: [Synth 8-3331] design ScriptLoadingMode has unconnected port size[5]
+WARNING: [Synth 8-3331] design ScriptLoadingMode has unconnected port size[4]
+WARNING: [Synth 8-3331] design ScriptLoadingMode has unconnected port size[3]
+WARNING: [Synth 8-3331] design ScriptLoadingMode has unconnected port size[2]
+WARNING: [Synth 8-3331] design ScriptLoadingMode has unconnected port size[1]
+WARNING: [Synth 8-3331] design ScriptLoadingMode has unconnected port size[0]
+WARNING: [Synth 8-3331] design ScriptLoadingMode has unconnected port clk
+WARNING: [Synth 8-3331] design ScriptLoadingMode has unconnected port verify[1]
+WARNING: [Synth 8-3331] design ScriptLoadingMode has unconnected port verify[0]
+WARNING: [Synth 8-3331] design ScriptLoadingMode has unconnected port signal[3]
+WARNING: [Synth 8-3331] design ScriptLoadingMode has unconnected port signal[2]
+WARNING: [Synth 8-3331] design ScriptLoadingMode has unconnected port signal[1]
+WARNING: [Synth 8-3331] design ScriptLoadingMode has unconnected port signal[0]
+WARNING: [Synth 8-3331] design FeedbackSignal has unconnected port clk
+WARNING: [Synth 8-3331] design FeedbackSignal has unconnected port script_mode
+WARNING: [Synth 8-3331] design FeedbackSignal has unconnected port dataOut_bits[7]
+WARNING: [Synth 8-3331] design FeedbackSignal has unconnected port dataOut_bits[6]
+WARNING: [Synth 8-3331] design FeedbackSignal has unconnected port dataOut_bits[5]
+WARNING: [Synth 8-3331] design FeedbackSignal has unconnected port dataOut_bits[4]
+WARNING: [Synth 8-3331] design FeedbackSignal has unconnected port dataOut_bits[3]
+WARNING: [Synth 8-3331] design FeedbackSignal has unconnected port dataOut_bits[2]
+WARNING: [Synth 8-3331] design FeedbackSignal has unconnected port dataOut_bits[1]
+WARNING: [Synth 8-3331] design FeedbackSignal has unconnected port dataOut_bits[0]
+>>>>>>> parent of f23bb53 (script DONE!!!!!)
 WARNING: [Synth 8-3331] design DemoTop has unconnected port led2[7]
 WARNING: [Synth 8-3331] design DemoTop has unconnected port led2[6]
 WARNING: [Synth 8-3331] design DemoTop has unconnected port led2[5]
@@ -91,8 +182,26 @@ WARNING: [Synth 8-3331] design DemoTop has unconnected port led2[3]
 WARNING: [Synth 8-3331] design DemoTop has unconnected port led2[2]
 WARNING: [Synth 8-3331] design DemoTop has unconnected port led2[1]
 WARNING: [Synth 8-3331] design DemoTop has unconnected port led2[0]
+<<<<<<< HEAD
 ---------------------------------------------------------------------------------
 Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 392.574 ; gain = 152.398
+=======
+WARNING: [Synth 8-3331] design DemoTop has unconnected port button[4]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port button[3]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port button[2]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port button[1]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port button[0]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port switches[7]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port switches[6]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port switches[5]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port switches[4]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port switches[3]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port switches[2]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port switches[1]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port switches[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 393.910 ; gain = 152.203
+>>>>>>> parent of f23bb53 (script DONE!!!!!)
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -101,19 +210,30 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
+<<<<<<< HEAD
 WARNING: [Synth 8-3295] tying undriven pin func:led[3] to constant 0 [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/new/DemoTop.v:101]
 WARNING: [Synth 8-3295] tying undriven pin func:led[1] to constant 0 [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/new/DemoTop.v:101]
 WARNING: [Synth 8-3295] tying undriven pin func:led[0] to constant 0 [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/new/DemoTop.v:101]
 ---------------------------------------------------------------------------------
 Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 392.574 ; gain = 152.398
+=======
+WARNING: [Synth 8-3295] tying undriven pin scriptMode:dataOut_ready to constant 0 [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/new/DemoTop.v:99]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 393.910 ; gain = 152.203
+>>>>>>> parent of f23bb53 (script DONE!!!!!)
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
+<<<<<<< HEAD
 Parsing XDC File [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.runs/synth_1/.Xil/Vivado-6204-DeLiAssistant/dcp1/inst_ram_in_context.xdc] for cell 'script_mem_module/ram_module'
 Finished Parsing XDC File [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.runs/synth_1/.Xil/Vivado-6204-DeLiAssistant/dcp1/inst_ram_in_context.xdc] for cell 'script_mem_module/ram_module'
+=======
+Parsing XDC File [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.runs/synth_1/.Xil/Vivado-5560-DeLiAssistant/dcp1/inst_ram_in_context.xdc] for cell 'script_mem_module/ram_module'
+Finished Parsing XDC File [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.runs/synth_1/.Xil/Vivado-5560-DeLiAssistant/dcp1/inst_ram_in_context.xdc] for cell 'script_mem_module/ram_module'
+>>>>>>> parent of f23bb53 (script DONE!!!!!)
 Parsing XDC File [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/constrs_1/new/cons.xdc]
 Finished Parsing XDC File [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/constrs_1/new/cons.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/constrs_1/new/cons.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/DemoTop_propImpl.xdc].
@@ -123,27 +243,42 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
+<<<<<<< HEAD
 Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 727.582 ; gain = 0.000
 ---------------------------------------------------------------------------------
 Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 727.582 ; gain = 487.406
+=======
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 722.750 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 722.750 ; gain = 481.043
+>>>>>>> parent of f23bb53 (script DONE!!!!!)
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcsg324-1
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
 Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 727.582 ; gain = 487.406
+=======
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 722.750 ; gain = 481.043
+>>>>>>> parent of f23bb53 (script DONE!!!!!)
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property DONT_TOUCH = true for script_mem_module/ram_module. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
 Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 727.582 ; gain = 487.406
+=======
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 722.750 ; gain = 481.043
+>>>>>>> parent of f23bb53 (script DONE!!!!!)
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "uart_clk" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5545] ROM "slow_clk" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "count2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+<<<<<<< HEAD
 INFO: [Synth 8-5545] ROM "tube_clk" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "count3" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-4471] merging register 'state1_reg[3:0]' into 'state2_reg[3:0]' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/new/seven_segment_tube.v:56]
@@ -163,6 +298,18 @@ INFO: [Synth 8-5545] ROM "start" won't be mapped to RAM because address size (32
 INFO: [Synth 8-5545] ROM "start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "pc" won't be mapped to RAM because it is too sparse
 WARNING: [Synth 8-6014] Unused sequential element waitingCounter_reg was removed.  [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/ScriptMode.v:253]
+=======
+INFO: [Synth 8-5544] ROM "led" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "n_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "pc1" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "pc1" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "start" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "movement" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "moveCounter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "pc2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "pc" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element watingCounter_reg was removed.  [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/ScriptMode.v:152]
+>>>>>>> parent of f23bb53 (script DONE!!!!!)
 INFO: [Synth 8-5544] ROM "script_size" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 WARNING: [Synth 8-6014] Unused sequential element script_cnt_reg was removed.  [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptMem.v:36]
 INFO: [Synth 8-5544] ROM "spacing" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
@@ -170,6 +317,7 @@ WARNING: [Synth 8-6014] Unused sequential element spacing_reg was removed.  [D:/
 WARNING: [Synth 8-6014] Unused sequential element clkCnt_reg was removed.  [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UART.v:143]
 WARNING: [Synth 8-327] inferring latch for variable 'dataIn_bits_reg' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/Output_Module.v:47]
 WARNING: [Synth 8-327] inferring latch for variable 'n_state_reg' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/Output_Module.v:47]
+<<<<<<< HEAD
 WARNING: [Synth 8-327] inferring latch for variable 'size_reg' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/Input_Module.v:42]
 WARNING: [Synth 8-327] inferring latch for variable 'pc_reg' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/ScriptMode.v:337]
 WARNING: [Synth 8-327] inferring latch for variable 'place_reg' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/ScriptMode.v:345]
@@ -181,6 +329,21 @@ WARNING: [Synth 8-327] inferring latch for variable 'i_num_reg' [D:/OWEN/Undergr
 WARNING: [Synth 8-327] inferring latch for variable 'i_sign_reg' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/ScriptMode.v:89]
 ---------------------------------------------------------------------------------
 Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:18 . Memory (MB): peak = 727.582 ; gain = 487.406
+=======
+WARNING: [Synth 8-327] inferring latch for variable 'pc_reg' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/ScriptMode.v:171]
+WARNING: [Synth 8-327] inferring latch for variable 'place_reg' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/ScriptMode.v:55]
+WARNING: [Synth 8-327] inferring latch for variable 'movement_reg' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/ScriptMode.v:54]
+WARNING: [Synth 8-327] inferring latch for variable 'pc1_reg' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/ScriptMode.v:94]
+WARNING: [Synth 8-327] inferring latch for variable 'pc2_reg' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/ScriptMode.v:121]
+WARNING: [Synth 8-327] inferring latch for variable 'i_num_reg' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/ScriptMode.v:84]
+WARNING: [Synth 8-327] inferring latch for variable 'func_reg' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/ScriptMode.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'op_code_reg' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/ScriptMode.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'i_sign_reg' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/ScriptMode.v:85]
+WARNING: [Synth 8-327] inferring latch for variable 'start_reg' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/ScriptMode.v:103]
+WARNING: [Synth 8-327] inferring latch for variable 'moveCounter_reg' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/ScriptMode.v:118]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 722.750 ; gain = 481.043
+>>>>>>> parent of f23bb53 (script DONE!!!!!)
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -193,12 +356,17 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
+<<<<<<< HEAD
 	   2 Input     32 Bit       Adders := 4     
+=======
+	   2 Input     32 Bit       Adders := 1     
+>>>>>>> parent of f23bb53 (script DONE!!!!!)
 	   2 Input     16 Bit       Adders := 1     
 	   2 Input      8 Bit       Adders := 4     
 	   2 Input      4 Bit       Adders := 2     
 	   2 Input      3 Bit       Adders := 1     
 +---Registers : 
+<<<<<<< HEAD
 	               32 Bit    Registers := 5     
 	               16 Bit    Registers := 1     
 	                8 Bit    Registers := 12    
@@ -227,6 +395,24 @@ Detailed RTL Component Info :
 	   5 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 9     
 	   3 Input      4 Bit        Muxes := 2     
+=======
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 8     
+	                4 Bit    Registers := 4     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 15    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   4 Input     32 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 15    
+	   4 Input      8 Bit        Muxes := 1     
+	   5 Input      8 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 5     
+	   4 Input      5 Bit        Muxes := 5     
+	   2 Input      4 Bit        Muxes := 4     
+>>>>>>> parent of f23bb53 (script DONE!!!!!)
 	   7 Input      4 Bit        Muxes := 2     
 	   2 Input      3 Bit        Muxes := 11    
 	   4 Input      3 Bit        Muxes := 3     
@@ -235,6 +421,7 @@ Detailed RTL Component Info :
 	   3 Input      2 Bit        Muxes := 2     
 	   6 Input      2 Bit        Muxes := 2     
 	   2 Input      2 Bit        Muxes := 2     
+<<<<<<< HEAD
 	  11 Input      2 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 49    
 	   3 Input      1 Bit        Muxes := 8     
@@ -242,6 +429,12 @@ Detailed RTL Component Info :
 	   4 Input      1 Bit        Muxes := 10    
 	  11 Input      1 Bit        Muxes := 1     
 	   6 Input      1 Bit        Muxes := 2     
+=======
+	   2 Input      1 Bit        Muxes := 28    
+	   3 Input      1 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 8     
+	  11 Input      1 Bit        Muxes := 1     
+>>>>>>> parent of f23bb53 (script DONE!!!!!)
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -272,6 +465,7 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input      1 Bit        Muxes := 2     
+<<<<<<< HEAD
 	   3 Input      1 Bit        Muxes := 2     
 Module seven_segment_tube 
 Detailed RTL Component Info : 
@@ -286,6 +480,21 @@ Detailed RTL Component Info :
 	   6 Input      8 Bit        Muxes := 2     
 	   5 Input      4 Bit        Muxes := 1     
 	   5 Input      1 Bit        Muxes := 1     
+=======
+Module FeedbackSignal 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+Module ScriptLoadingMode 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+>>>>>>> parent of f23bb53 (script DONE!!!!!)
 Module Output 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -311,6 +520,7 @@ Detailed RTL Component Info :
 Module ScriptMode 
 Detailed RTL Component Info : 
 +---Adders : 
+<<<<<<< HEAD
 	   2 Input     32 Bit       Adders := 2     
 	   2 Input      8 Bit       Adders := 2     
 +---Registers : 
@@ -344,6 +554,25 @@ Detailed RTL Component Info :
 	  11 Input      1 Bit        Muxes := 1     
 	   6 Input      1 Bit        Muxes := 2     
 	   5 Input      1 Bit        Muxes := 1     
+=======
+	   2 Input      8 Bit       Adders := 2     
++---Registers : 
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   4 Input     32 Bit        Muxes := 1     
+	   5 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 5     
+	   4 Input      5 Bit        Muxes := 5     
+	  11 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 15    
+	  11 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 6     
+	   3 Input      1 Bit        Muxes := 2     
+>>>>>>> parent of f23bb53 (script DONE!!!!!)
 Module ScriptMem 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -404,9 +633,13 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
 INFO: [Synth 8-5545] ROM "clk_counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "s_clk" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 WARNING: [Synth 8-6014] Unused sequential element waitingCounter_reg was removed.  [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/ScriptMode.v:253]
+=======
+WARNING: [Synth 8-6014] Unused sequential element watingCounter_reg was removed.  [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/ScriptMode.v:152]
+>>>>>>> parent of f23bb53 (script DONE!!!!!)
 INFO: [Synth 8-5546] ROM "clock/uart_clk" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5545] ROM "clock/count2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "clock/slow_clk" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
@@ -416,12 +649,25 @@ INFO: [Synth 8-5546] ROM "tube/tub_control1" won't be mapped to RAM because it i
 WARNING: [Synth 8-6014] Unused sequential element script_mem_module/script_cnt_reg was removed.  [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptMem.v:36]
 WARNING: [Synth 8-6014] Unused sequential element uart_module/rx/spacing_reg was removed.  [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UART.v:59]
 WARNING: [Synth 8-6014] Unused sequential element uart_module/clkCnt_reg was removed.  [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UART.v:143]
+<<<<<<< HEAD
 WARNING: [Synth 8-3917] design DemoTop has port led[7] driven by constant 0
 WARNING: [Synth 8-3917] design DemoTop has port led[6] driven by constant 0
 WARNING: [Synth 8-3917] design DemoTop has port led[5] driven by constant 0
 WARNING: [Synth 8-3917] design DemoTop has port led[4] driven by constant 0
 WARNING: [Synth 8-3331] design Output has unconnected port led[2]
 WARNING: [Synth 8-3331] design ScriptMode has unconnected port dataIn_ready
+=======
+WARNING: [Synth 8-3331] design Output has unconnected port dataIn_ready
+WARNING: [Synth 8-3331] design Output has unconnected port dataOut_bits[7]
+WARNING: [Synth 8-3331] design Output has unconnected port dataOut_bits[6]
+WARNING: [Synth 8-3331] design Output has unconnected port dataOut_bits[5]
+WARNING: [Synth 8-3331] design Output has unconnected port dataOut_bits[4]
+WARNING: [Synth 8-3331] design Output has unconnected port dataOut_bits[3]
+WARNING: [Synth 8-3331] design Output has unconnected port dataOut_bits[2]
+WARNING: [Synth 8-3331] design Output has unconnected port dataOut_bits[1]
+WARNING: [Synth 8-3331] design Output has unconnected port dataOut_bits[0]
+WARNING: [Synth 8-3331] design Output has unconnected port dataOut_valid
+>>>>>>> parent of f23bb53 (script DONE!!!!!)
 WARNING: [Synth 8-3331] design ScriptMode has unconnected port size[7]
 WARNING: [Synth 8-3331] design ScriptMode has unconnected port size[6]
 WARNING: [Synth 8-3331] design ScriptMode has unconnected port size[5]
@@ -430,7 +676,10 @@ WARNING: [Synth 8-3331] design ScriptMode has unconnected port size[3]
 WARNING: [Synth 8-3331] design ScriptMode has unconnected port size[2]
 WARNING: [Synth 8-3331] design ScriptMode has unconnected port size[1]
 WARNING: [Synth 8-3331] design ScriptMode has unconnected port size[0]
+<<<<<<< HEAD
 WARNING: [Synth 8-3331] design ScriptMode has unconnected port uart_clk_16
+=======
+>>>>>>> parent of f23bb53 (script DONE!!!!!)
 WARNING: [Synth 8-3331] design DemoTop has unconnected port led2[7]
 WARNING: [Synth 8-3331] design DemoTop has unconnected port led2[6]
 WARNING: [Synth 8-3331] design DemoTop has unconnected port led2[5]
@@ -439,6 +688,7 @@ WARNING: [Synth 8-3331] design DemoTop has unconnected port led2[3]
 WARNING: [Synth 8-3331] design DemoTop has unconnected port led2[2]
 WARNING: [Synth 8-3331] design DemoTop has unconnected port led2[1]
 WARNING: [Synth 8-3331] design DemoTop has unconnected port led2[0]
+<<<<<<< HEAD
 INFO: [Synth 8-3886] merging instance 'scriptMode/judge_reg[30]' (FDRE) to 'scriptMode/judge_reg[31]'
 INFO: [Synth 8-3886] merging instance 'scriptMode/judge_reg[31]' (FDRE) to 'scriptMode/judge_reg[29]'
 INFO: [Synth 8-3886] merging instance 'scriptMode/judge_reg[29]' (FDRE) to 'scriptMode/judge_reg[28]'
@@ -551,6 +801,71 @@ ROM:
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP and Shift Register Reporting
+=======
+WARNING: [Synth 8-3331] design DemoTop has unconnected port button[4]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port button[3]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port button[2]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port button[1]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port button[0]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port switches[7]
+WARNING: [Synth 8-3331] design DemoTop has unconnected port switches[6]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uart_module/tx/data_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\scriptMode/out/n_state_reg[2] )
+INFO: [Synth 8-3886] merging instance 'scriptMode/moveCounter_reg[19]' (LD) to 'scriptMode/moveCounter_reg[31]'
+INFO: [Synth 8-3886] merging instance 'scriptMode/moveCounter_reg[18]' (LD) to 'scriptMode/moveCounter_reg[31]'
+INFO: [Synth 8-3886] merging instance 'scriptMode/moveCounter_reg[17]' (LD) to 'scriptMode/moveCounter_reg[31]'
+INFO: [Synth 8-3886] merging instance 'scriptMode/moveCounter_reg[23]' (LD) to 'scriptMode/moveCounter_reg[31]'
+INFO: [Synth 8-3886] merging instance 'scriptMode/moveCounter_reg[22]' (LD) to 'scriptMode/moveCounter_reg[31]'
+INFO: [Synth 8-3886] merging instance 'scriptMode/moveCounter_reg[21]' (LD) to 'scriptMode/moveCounter_reg[31]'
+INFO: [Synth 8-3886] merging instance 'scriptMode/moveCounter_reg[20]' (LD) to 'scriptMode/moveCounter_reg[31]'
+INFO: [Synth 8-3886] merging instance 'scriptMode/moveCounter_reg[29]' (LD) to 'scriptMode/moveCounter_reg[31]'
+INFO: [Synth 8-3886] merging instance 'scriptMode/moveCounter_reg[28]' (LD) to 'scriptMode/moveCounter_reg[31]'
+INFO: [Synth 8-3886] merging instance 'scriptMode/moveCounter_reg[31]' (LD) to 'scriptMode/moveCounter_reg[30]'
+INFO: [Synth 8-3886] merging instance 'scriptMode/moveCounter_reg[30]' (LD) to 'scriptMode/moveCounter_reg[27]'
+INFO: [Synth 8-3886] merging instance 'scriptMode/moveCounter_reg[25]' (LD) to 'scriptMode/moveCounter_reg[27]'
+INFO: [Synth 8-3886] merging instance 'scriptMode/moveCounter_reg[24]' (LD) to 'scriptMode/moveCounter_reg[27]'
+INFO: [Synth 8-3886] merging instance 'scriptMode/moveCounter_reg[27]' (LD) to 'scriptMode/moveCounter_reg[26]'
+INFO: [Synth 8-3886] merging instance 'scriptMode/moveCounter_reg[26]' (LD) to 'scriptMode/moveCounter_reg[16]'
+INFO: [Synth 8-3886] merging instance 'scriptMode/moveCounter_reg[4]' (LD) to 'scriptMode/moveCounter_reg[16]'
+INFO: [Synth 8-3886] merging instance 'scriptMode/moveCounter_reg[2]' (LD) to 'scriptMode/moveCounter_reg[16]'
+INFO: [Synth 8-3886] merging instance 'scriptMode/moveCounter_reg[3]' (LD) to 'scriptMode/moveCounter_reg[16]'
+INFO: [Synth 8-3886] merging instance 'scriptMode/moveCounter_reg[8]' (LD) to 'scriptMode/moveCounter_reg[16]'
+INFO: [Synth 8-3886] merging instance 'scriptMode/moveCounter_reg[7]' (LD) to 'scriptMode/moveCounter_reg[16]'
+INFO: [Synth 8-3886] merging instance 'scriptMode/moveCounter_reg[6]' (LD) to 'scriptMode/moveCounter_reg[16]'
+INFO: [Synth 8-3886] merging instance 'scriptMode/moveCounter_reg[5]' (LD) to 'scriptMode/moveCounter_reg[16]'
+INFO: [Synth 8-3886] merging instance 'scriptMode/moveCounter_reg[14]' (LD) to 'scriptMode/moveCounter_reg[16]'
+INFO: [Synth 8-3886] merging instance 'scriptMode/moveCounter_reg[13]' (LD) to 'scriptMode/moveCounter_reg[16]'
+INFO: [Synth 8-3886] merging instance 'scriptMode/moveCounter_reg[16]' (LD) to 'scriptMode/moveCounter_reg[15]'
+INFO: [Synth 8-3886] merging instance 'scriptMode/moveCounter_reg[15]' (LD) to 'scriptMode/moveCounter_reg[12]'
+INFO: [Synth 8-3886] merging instance 'scriptMode/moveCounter_reg[10]' (LD) to 'scriptMode/moveCounter_reg[12]'
+INFO: [Synth 8-3886] merging instance 'scriptMode/moveCounter_reg[9]' (LD) to 'scriptMode/moveCounter_reg[12]'
+INFO: [Synth 8-3886] merging instance 'scriptMode/moveCounter_reg[12]' (LD) to 'scriptMode/moveCounter_reg[11]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\scriptMode/moveCounter_reg[11] )
+INFO: [Synth 8-3886] merging instance 'uart_module/tx/data_reg[6]' (FDE) to 'uart_module/tx/data_reg[5]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uart_module/tx/data_reg[5] )
+INFO: [Synth 8-3886] merging instance 'uart_module/tx/data_reg[5]' (FDE) to 'uart_module/tx/data_reg[4]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uart_module/tx/data_reg[4] )
+INFO: [Synth 8-3886] merging instance 'uart_module/tx/data_reg[4]' (FDE) to 'uart_module/tx/data_reg[3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uart_module/tx/data_reg[3] )
+INFO: [Synth 8-3886] merging instance 'uart_module/tx/data_reg[3]' (FDE) to 'uart_module/tx/data_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uart_module/tx/data_reg[2] )
+INFO: [Synth 8-3886] merging instance 'uart_module/tx/data_reg[2]' (FDE) to 'uart_module/tx/data_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uart_module/tx/data_reg[1] )
+WARNING: [Synth 8-3332] Sequential element (scriptMode/out/dataIn_bits_reg[7]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (scriptMode/out/dataIn_bits_reg[6]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (scriptMode/out/dataIn_bits_reg[5]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (scriptMode/out/dataIn_bits_reg[4]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (scriptMode/out/dataIn_bits_reg[3]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (scriptMode/out/dataIn_bits_reg[2]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (scriptMode/out/dataIn_bits_reg[1]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (scriptMode/out/n_state_reg[2]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (scriptMode/out/state_reg[2]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (scriptMode/moveCounter_reg[11]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (uart_module/tx/data_reg[1]) is unused and will be removed from module DemoTop.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 722.750 ; gain = 481.043
+>>>>>>> parent of f23bb53 (script DONE!!!!!)
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -562,13 +877,21 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
 Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:28 . Memory (MB): peak = 729.914 ; gain = 489.738
+=======
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:31 . Memory (MB): peak = 722.750 ; gain = 481.043
+>>>>>>> parent of f23bb53 (script DONE!!!!!)
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
 Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:28 . Memory (MB): peak = 730.586 ; gain = 490.410
+=======
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:31 . Memory (MB): peak = 722.750 ; gain = 481.043
+>>>>>>> parent of f23bb53 (script DONE!!!!!)
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -579,8 +902,13 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (scriptMode/io_reg) is unused and will be removed from module DemoTop.
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
 Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:28 . Memory (MB): peak = 759.449 ; gain = 519.273
+=======
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:31 . Memory (MB): peak = 741.051 ; gain = 499.344
+>>>>>>> parent of f23bb53 (script DONE!!!!!)
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -604,20 +932,44 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
 Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 759.449 ; gain = 519.273
+=======
+Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:32 . Memory (MB): peak = 741.051 ; gain = 499.344
+>>>>>>> parent of f23bb53 (script DONE!!!!!)
 ---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-3352] multi-driven net led_OBUF[7] with 1st driver pin 'receiver/scriptLoadingMode/led2_reg[7]/Q' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/Input_Module.v:93]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net led_OBUF[7] with 2nd driver pin 'receiver/feedbackSignal/led_reg[7]/Q' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/Input_Module.v:70]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net led_OBUF[6] with 1st driver pin 'receiver/scriptLoadingMode/led2_reg[6]/Q' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/Input_Module.v:93]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net led_OBUF[6] with 2nd driver pin 'receiver/feedbackSignal/led_reg[6]/Q' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/Input_Module.v:70]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net led_OBUF[5] with 1st driver pin 'receiver/scriptLoadingMode/led2_reg[5]/Q' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/Input_Module.v:93]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net led_OBUF[5] with 2nd driver pin 'receiver/feedbackSignal/led_reg[5]/Q' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/Input_Module.v:70]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net led_OBUF[4] with 1st driver pin 'receiver/scriptLoadingMode/led2_reg[4]/Q' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/Input_Module.v:93]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net led_OBUF[4] with 2nd driver pin 'receiver/feedbackSignal/led_reg[4]/Q' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/Input_Module.v:70]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net led_OBUF[3] with 1st driver pin 'receiver/feedbackSignal/led_reg[3]/Q' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/Input_Module.v:70]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net led_OBUF[3] with 2nd driver pin 'receiver/scriptLoadingMode/led2_reg[3]/Q' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/Input_Module.v:93]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net led_OBUF[2] with 1st driver pin 'receiver/feedbackSignal/led_reg[2]/Q' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/Input_Module.v:70]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net led_OBUF[2] with 2nd driver pin 'receiver/scriptLoadingMode/led2_reg[2]/Q' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/Input_Module.v:93]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net led_OBUF[1] with 1st driver pin 'receiver/feedbackSignal/led_reg[1]/Q' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/Input_Module.v:70]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net led_OBUF[1] with 2nd driver pin 'receiver/scriptLoadingMode/led2_reg[1]/Q' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/Input_Module.v:93]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net led_OBUF[0] with 1st driver pin 'receiver/feedbackSignal/led_reg[0]/Q' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/Input_Module.v:70]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net led_OBUF[0] with 2nd driver pin 'receiver/scriptLoadingMode/led2_reg[0]/Q' [D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/Input_Module.v:93]
 
 Report Check Netlist: 
 +------+------------------+-------+---------+-------+------------------+
 |      |Item              |Errors |Warnings |Status |Description       |
 +------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
+|1     |multi_driven_nets |      0|        8|Failed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
 Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 759.449 ; gain = 519.273
+=======
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:32 . Memory (MB): peak = 741.051 ; gain = 499.344
+>>>>>>> parent of f23bb53 (script DONE!!!!!)
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -629,25 +981,41 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
 Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 759.449 ; gain = 519.273
+=======
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:32 . Memory (MB): peak = 741.051 ; gain = 499.344
+>>>>>>> parent of f23bb53 (script DONE!!!!!)
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
 Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 759.449 ; gain = 519.273
+=======
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:32 . Memory (MB): peak = 741.051 ; gain = 499.344
+>>>>>>> parent of f23bb53 (script DONE!!!!!)
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
 Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 759.449 ; gain = 519.273
+=======
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:32 . Memory (MB): peak = 741.051 ; gain = 499.344
+>>>>>>> parent of f23bb53 (script DONE!!!!!)
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
 Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 759.449 ; gain = 519.273
+=======
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:32 . Memory (MB): peak = 741.051 ; gain = 499.344
+>>>>>>> parent of f23bb53 (script DONE!!!!!)
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -666,6 +1034,7 @@ Report Cell Usage:
 +------+---------+------+
 |1     |inst_ram |     1|
 |2     |BUFG     |     4|
+<<<<<<< HEAD
 |3     |CARRY4   |    51|
 |4     |LUT1     |    10|
 |5     |LUT2     |    96|
@@ -709,10 +1078,53 @@ Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 .
 Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:29 . Memory (MB): peak = 759.449 ; gain = 519.273
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 128 Unisim elements for replacement
+=======
+|3     |CARRY4   |    26|
+|4     |LUT1     |     9|
+|5     |LUT2     |    53|
+|6     |LUT3     |    26|
+|7     |LUT4     |    45|
+|8     |LUT5     |    30|
+|9     |LUT6     |    25|
+|10    |FDCE     |     1|
+|11    |FDPE     |     1|
+|12    |FDRE     |   186|
+|13    |LD       |    60|
+|14    |IBUF     |     3|
+|15    |OBUF     |     9|
+|16    |OBUFT    |     8|
++------+---------+------+
+
+Report Instance Areas: 
++------+----------------------+------------------------+------+
+|      |Instance              |Module                  |Cells |
++------+----------------------+------------------------+------+
+|1     |top                   |                        |   502|
+|2     |  clock               |clock_frequency_divider |    81|
+|3     |  receiver            |Receiver                |    16|
+|4     |    feedbackSignal    |FeedbackSignal          |     8|
+|5     |    scriptLoadingMode |ScriptLoadingMode       |     8|
+|6     |  scriptMode          |ScriptMode              |   247|
+|7     |    out               |Output                  |    13|
+|8     |  script_mem_module   |ScriptMem               |    61|
+|9     |  uart_module         |UART                    |    73|
+|10    |    rx                |UARTReceiver            |    38|
+|11    |    tx                |UARTTransmitter         |    12|
++------+----------------------+------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:32 . Memory (MB): peak = 741.051 ; gain = 499.344
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 16 critical warnings and 72 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:27 . Memory (MB): peak = 741.051 ; gain = 170.504
+Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:32 . Memory (MB): peak = 741.051 ; gain = 499.344
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 89 Unisim elements for replacement
+>>>>>>> parent of f23bb53 (script DONE!!!!!)
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 16 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
+<<<<<<< HEAD
   A total of 61 instances were transformed.
   LD => LDCE: 30 instances
   LDC => LDCE: 31 instances
@@ -725,3 +1137,17 @@ INFO: [Common 17-1381] The checkpoint 'D:/OWEN/Undergraduate/2Autumn/DigitalLogi
 INFO: [runtcl-4] Executing : report_utilization -file DemoTop_utilization_synth.rpt -pb DemoTop_utilization_synth.pb
 report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 759.449 ; gain = 0.000
 INFO: [Common 17-206] Exiting Vivado at Fri Dec 29 23:51:59 2023...
+=======
+  A total of 60 instances were transformed.
+  LD => LDCE: 44 instances
+  LD => LDCE (inverted pins: G): 16 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+104 Infos, 150 Warnings, 16 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:35 . Memory (MB): peak = 741.051 ; gain = 510.867
+INFO: [Common 17-1381] The checkpoint 'D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.runs/synth_1/DemoTop.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file DemoTop_utilization_synth.rpt -pb DemoTop_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 741.051 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Dec 19 16:59:20 2023...
+>>>>>>> parent of f23bb53 (script DONE!!!!!)

@@ -24,6 +24,7 @@ module Output(
     input clk,
     input [7:0] switches,
     input [4:0] button,
+<<<<<<< HEAD
     input rst_n,
     input [3:0] led,
     output reg [7:0]dataIn_bits
@@ -36,6 +37,20 @@ always @(posedge clk, negedge rst_n) begin
     if(~rst_n) begin
     state <= S_end; 
     end
+=======
+    input dataIn_ready,
+    input rst_n,
+    input [7:0] dataOut_bits,
+    input dataOut_valid,
+    output reg [7:0]dataIn_bits
+);
+parameter S_start = 3'b000,S_end = 3'b001,S_action = 3'b010;
+reg [2:0] state;
+reg [2:0] n_state;
+always @(posedge clk, negedge rst_n) begin
+    if(~rst_n)
+    state <= S_end; 
+>>>>>>> parent of f23bb53 (script DONE!!!!!)
     else
     state <= n_state;
 end
@@ -55,6 +70,7 @@ else n_state = S_action;
 S_action:
 begin
 if(switches[7]&~switches[6]) {n_state,dataIn_bits} = {S_end,8'b0000_1001};
+<<<<<<< HEAD
 
 else if(led[0]&~led[1]&led[3]&button[0]) {n_state,dataIn_bits} = {S_action,8'b0000_0110};//get
 
@@ -75,6 +91,15 @@ if(switches[7]&~switches[6]) {n_state,dataIn_bits} = {S_end,8'b0000_1001};
 else if(switches[5:0]>20) {n_state,dataIn_bits} = {S_target,8'b0000_0011};
 else if(button>0) n_state = S_action;
 else {n_state,dataIn_bits} = {S_target,switches[5:0],2'b11};
+=======
+else if(button[0]) {n_state,dataIn_bits} = {S_action,8'b0000_0110};
+else if(button[1]) {n_state,dataIn_bits} = {S_action,8'b0000_1010};
+else if(button[2]) {n_state,dataIn_bits} = {S_action,8'b0001_0010};
+else if(button[3]) {n_state,dataIn_bits} = {S_action,8'b0010_0010};
+else if(button[4]) {n_state,dataIn_bits} = {S_action,8'b0100_0010};
+else if(switches[5:0]>20) {n_state,dataIn_bits} = {S_action,8'b0000_0000};
+else {n_state,dataIn_bits} = {S_action,switches[5:0],2'b11};
+>>>>>>> parent of f23bb53 (script DONE!!!!!)
 end
 
 endcase

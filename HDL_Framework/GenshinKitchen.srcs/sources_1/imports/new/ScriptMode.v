@@ -14,15 +14,17 @@ module ScriptMode(
     input [15:0] script, // contains instructions
     input uart_clk_16,
 
+<<<<<<< HEAD
     output [7:0] dataIn_bits,
+=======
+    output dataIn_bits ,
+>>>>>>> parent of f23bb53 (script DONE!!!!!)
     output reg [7:0] pc
     );
     reg [15:0] inst; // the ready-to-decode signal
-    always @(*) begin
+    always @(negedge script_mode) begin
         if(~script_mode)
-            inst = script;
-        else
-            inst = 16'b0;
+            inst <= script;
     end
 
     wire [3:0] signal; //meaningless
@@ -66,21 +68,20 @@ module ScriptMode(
     reg [1:0] func;
     reg [1:0] start;
     reg io; // io == 0, from software; io == 1, to software
-    reg s_clk;
 
     // setting status
     // data changes when the dataflow mode change
-    // always @(*) begin
-    //     if(dataIn_ready)
-    //         io = 1;
-    //     else if(dataOut_ready)
-    //         io = 0;
-    // end
+    always @(posedge dataIn_ready, posedge dataOut_ready) begin
+        if(dataIn_ready)
+            io <= 1;
+        else if(dataOut_ready)
+            io <= 0;
+    end
 
     // dealing with inst, encode
     // data only chage when pc changes
-    reg [7:0] pc5;
     always @(*) begin
+<<<<<<< HEAD
         if(~reset) begin
             pc5 = 0;
             func = 0;
@@ -154,6 +155,36 @@ module ScriptMode(
             else begin
                 pc1 = 0;
             end
+=======
+        if(~script_mode) begin
+            func = inst[4:3];
+            op_code = inst[2:0];
+            i_num = inst[15:8];
+            i_sign = inst[7:5];
+        end
+    end
+
+    reg [7:0] pc1, pc2, pc3, pc4;
+    // jump instruction and game start and end
+    always @(inst) begin
+        if({op_code, func} == 5'b01000) begin
+            if(i_sign == 3'b001) begin
+                pc1 = pc + i_num;
+            end
+        end
+        else if({op_code, func} == 5'b01001) begin
+            if(i_sign == 3'b000) begin
+                pc1 = pc + i_num;
+            end
+        end
+        else if({op_code, func} == 5'b10001) begin
+            start = 2'b10;
+            pc1 = pc + 2;
+        end
+        else if({op_code, func} == 5'b10010) begin
+            start = 2'b01;
+            pc1 = pc + 2;
+>>>>>>> parent of f23bb53 (script DONE!!!!!)
         end
     end
 
@@ -163,6 +194,7 @@ module ScriptMode(
     // activate by io changes, when dataIn ready the block is activated
     integer target_prev = 25;
     integer moveCounter = 1;
+<<<<<<< HEAD
     always @(posedge s_clk) begin
         if(~reset) begin
             movement1 <= 0; place1 <= 0; pc2 <= 0; target_prev <= 0; moveCounter <= 1;
@@ -371,4 +403,74 @@ module ScriptMode(
     // assign led2 = script[7:0];
     // assign led2 = {signal[2], judge, i_sign, 2'b0, s_clk};
     // assign led2 = waitingCounter;
+=======
+    always @(io) begin
+        if(io) begin // to software ready
+            if({op_code, func} == 5'b00100) begin
+                case (moveCounter)
+                    1: begin movement = 5'b00000; place = {start, i_num[5:0]}; moveCounter = moveCounter + 1; end // select a place
+                    2: begin movement = 5'b01000; place = {start, i_num[5:0]}; moveCounter = moveCounter + 1; end// move
+                    3: begin movement = 5'b00001; place = {start, i_num[5:0]}; moveCounter = 1; pc2 = pc + 2; end// get the item
+                endcase
+            end
+            else if({op_code, func} == 5'b00101) begin
+                case (moveCounter)
+                    1: begin movement = 5'b00000; place = {start, i_num[5:0]}; moveCounter = moveCounter + 1; end// select a place
+                    2: begin movement = 5'b01000; place = {start, i_num[5:0]}; moveCounter = moveCounter + 1; end// move
+                    3: begin movement = 5'b00010; place = {start, i_num[5:0]}; moveCounter = 1; pc2 = pc + 2; end // put the item
+                endcase
+            end
+            else if({op_code, func} == 5'b00110) begin
+                case (moveCounter)
+                    1: begin movement = 5'b00000; place = {start, i_num[5:0]}; moveCounter = moveCounter + 1; end // select a place
+                    2: begin movement = 5'b01000; place = {start, i_num[5:0]}; moveCounter = moveCounter + 1; end // move
+                    3: begin movement = 5'b00100; place = {start, i_num[5:0]}; moveCounter = 1; pc2 = pc + 2; end // interact the item
+                endcase
+            end
+            else if({op_code, func} == 5'b00111) begin
+                case (moveCounter)
+                    1: begin movement = 5'b00000; place = {start, i_num[5:0]}; moveCounter = moveCounter + 1; end // select a place
+                    2: begin movement = 5'b01000; place = {start, i_num[5:0]}; moveCounter = moveCounter + 1; end// move
+                    3: begin movement = 5'b10000; place = {start, i_num[5:0]}; moveCounter = 1; pc2 = pc + 2; end // throw the item
+                endcase
+            end
+        end
+    end
+
+    // wating mode 1
+    integer watingCounter = 0;
+    always @(posedge slow_clk) begin
+        if({op_code, func} == 5'b01100 && i_num > 0) begin
+            if(watingCounter == i_num) begin
+                pc3 = pc + 2;
+                watingCounter = 0;
+            end
+            watingCounter = watingCounter + 1;
+        end
+    end
+
+    // waiting mode 2
+    always @(posedge clk) begin
+        if({op_code, func} == 5'b01101) begin
+            if(i_sign) begin
+                pc4 = pc + 2;
+            end
+        end
+    end
+
+    always @(*) begin
+        case({op_code, func})
+            5'b01000: pc = pc1;
+            5'b01001: pc = pc1;
+            5'b10001: pc = pc1;
+            5'b10010: pc = pc1;
+            5'b00100: pc = pc2;
+            5'b00101: pc = pc2;
+            5'b00110: pc = pc2;
+            5'b00111: pc = pc2;
+            5'b01100: pc = pc3;
+            5'b01101: pc = pc4;
+        endcase
+    end
+>>>>>>> parent of f23bb53 (script DONE!!!!!)
 endmodule

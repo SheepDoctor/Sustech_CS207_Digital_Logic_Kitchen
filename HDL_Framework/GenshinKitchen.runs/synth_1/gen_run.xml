@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <GenRun Id="synth_1" LaunchPart="xc7a35tcsg324-1" LaunchTime="1703865080">
+=======
+<GenRun Id="synth_1" LaunchPart="xc7a35tcsg324-1" LaunchTime="1702976231">
+>>>>>>> parent of f23bb53 (script DONE!!!!!)
   <File Type="PA-TCL" Name="DemoTop.tcl"/>
   <File Type="REPORTS-TCL" Name="DemoTop_reports.tcl"/>
   <File Type="RDS-RDS" Name="DemoTop.vds"/>

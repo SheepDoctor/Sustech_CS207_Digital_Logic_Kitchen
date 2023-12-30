@@ -37,12 +37,24 @@ module Receiver (
             signal <= signal;
     end
     // 10 channel: Change into Script loading mode
+<<<<<<< HEAD
     always @(*) begin
         if(channal == 2'b10) begin
             size <= dataOut_bits;
         end
     end
     assign led = {4'b0000, signal};
+=======
+    ScriptLoadingMode scriptLoadingMode(
+        .clk(clk), 
+        .dataOut_ready(dataOut_ready), 
+        .dataOut_bits(dataOut_bits), 
+        .led2(led),
+        .size(size),
+        .verify(verify),
+        .channal(channal),
+        .signal(signal));
+>>>>>>> parent of f23bb53 (script DONE!!!!!)
 endmodule
 
 /*
@@ -78,6 +90,28 @@ end
 
 endmodule
 
+<<<<<<< HEAD
+=======
+module ScriptLoadingMode (
+    input clk,
+    input dataOut_ready,
+    input [7:0] dataOut_bits,
+    input [1:0] verify,
+    input [1:0] channal,
+    input [3:0] signal,
+    output reg [7:0] led2,
+    output reg [7:0] size
+);
+always @(posedge dataOut_ready) begin
+    if(dataOut_ready)
+        if(channal == 2'b10) begin
+            led2 <= dataOut_bits;
+        end
+    else 
+        led2 <= 8'b0000_0000;
+end
+endmodule
+>>>>>>> parent of f23bb53 (script DONE!!!!!)
 
 
 /*
