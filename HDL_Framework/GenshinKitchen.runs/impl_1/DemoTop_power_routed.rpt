@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date             : Fri Dec 22 18:16:40 2023
+| Date             : Fri Dec 29 23:52:50 2023
 | Host             : DeLiAssistant running 64-bit major release  (build 9200)
 | Command          : report_power -file DemoTop_power_routed.rpt -pb DemoTop_power_summary_routed.pb -rpx DemoTop_power_routed.rpx
 | Design           : DemoTop
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.769        |
+| Total On-Chip Power (W)  | 7.442        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.694        |
-| Device Static (W)        | 0.076        |
+| Dynamic (W)              | 7.336        |
+| Device Static (W)        | 0.106        |
 | Effective TJA (C/W)      | 4.8          |
-| Max Ambient (C)          | 76.5         |
-| Junction Temperature (C) | 33.5         |
+| Max Ambient (C)          | 49.4         |
+| Junction Temperature (C) | 60.6         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,17 +52,17 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.331 |      599 |       --- |             --- |
-|   LUT as Logic |     0.255 |      257 |     20800 |            1.24 |
-|   Register     |     0.036 |      237 |     41600 |            0.57 |
-|   CARRY4       |     0.033 |       36 |      8150 |            0.44 |
+| Slice Logic    |     0.649 |      969 |       --- |             --- |
+|   LUT as Logic |     0.519 |      381 |     20800 |            1.83 |
+|   CARRY4       |     0.063 |       51 |      8150 |            0.63 |
+|   Register     |     0.061 |      402 |     41600 |            0.97 |
 |   BUFG         |     0.006 |        4 |        32 |           12.50 |
-|   Others       |     0.000 |       20 |       --- |             --- |
-| Signals        |     0.274 |      479 |       --- |             --- |
+|   Others       |     0.000 |       26 |       --- |             --- |
+| Signals        |     0.693 |      840 |       --- |             --- |
 | Block RAM      |     0.000 |      0.5 |        50 |            1.00 |
-| I/O            |     1.089 |       20 |       210 |            9.52 |
-| Static Power   |     0.076 |          |           |                 |
-| Total          |     1.769 |          |           |                 |
+| I/O            |     5.995 |       57 |       210 |           27.14 |
+| Static Power   |     0.106 |          |           |                 |
+| Total          |     7.442 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,16 +72,16 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.625 |       0.612 |      0.013 |
-| Vccaux    |       1.800 |     0.053 |       0.040 |      0.013 |
-| Vcco33    |       3.300 |     0.307 |       0.306 |      0.001 |
+| Vccint    |       1.000 |     1.439 |       1.402 |      0.038 |
+| Vccaux    |       1.800 |     0.233 |       0.217 |      0.016 |
+| Vcco33    |       3.300 |     1.681 |       1.680 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.001 |       0.000 |      0.001 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
@@ -139,11 +139,14 @@ Table of Contents
 +------------------------------------------------+-----------+
 | Name                                           | Power (W) |
 +------------------------------------------------+-----------+
-| DemoTop                                        |     1.694 |
-|   clock                                        |     0.280 |
-|   scriptMode                                   |     0.074 |
-|     out__0                                     |     0.000 |
-|   script_mem_module                            |     0.015 |
+| DemoTop                                        |     7.336 |
+|   clock                                        |     0.401 |
+|   func                                         |     0.062 |
+|   nolabel_line82                               |     0.014 |
+|   receiver                                     |     0.000 |
+|   scriptMode                                   |     0.308 |
+|     out                                        |     0.001 |
+|   script_mem_module                            |     0.091 |
 |     ram_module                                 |     0.000 |
 |       U0                                       |     0.000 |
 |         inst_blk_mem_gen                       |     0.000 |
@@ -151,9 +154,10 @@ Table of Contents
 |             valid.cstr                         |     0.000 |
 |               ramloop[0].ram.r                 |     0.000 |
 |                 prim_noinit.ram                |     0.000 |
-|   uart_module                                  |     0.215 |
-|     rx                                         |     0.137 |
-|     tx                                         |     0.021 |
+|   tube                                         |     0.166 |
+|   uart_module                                  |     0.207 |
+|     rx                                         |     0.116 |
+|     tx                                         |     0.025 |
 +------------------------------------------------+-----------+
 
 

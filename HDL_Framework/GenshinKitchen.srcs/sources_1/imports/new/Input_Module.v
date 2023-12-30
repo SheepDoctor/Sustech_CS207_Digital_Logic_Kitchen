@@ -11,37 +11,38 @@ module Receiver (
     input dataOut_ready,
     input [7:0] dataOut_bits,
     output [7:0] led,
-    output [7:0] size
+    output reg [7:0] size,
+    output reg [3:0] signal,
+    output [1:0] verify,
+    output [1:0] channal
 );
-    wire [3:0] signal;
-    wire [1:0] verify;
-    wire [1:0] channal;
+    wire [3:0] signal_temp;
     GetInfo get(
         .clk(clk), 
         .dataOut_ready(dataOut_ready), 
         .dataOut_bits(dataOut_bits), 
         .verify(verify), 
         .channal(channal), 
-        .signal(signal));
+        .signal(signal_temp));
     // 01 channel: Feedback signal from Client to Board
-    FeedbackSignal feedbackSignal(
-        .clk(clk), 
-        .dataOut_ready(dataOut_ready), 
-        .dataOut_bits(dataOut_bits), 
-        .led(led),
-        .verify(verify),
-        .channal(channal),
-        .signal(signal));
+    always @(posedge dataOut_ready) begin
+        if(dataOut_ready)
+            if(verify == 2'b00) begin
+                if(channal == 2'b01) begin
+                    signal <= signal_temp;
+                end
+            end
+        else 
+            // fantastic effiects to be added
+            signal <= signal;
+    end
     // 10 channel: Change into Script loading mode
-    // ScriptLoadingMode scriptLoadingMode(
-    //     .clk(clk), 
-    //     .dataOut_ready(dataOut_ready), 
-    //     .dataOut_bits(dataOut_bits), 
-    //     .led2(led),
-    //     .size(size),
-    //     .verify(verify),
-    //     .channal(channal),
-    //     .signal(signal));
+    always @(*) begin
+        if(channal == 2'b10) begin
+            size <= dataOut_bits;
+        end
+    end
+    assign led = {4'b0000, signal};
 endmodule
 
 /*
@@ -77,25 +78,6 @@ end
 
 endmodule
 
-// module ScriptLoadingMode (
-//     input clk,
-//     input dataOut_ready,
-//     input [7:0] dataOut_bits,
-//     input [1:0] verify,
-//     input [1:0] channal,
-//     input [3:0] signal,
-//     output reg [7:0] led2,
-//     output reg [7:0] size
-// );
-// always @(posedge dataOut_ready) begin
-//     if(dataOut_ready)
-//         if(channal == 2'b10) begin
-//             led2 <= dataOut_bits;
-//         end
-//     else 
-//         led2 <= 8'b0000_0000;
-// end
-// endmodule
 
 
 /*

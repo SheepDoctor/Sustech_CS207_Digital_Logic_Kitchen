@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcsg324-1" LaunchTime="1703240117">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcsg324-1" LaunchTime="1703865080">
   <File Type="PA-TCL" Name="DemoTop.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="DemoTop_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="DemoTop_reports.tcl"/>
@@ -56,6 +56,27 @@
       <FileInfo>
         <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/clock_frequency_divider.v"/>
         <Attr Name="ImportTime" Val="1702875368"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/modeJudger.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/modeSwitcher.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/seven_segment_tube.v">
+      <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>

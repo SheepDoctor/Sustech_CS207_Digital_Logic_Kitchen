@@ -30,8 +30,13 @@ module DemoTop(
     input clk,
     input rst_n,
     input rx,
-    output tx
+    output tx,
+    output [3:0]tub_sel1,
+    output [3:0]tub_sel2,
+    output [7:0] tub_control1,
+    output [7:0] tub_control2
     );
+
 
 // The wire below is useful!
 wire uart_clk_16;
@@ -46,9 +51,13 @@ wire [15:0] script;
 // The wire above is useful~
 wire [7:0] led1in;
 wire [7:0] led2in;
+wire [3:0] signal;
 wire slow_clk;
-
 wire [7:0] size;
+wire tube_clk;
+wire [7:0]dataIn_user;
+wire [7:0]dataIn_script;
+wire switchMode;
 // Self-Defined wires
 
 // assign led = script[15:8];
@@ -59,28 +68,45 @@ wire [7:0] size;
     clock_frequency_divider clock(
     .clk(clk),
     .uart_clk(uart_clk_16),
-    .slow_clk(slow_clk)
+    .slow_clk(slow_clk),
+    .tube_clk(tube_clk)
     );
     
-    /*    
-    set_ready set (
-    .clk(slow_clk),
+    modeSwitcher(
+    .dataIn_user(dataIn_user),
+    .dataIn_script(dataIn_script),
+    .switchMode(switchMode),
+    .dataIn_bits(dataIn_bits)
+    );
+    
+    modeJudger(
+    .dataIn_bits(dataIn_bits),
+    .dataOut_bits(dataOut_bits),
+    .clk(clk),
     .rst_n(rst_n),
-    .dataIn_ready(dataIn_ready)
-    );*/
+    .switchMode(switchMode)
+    );
 
-    /*
+    seven_segment_tube tube(
+    .switchMode(switchMode),
+    .code(script),
+    .clk(tube_clk),
+    .tub_sel1(tub_sel1),
+    .tub_sel2(tub_sel2),
+    .tub_control1(tub_control1),
+    .tub_control2(tub_control2)
+    );
+
+    
     Output func(
     .clk(slow_clk),
     .switches(switches), 
     .button(button),
-    .dataIn_ready(dataIn_ready),
     .rst_n(rst_n),
-    .dataOut_bits(dataOut_bits),
-    .dataOut_valid(dataOut_valid), 
-    .dataIn_bits(dataIn_bits) // client signal
-      );*/
-    /*
+    .led(signal),
+    .dataIn_bits(dataIn_user) // client signal
+      );
+    
     Receiver receiver(
       .clk(uart_clk_16),
       .dataOut_bits(dataOut_bits),
@@ -88,32 +114,19 @@ wire [7:0] size;
       .led(led),
       .size(size)
     );
-  */
-  /*  
-    Led1 output1(
-    .dataIn_bits(dataIn_bits),
-    .led(led)
-    );
-    
-    Led2 output2(
-     .dataIn_ready(dataIn_ready),
-     .dataOut_ready(dataOut_valid),//feedback signal
-    .led2({script_mode, 7'b0000000});
-    );*/
 
     ScriptMode scriptMode(
-      .rst_n(rst_n),
+      .reset(rst_n),
       .clk(clk),
+      .uart_clk_16(uart_clk_16),
       .slow_clk(slow_clk),
       .dataOut_bits(dataOut_bits),
-      .dataOut_ready(dataOut_ready),
+      .dataOut_ready(dataOut_valid),
       .dataIn_ready(dataIn_ready),
-      .dataIn_bits(dataIn_bits),
+      .dataIn_bits(dataIn_script),
       .size(size),
       .script_mode(script_mode),
       .script(script),
-      .led(led),
-      .led2(led2),
       .pc(pc)
     );
     
