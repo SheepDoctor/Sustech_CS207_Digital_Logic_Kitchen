@@ -75,7 +75,7 @@ wire switchMode;
       .vga(vga),
       .vga_hs(vga_hs),
       .vga_vs(vga_vs)
-    )
+    );
 
     clock_frequency_divider clock(
     .clk(clk),
