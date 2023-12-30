@@ -21,20 +21,23 @@
 
 
 module DemoTop(
-    input [4:0] button,
-    input [7:0] switches,
+    input           [4:0] button,
+    input           [7:0] switches,
 
-    output [7:0] led,
-    output [7:0] led2,
+    output          [7:0] led,
+    output          [7:0] led2,
     
-    input clk,
-    input rst_n,
-    input rx,
-    output tx,
-    output [3:0]tub_sel1,
-    output [3:0]tub_sel2,
-    output [7:0] tub_control1,
-    output [7:0] tub_control2
+    input           clk,
+    input           rst_n,
+    input           rx,
+    output          tx,
+    output          [3:0]tub_sel1,
+    output          [3:0]tub_sel2,
+    output          [7:0] tub_control1,
+    output          [7:0] tub_control2,
+    output 					[11:0]vga,
+    output 					vga_hs,
+    output 					vga_vs
     );
 
 
@@ -64,6 +67,15 @@ wire switchMode;
 // assign led2 = script[7:0];
 
 // assign end
+
+    vga_top vga_inst (
+      .clk(clk),
+      .nrst(rst_n),
+      .dataIn_bits(dataIn_bits),
+      .vga(vga),
+      .vga_hs(vga_hs),
+      .vga_vs(vga_vs)
+    )
 
     clock_frequency_divider clock(
     .clk(clk),

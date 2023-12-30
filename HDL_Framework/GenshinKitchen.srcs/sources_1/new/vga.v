@@ -2,13 +2,13 @@ module vga(
 input 					clk,
 input 					nrst,
 
-input [15:0] 			data,//RGB565
+input [11:0] 			data,
 output [10:0] 			x,
 output [10:0] 			y,
 
 output wire  				vga_hs,
 output wire 				vga_vs,
-output  				[15:0] vga
+output  				[11:0] vga
 );
 parameter h_visible = 1280;
 parameter h_front = 48;
@@ -24,13 +24,13 @@ parameter v_whole = 1066;
 assign vga_hs = (hcount >= 11'd0 && hcount < h_sync) ? 1'b0 : 1'b1;
 assign vga_vs = (vcount >= 20'd0 && vcount < v_sync) ? 1'b0 : 1'b1;
 
-assign vga_hen = (hcount >= h_sync + h_back && hcount < h_sync + h_back + h_visible) ? 1'b1 : 1'b0; //水平有效信号
-assign vga_ven = (vcount >= v_sync + v_back && vcount < v_sync + v_back + v_visible) ? 1'b1 : 1'b0; //垂直有效信号
+assign vga_hen = (hcount >= h_sync + h_back && hcount < h_sync + h_back + h_visible) ? 1'b1 : 1'b0; //
+assign vga_ven = (vcount >= v_sync + v_back && vcount < v_sync + v_back + v_visible) ? 1'b1 : 1'b0; //
 
-assign x = vga_hen ? hcount - h_sync - h_back : 11'b0; //水平坐标
-assign y = vga_ven ? vcount - v_sync - v_back : 11'b0; //垂直坐标
+assign x = vga_hen ? hcount - h_sync - h_back : 11'b0; //
+assign y = vga_ven ? vcount - v_sync - v_back : 11'b0; //
 
-assign vga = vga_hen & vga_ven ? data : 16'b0; //信号
+assign vga = vga_hen & vga_ven ? data : 16'b0;
 reg [10:0] hcount;
 reg [10:0] vcount;
 always @(posedge clk or negedge nrst) begin

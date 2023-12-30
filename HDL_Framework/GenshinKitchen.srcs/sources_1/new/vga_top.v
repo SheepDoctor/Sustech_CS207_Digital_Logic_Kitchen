@@ -1,12 +1,13 @@
 module vga_top(
 input 					clk,
 input 					nrst,
-output 					[15:0]vga,
+input					[7:0]dataIn_bits,
+output 					[11:0]vga,
 output 					vga_hs,
 output 					vga_vs
 );
 
-wire [15:0] data;
+wire [11:0] data;
 wire [10:0] x;
 wire [10:0] y;
 wire clk_108M;
@@ -27,7 +28,8 @@ vga_test vga_test_inst(
 	.nrst(locked&nrst),
 	.x(x),
 	.y(y),
-	.data(data)
+	.data(data),
+	.dataIn_bits(dataIn_bits)
 );
 
 pll108MHz	pll_108M_inst (
