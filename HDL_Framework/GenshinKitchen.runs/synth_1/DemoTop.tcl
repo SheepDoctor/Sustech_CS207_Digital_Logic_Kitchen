@@ -16,6 +16,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param xicom.use_bs_reader 1
 create_project -in_memory -part xc7a35tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -36,6 +37,9 @@ read_verilog -library xil_defaultlib {
   D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/ScriptMode.v
   D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UART.v
   D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/clock_frequency_divider.v
+  D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/new/modeJudger.v
+  D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/new/modeSwitcher.v
+  D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/new/seven_segment_tube.v
   D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/new/DemoTop.v
 }
 read_ip -quiet D:/OWEN/Undergraduate/2Autumn/DigitalLogic/DL/HDL_Framework/GenshinKitchen.srcs/sources_1/ip/inst_ram/inst_ram.xci

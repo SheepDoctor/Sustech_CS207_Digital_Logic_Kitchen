@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<Runs Version="1" Minor="0">
-	<Run Id="pll108MHz_clk_wiz_0_0_synth_1" LaunchDir="G:/学习资料/DL-Kit/HDL_Framework/GenshinKitchen.runs/pll108MHz_clk_wiz_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
-</Runs>
-

@@ -23,12 +23,14 @@
 module clock_frequency_divider(
 input clk,
 output reg uart_clk, 
-output reg slow_clk
+output reg slow_clk,
+output reg tube_clk
 //maybe write other clks here
     );
-parameter period1 = 650, period2 = 10000000;    // 100000000/650 Hz stable and 10Hz stable
+parameter period1 = 650, period2 = 10000000,period3 = 500000;    // 100000000/650 Hz stable and 10Hz stable
 reg [15:0] count1;// 16 bits counter for dividing frequency
 reg [31:0] count2; 
+reg [31:0] count3; 
 initial begin
 count1<=0;
 uart_clk<=0;
@@ -56,4 +58,19 @@ else begin
 count2 <= count2+1;
 end
 end
+
+initial begin
+count3<=0;
+tube_clk<=0;
+end
+always @ (posedge clk) begin
+if(count3==(period3>>1)-1) begin
+tube_clk <= ~tube_clk; // invert clock
+count3<=0;
+end 
+else begin
+count3 <= count3+1;
+end
+end
 endmodule
+
