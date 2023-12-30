@@ -92,7 +92,7 @@ wire switchMode;
     );
     
     modeJudger(
-    .dataIn_bits(dataIn_bits),
+    .dataIn_bits(dataIn_script),
     .dataOut_bits(dataOut_bits),
     .clk(clk),
     .rst_n(rst_n),
