@@ -61,14 +61,8 @@ wire tube_clk;
 wire [7:0]dataIn_user;
 wire [7:0]dataIn_script;
 wire switchMode;
-// Self-Defined wires
-
-// assign led = script[15:8];
-// assign led2 = script[7:0];
-
-// assign end
-
-
+// Self-Defined wires，have been introduced in their module files
+    
     clock_frequency_divider clock(
     .clk(clk),
     .uart_clk(uart_clk_16),
@@ -76,7 +70,7 @@ wire switchMode;
     .tube_clk(tube_clk)
     );
     
-     modeSwitcher(
+     modeSwitcher switcher(
     .dataIn_user(dataIn_user),
     .dataIn_script(dataIn_script),
     .switchMode(switchMode),
@@ -95,7 +89,7 @@ wire switchMode;
     .vga_vs(vga_vs)
     );
     
-     modeJudger(
+     modeJudger judger(
     .dataIn_bits(dataIn_script),
     .clk(clk),
     .rst_n(rst_n),
