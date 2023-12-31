@@ -1,6 +1,27 @@
+/*
+this is the file which contains all parameters
+*/
+// clock divide
 `define period1  650
 `define period2  10000000
 `define period3  500000
+
+// mode judge
+`define user 1'b1
+`define script 1'b0
+
+// control seven segment tube
+`define tub1 4'b0001
+`define tub2 4'b1000
+`define tub3 4'b0100
+`define tub4 4'b0010
+
+// operation states
+`define S_start 3'b000
+`define S_end 3'b001
+`define S_action 3'b010
+`define S_target 3'b011
+
 `define white  12'b1111_1111_1111 //RGB white
 `define black  12'd0              //RGB black
 `define blue  12'b1111_0000_0000   //RGB blue
