@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Sun Dec 31 12:09:55 2023
+| Date         : Sun Dec 31 15:19:36 2023
 | Host         : LAPTOP-I606K2C4 running 64-bit major release  (build 9200)
 | Command      : report_drc -file DemoTop_drc_routed.rpt -pb DemoTop_drc_routed.pb -rpx DemoTop_drc_routed.rpx
 | Design       : DemoTop
@@ -59,17 +59,17 @@ Related violations: <none>
 
 PDRC-153#3 Warning
 Gated clock check  
-Net scriptMode/out/dataIn_bits_reg[6]_i_2_n_0 is a gated clock net sourced by a combinational pin scriptMode/out/dataIn_bits_reg[6]_i_2/O, cell scriptMode/out/dataIn_bits_reg[6]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net scriptMode/get/E[0] is a gated clock net sourced by a combinational pin scriptMode/get/pc1_reg[7]_i_2/O, cell scriptMode/get/pc1_reg[7]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#4 Warning
 Gated clock check  
-Net scriptMode/out/n_state_reg[1]_i_2_n_0 is a gated clock net sourced by a combinational pin scriptMode/out/n_state_reg[1]_i_2/O, cell scriptMode/out/n_state_reg[1]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net scriptMode/get/state_reg[1][0] is a gated clock net sourced by a combinational pin scriptMode/get/n_state_reg[1]_i_2/O, cell scriptMode/get/n_state_reg[1]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#5 Warning
 Gated clock check  
-Net scriptMode/pc1_reg[7]_i_1_n_0 is a gated clock net sourced by a combinational pin scriptMode/pc1_reg[7]_i_1/O, cell scriptMode/pc1_reg[7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net scriptMode/out/dataIn_bits_reg[6]_i_2_n_0 is a gated clock net sourced by a combinational pin scriptMode/out/dataIn_bits_reg[6]_i_2/O, cell scriptMode/out/dataIn_bits_reg[6]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#6 Warning

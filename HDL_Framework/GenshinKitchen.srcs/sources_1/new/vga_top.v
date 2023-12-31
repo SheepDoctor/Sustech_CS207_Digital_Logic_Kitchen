@@ -15,10 +15,10 @@ wire [10:0] x;
 wire [10:0] y;
 wire clk_108M;
 wire locked;
-vga vga_inst(
+vga vga_inst( //vga控制模块
 	.clk(clk),
 	.nrst(nrst),
-	.data(data),//RGB565
+	.data(data),//BGR
 	.x(x),
 	.y(y),
 	.vga_hs(vga_hs),
@@ -26,7 +26,7 @@ vga vga_inst(
 	.vga(vga)
 );
 
-vga_test vga_test_inst(
+vga_test vga_test_inst( //vga图像传输模块
 	.clk(clk),
 	.nrst(nrst),
 	.signal(signal),

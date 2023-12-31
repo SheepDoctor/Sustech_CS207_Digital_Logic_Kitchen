@@ -2,7 +2,7 @@ module vga(
 input 					clk,
 input 					nrst,
 
-input [11:0] 			data,//RGB565
+input [11:0] 			data,//BGR
 output [10:0] 			x,
 output [10:0] 			y,
 
@@ -10,7 +10,7 @@ output wire  				vga_hs,
 output wire 				vga_vs,
 output  				[11:0] vga
 );
-parameter h_visible = 1280;
+parameter h_visible = 1280; // ÆÁÄ»·Ö±æÂÊ£º1280*1024
 parameter h_front = 48;
 parameter h_sync = 112;
 parameter h_back = 248;
@@ -33,7 +33,7 @@ assign y = vga_ven ? vcount - v_sync - v_back : 11'b0; //´¹Ö±×ø±ê
 assign vga = vga_hen & vga_ven ? data : 12'b0; //ĞÅºÅ
 reg [10:0] hcount;
 reg [10:0] vcount;
-always @(posedge clk or negedge nrst) begin
+always @(posedge clk or negedge nrst) begin  // ÆÁÄ»É¨Ãè
 	if(!nrst) begin
 		hcount <= 11'b0;
 		vcount <= 11'b0;

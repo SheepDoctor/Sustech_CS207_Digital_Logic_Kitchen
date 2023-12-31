@@ -2,8 +2,8 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Sun Dec 31 12:08:36 2023
-# Process ID: 9904
+# Start of session at: Sun Dec 31 15:18:20 2023
+# Process ID: 22580
 # Current directory: G:/Study/Genshin_Kit/HDL_Framework/GenshinKitchen.runs/synth_1
 # Command line: vivado.exe -log DemoTop.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source DemoTop.tcl
 # Log file: G:/Study/Genshin_Kit/HDL_Framework/GenshinKitchen.runs/synth_1/DemoTop.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 4320 
+INFO: Helper process launched with PID 4284 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 340.953 ; gain = 99.355
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 341.469 ; gain = 101.402
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'DemoTop' [G:/Study/Genshin_Kit/HDL_Framework/GenshinKitchen.srcs/sources_1/new/DemoTop.v:23]
 INFO: [Synth 8-638] synthesizing module 'clock_frequency_divider' [G:/Study/Genshin_Kit/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/clock_frequency_divider.v:23]
@@ -83,8 +83,8 @@ INFO: [Synth 8-155] case statement is not full and has no default [G:/Study/Gens
 INFO: [Synth 8-155] case statement is not full and has no default [G:/Study/Genshin_Kit/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/ScriptMode.v:231]
 INFO: [Synth 8-256] done synthesizing module 'ScriptMode' (11#1) [G:/Study/Genshin_Kit/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/ScriptMode.v:5]
 INFO: [Synth 8-638] synthesizing module 'ScriptMem' [G:/Study/Genshin_Kit/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptMem.v:23]
-INFO: [Synth 8-638] synthesizing module 'inst_ram' [G:/Study/Genshin_Kit/HDL_Framework/GenshinKitchen.runs/synth_1/.Xil/Vivado-9904-LAPTOP-I606K2C4/realtime/inst_ram_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'inst_ram' (12#1) [G:/Study/Genshin_Kit/HDL_Framework/GenshinKitchen.runs/synth_1/.Xil/Vivado-9904-LAPTOP-I606K2C4/realtime/inst_ram_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'inst_ram' [G:/Study/Genshin_Kit/HDL_Framework/GenshinKitchen.runs/synth_1/.Xil/Vivado-22580-LAPTOP-I606K2C4/realtime/inst_ram_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'inst_ram' (12#1) [G:/Study/Genshin_Kit/HDL_Framework/GenshinKitchen.runs/synth_1/.Xil/Vivado-22580-LAPTOP-I606K2C4/realtime/inst_ram_stub.v:6]
 INFO: [Synth 8-256] done synthesizing module 'ScriptMem' (13#1) [G:/Study/Genshin_Kit/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptMem.v:23]
 INFO: [Synth 8-638] synthesizing module 'UART' [G:/Study/Genshin_Kit/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UART.v:128]
 INFO: [Synth 8-638] synthesizing module 'UARTTransmitter' [G:/Study/Genshin_Kit/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UART.v:3]
@@ -107,22 +107,6 @@ WARNING: [Synth 8-3331] design ScriptMode has unconnected port size[3]
 WARNING: [Synth 8-3331] design ScriptMode has unconnected port size[2]
 WARNING: [Synth 8-3331] design ScriptMode has unconnected port size[1]
 WARNING: [Synth 8-3331] design ScriptMode has unconnected port size[0]
-WARNING: [Synth 8-3331] design vga_test has unconnected port script[15]
-WARNING: [Synth 8-3331] design vga_test has unconnected port script[14]
-WARNING: [Synth 8-3331] design vga_test has unconnected port script[13]
-WARNING: [Synth 8-3331] design vga_test has unconnected port script[12]
-WARNING: [Synth 8-3331] design vga_test has unconnected port script[11]
-WARNING: [Synth 8-3331] design vga_test has unconnected port script[10]
-WARNING: [Synth 8-3331] design vga_test has unconnected port script[9]
-WARNING: [Synth 8-3331] design vga_test has unconnected port script[8]
-WARNING: [Synth 8-3331] design vga_test has unconnected port script[7]
-WARNING: [Synth 8-3331] design vga_test has unconnected port script[6]
-WARNING: [Synth 8-3331] design vga_test has unconnected port script[5]
-WARNING: [Synth 8-3331] design vga_test has unconnected port script[4]
-WARNING: [Synth 8-3331] design vga_test has unconnected port script[3]
-WARNING: [Synth 8-3331] design vga_test has unconnected port script[2]
-WARNING: [Synth 8-3331] design vga_test has unconnected port script[1]
-WARNING: [Synth 8-3331] design vga_test has unconnected port script[0]
 WARNING: [Synth 8-3331] design DemoTop has unconnected port led2[7]
 WARNING: [Synth 8-3331] design DemoTop has unconnected port led2[6]
 WARNING: [Synth 8-3331] design DemoTop has unconnected port led2[5]
@@ -132,7 +116,7 @@ WARNING: [Synth 8-3331] design DemoTop has unconnected port led2[2]
 WARNING: [Synth 8-3331] design DemoTop has unconnected port led2[1]
 WARNING: [Synth 8-3331] design DemoTop has unconnected port led2[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 393.109 ; gain = 151.512
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 394.773 ; gain = 154.707
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -142,15 +126,15 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 393.109 ; gain = 151.512
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 394.773 ; gain = 154.707
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [G:/Study/Genshin_Kit/HDL_Framework/GenshinKitchen.runs/synth_1/.Xil/Vivado-9904-LAPTOP-I606K2C4/dcp1/inst_ram_in_context.xdc] for cell 'script_mem_module/ram_module'
-Finished Parsing XDC File [G:/Study/Genshin_Kit/HDL_Framework/GenshinKitchen.runs/synth_1/.Xil/Vivado-9904-LAPTOP-I606K2C4/dcp1/inst_ram_in_context.xdc] for cell 'script_mem_module/ram_module'
+Parsing XDC File [G:/Study/Genshin_Kit/HDL_Framework/GenshinKitchen.runs/synth_1/.Xil/Vivado-22580-LAPTOP-I606K2C4/dcp1/inst_ram_in_context.xdc] for cell 'script_mem_module/ram_module'
+Finished Parsing XDC File [G:/Study/Genshin_Kit/HDL_Framework/GenshinKitchen.runs/synth_1/.Xil/Vivado-22580-LAPTOP-I606K2C4/dcp1/inst_ram_in_context.xdc] for cell 'script_mem_module/ram_module'
 Parsing XDC File [G:/Study/Genshin_Kit/HDL_Framework/GenshinKitchen.srcs/constrs_1/new/cons.xdc]
 Finished Parsing XDC File [G:/Study/Genshin_Kit/HDL_Framework/GenshinKitchen.srcs/constrs_1/new/cons.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [G:/Study/Genshin_Kit/HDL_Framework/GenshinKitchen.srcs/constrs_1/new/cons.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/DemoTop_propImpl.xdc].
@@ -160,23 +144,23 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 726.449 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 729.375 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 726.449 ; gain = 484.852
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 729.375 ; gain = 489.309
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 726.449 ; gain = 484.852
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 729.375 ; gain = 489.309
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property DONT_TOUCH = true for script_mem_module/ram_module. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 726.449 ; gain = 484.852
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 729.375 ; gain = 489.309
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "uart_clk" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5545] ROM "slow_clk" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
@@ -219,7 +203,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'op_code_reg' [G:/Study/Gens
 WARNING: [Synth 8-327] inferring latch for variable 'i_num_reg' [G:/Study/Genshin_Kit/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/ScriptMode.v:88]
 WARNING: [Synth 8-327] inferring latch for variable 'i_sign_reg' [G:/Study/Genshin_Kit/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/ScriptMode.v:89]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 726.449 ; gain = 484.852
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 729.375 ; gain = 489.309
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -461,25 +445,24 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-6014] Unused sequential element vga_inst/hcount_reg was removed.  [G:/Study/Genshin_Kit/HDL_Framework/GenshinKitchen.srcs/sources_1/new/vga.v:24]
-WARNING: [Synth 8-6014] Unused sequential element vga_inst/vcount_reg was removed.  [G:/Study/Genshin_Kit/HDL_Framework/GenshinKitchen.srcs/sources_1/new/vga.v:25]
-INFO: [Synth 8-5546] ROM "tub_control1" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5545] ROM "clk_counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "s_clk" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 WARNING: [Synth 8-6014] Unused sequential element waitingCounter_reg was removed.  [G:/Study/Genshin_Kit/HDL_Framework/GenshinKitchen.srcs/sources_1/imports/new/ScriptMode.v:253]
-WARNING: [Synth 8-6014] Unused sequential element script_cnt_reg was removed.  [G:/Study/Genshin_Kit/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptMem.v:36]
-WARNING: [Synth 8-6014] Unused sequential element rx/spacing_reg was removed.  [G:/Study/Genshin_Kit/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UART.v:59]
-WARNING: [Synth 8-6014] Unused sequential element clkCnt_reg was removed.  [G:/Study/Genshin_Kit/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UART.v:143]
 INFO: [Synth 8-5546] ROM "clock/uart_clk" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5545] ROM "clock/count2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "clock/slow_clk" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "clock/count3" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "clock/tube_clk" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "tube/tub_control1" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element vga_inst/vga_inst/hcount_reg was removed.  [G:/Study/Genshin_Kit/HDL_Framework/GenshinKitchen.srcs/sources_1/new/vga.v:24]
+WARNING: [Synth 8-6014] Unused sequential element vga_inst/vga_inst/vcount_reg was removed.  [G:/Study/Genshin_Kit/HDL_Framework/GenshinKitchen.srcs/sources_1/new/vga.v:25]
+WARNING: [Synth 8-6014] Unused sequential element script_mem_module/script_cnt_reg was removed.  [G:/Study/Genshin_Kit/HDL_Framework/GenshinKitchen.srcs/sources_1/new/ScriptMem.v:36]
+WARNING: [Synth 8-6014] Unused sequential element uart_module/rx/spacing_reg was removed.  [G:/Study/Genshin_Kit/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UART.v:59]
+WARNING: [Synth 8-6014] Unused sequential element uart_module/clkCnt_reg was removed.  [G:/Study/Genshin_Kit/HDL_Framework/GenshinKitchen.srcs/sources_1/new/UART.v:143]
 WARNING: [Synth 8-3917] design DemoTop has port led[7] driven by constant 0
 WARNING: [Synth 8-3917] design DemoTop has port led[6] driven by constant 0
 WARNING: [Synth 8-3917] design DemoTop has port led[5] driven by constant 0
 WARNING: [Synth 8-3917] design DemoTop has port led[4] driven by constant 0
-WARNING: [Synth 8-3331] design ScriptMem has unconnected port reset
 WARNING: [Synth 8-3331] design Output has unconnected port led[2]
 WARNING: [Synth 8-3331] design ScriptMode has unconnected port dataIn_ready
 WARNING: [Synth 8-3331] design ScriptMode has unconnected port size[7]
@@ -491,22 +474,6 @@ WARNING: [Synth 8-3331] design ScriptMode has unconnected port size[2]
 WARNING: [Synth 8-3331] design ScriptMode has unconnected port size[1]
 WARNING: [Synth 8-3331] design ScriptMode has unconnected port size[0]
 WARNING: [Synth 8-3331] design ScriptMode has unconnected port uart_clk_16
-WARNING: [Synth 8-3331] design vga_top has unconnected port script[15]
-WARNING: [Synth 8-3331] design vga_top has unconnected port script[14]
-WARNING: [Synth 8-3331] design vga_top has unconnected port script[13]
-WARNING: [Synth 8-3331] design vga_top has unconnected port script[12]
-WARNING: [Synth 8-3331] design vga_top has unconnected port script[11]
-WARNING: [Synth 8-3331] design vga_top has unconnected port script[10]
-WARNING: [Synth 8-3331] design vga_top has unconnected port script[9]
-WARNING: [Synth 8-3331] design vga_top has unconnected port script[8]
-WARNING: [Synth 8-3331] design vga_top has unconnected port script[7]
-WARNING: [Synth 8-3331] design vga_top has unconnected port script[6]
-WARNING: [Synth 8-3331] design vga_top has unconnected port script[5]
-WARNING: [Synth 8-3331] design vga_top has unconnected port script[4]
-WARNING: [Synth 8-3331] design vga_top has unconnected port script[3]
-WARNING: [Synth 8-3331] design vga_top has unconnected port script[2]
-WARNING: [Synth 8-3331] design vga_top has unconnected port script[1]
-WARNING: [Synth 8-3331] design vga_top has unconnected port script[0]
 WARNING: [Synth 8-3331] design DemoTop has unconnected port led2[7]
 WARNING: [Synth 8-3331] design DemoTop has unconnected port led2[6]
 WARNING: [Synth 8-3331] design DemoTop has unconnected port led2[5]
@@ -545,7 +512,7 @@ INFO: [Synth 8-3886] merging instance 'scriptMode/judge_reg[5]' (FDRE) to 'scrip
 INFO: [Synth 8-3886] merging instance 'scriptMode/judge_reg[4]' (FDRE) to 'scriptMode/judge_reg[3]'
 INFO: [Synth 8-3886] merging instance 'scriptMode/judge_reg[3]' (FDRE) to 'scriptMode/judge_reg[2]'
 INFO: [Synth 8-3886] merging instance 'scriptMode/judge_reg[2]' (FDRE) to 'scriptMode/judge_reg[1]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\scriptMode/judge_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (scriptMode/\judge_reg[1] )
 INFO: [Synth 8-3886] merging instance 'scriptMode/target_prev_reg[8]' (FDRE) to 'scriptMode/target_prev_reg[9]'
 INFO: [Synth 8-3886] merging instance 'scriptMode/target_prev_reg[9]' (FDRE) to 'scriptMode/target_prev_reg[10]'
 INFO: [Synth 8-3886] merging instance 'scriptMode/target_prev_reg[10]' (FDRE) to 'scriptMode/target_prev_reg[11]'
@@ -569,10 +536,9 @@ INFO: [Synth 8-3886] merging instance 'scriptMode/target_prev_reg[27]' (FDRE) to
 INFO: [Synth 8-3886] merging instance 'scriptMode/target_prev_reg[28]' (FDRE) to 'scriptMode/target_prev_reg[29]'
 INFO: [Synth 8-3886] merging instance 'scriptMode/target_prev_reg[29]' (FDRE) to 'scriptMode/target_prev_reg[30]'
 INFO: [Synth 8-3886] merging instance 'scriptMode/target_prev_reg[30]' (FDRE) to 'scriptMode/target_prev_reg[31]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\scriptMode/target_prev_reg[31] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\scriptMode/out/n_state_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (scriptMode/\target_prev_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (scriptMode/\out/n_state_reg[2] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\func/n_state_reg[2] )
-INFO: [Synth 8-3886] merging instance 'scriptMode/out/state_reg[2]' (FDC) to 'func/state_reg[2]'
 INFO: [Synth 8-3886] merging instance 'vga_inst/vga_test_inst/data_reg[0]' (FDC) to 'vga_inst/vga_test_inst/data_reg[1]'
 INFO: [Synth 8-3886] merging instance 'vga_inst/vga_test_inst/data_reg[1]' (FDC) to 'vga_inst/vga_test_inst/data_reg[2]'
 INFO: [Synth 8-3886] merging instance 'vga_inst/vga_test_inst/data_reg[2]' (FDC) to 'vga_inst/vga_test_inst/data_reg[3]'
@@ -588,8 +554,6 @@ INFO: [Synth 8-3886] merging instance 'tube/tub_control2_reg[2]' (FDE) to 'tube/
 INFO: [Synth 8-3886] merging instance 'tube/tub_control2_reg[5]' (FDE) to 'tube/tub_control2_reg[6]'
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (\tube/tub_control2_reg[6] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tube/tub_control1_reg[0] )
-WARNING: [Synth 8-3332] Sequential element (tube/tub_control2_reg[6]) is unused and will be removed from module DemoTop.
-WARNING: [Synth 8-3332] Sequential element (tube/tub_control1_reg[0]) is unused and will be removed from module DemoTop.
 WARNING: [Synth 8-3332] Sequential element (func/n_state_reg[2]) is unused and will be removed from module DemoTop.
 WARNING: [Synth 8-3332] Sequential element (receiver/size_reg[7]) is unused and will be removed from module DemoTop.
 WARNING: [Synth 8-3332] Sequential element (receiver/size_reg[6]) is unused and will be removed from module DemoTop.
@@ -599,43 +563,42 @@ WARNING: [Synth 8-3332] Sequential element (receiver/size_reg[3]) is unused and 
 WARNING: [Synth 8-3332] Sequential element (receiver/size_reg[2]) is unused and will be removed from module DemoTop.
 WARNING: [Synth 8-3332] Sequential element (receiver/size_reg[1]) is unused and will be removed from module DemoTop.
 WARNING: [Synth 8-3332] Sequential element (receiver/size_reg[0]) is unused and will be removed from module DemoTop.
-WARNING: [Synth 8-3332] Sequential element (scriptMode/get/size_reg[7]) is unused and will be removed from module DemoTop.
-WARNING: [Synth 8-3332] Sequential element (scriptMode/get/size_reg[6]) is unused and will be removed from module DemoTop.
-WARNING: [Synth 8-3332] Sequential element (scriptMode/get/size_reg[5]) is unused and will be removed from module DemoTop.
-WARNING: [Synth 8-3332] Sequential element (scriptMode/get/size_reg[4]) is unused and will be removed from module DemoTop.
-WARNING: [Synth 8-3332] Sequential element (scriptMode/get/size_reg[3]) is unused and will be removed from module DemoTop.
-WARNING: [Synth 8-3332] Sequential element (scriptMode/get/size_reg[2]) is unused and will be removed from module DemoTop.
-WARNING: [Synth 8-3332] Sequential element (scriptMode/get/size_reg[1]) is unused and will be removed from module DemoTop.
-WARNING: [Synth 8-3332] Sequential element (scriptMode/get/size_reg[0]) is unused and will be removed from module DemoTop.
-WARNING: [Synth 8-3332] Sequential element (scriptMode/out/n_state_reg[2]) is unused and will be removed from module DemoTop.
-WARNING: [Synth 8-3332] Sequential element (scriptMode/i_sign_reg[2]) is unused and will be removed from module DemoTop.
-WARNING: [Synth 8-3332] Sequential element (scriptMode/target_prev_reg[31]) is unused and will be removed from module DemoTop.
-WARNING: [Synth 8-3332] Sequential element (scriptMode/judge_reg[1]) is unused and will be removed from module DemoTop.
-WARNING: [Synth 8-3332] Sequential element (scriptMode/judge_reg[0]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (get/size_reg[7]) is unused and will be removed from module ScriptMode.
+WARNING: [Synth 8-3332] Sequential element (get/size_reg[6]) is unused and will be removed from module ScriptMode.
+WARNING: [Synth 8-3332] Sequential element (get/size_reg[5]) is unused and will be removed from module ScriptMode.
+WARNING: [Synth 8-3332] Sequential element (get/size_reg[4]) is unused and will be removed from module ScriptMode.
+WARNING: [Synth 8-3332] Sequential element (get/size_reg[3]) is unused and will be removed from module ScriptMode.
+WARNING: [Synth 8-3332] Sequential element (get/size_reg[2]) is unused and will be removed from module ScriptMode.
+WARNING: [Synth 8-3332] Sequential element (get/size_reg[1]) is unused and will be removed from module ScriptMode.
+WARNING: [Synth 8-3332] Sequential element (get/size_reg[0]) is unused and will be removed from module ScriptMode.
+WARNING: [Synth 8-3332] Sequential element (out/n_state_reg[2]) is unused and will be removed from module ScriptMode.
+WARNING: [Synth 8-3332] Sequential element (out/state_reg[2]) is unused and will be removed from module ScriptMode.
+WARNING: [Synth 8-3332] Sequential element (i_sign_reg[2]) is unused and will be removed from module ScriptMode.
+WARNING: [Synth 8-3332] Sequential element (target_prev_reg[31]) is unused and will be removed from module ScriptMode.
+WARNING: [Synth 8-3332] Sequential element (judge_reg[1]) is unused and will be removed from module ScriptMode.
+WARNING: [Synth 8-3332] Sequential element (judge_reg[0]) is unused and will be removed from module ScriptMode.
 WARNING: [Synth 8-3332] Sequential element (func/state_reg[2]) is unused and will be removed from module DemoTop.
-INFO: [Synth 8-3886] merging instance 'scriptMode/get/signal_reg[2]' (FDE) to 'receiver/signal_reg[2]'
-INFO: [Synth 8-3886] merging instance 'scriptMode/get/signal_reg[0]' (FDE) to 'receiver/signal_reg[0]'
-INFO: [Synth 8-3886] merging instance 'scriptMode/get/signal_reg[1]' (FDE) to 'receiver/signal_reg[1]'
-INFO: [Synth 8-3886] merging instance 'scriptMode/get/signal_reg[3]' (FDE) to 'receiver/signal_reg[3]'
+WARNING: [Synth 8-3332] Sequential element (tube/tub_control2_reg[6]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (tube/tub_control1_reg[0]) is unused and will be removed from module DemoTop.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (scriptMode/\out/dataIn_bits_reg[7] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\func/dataIn_bits_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\scriptMode/out/dataIn_bits_reg[7] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uart_module/tx/data_reg[7] )
 WARNING: [Synth 8-3332] Sequential element (func/dataIn_bits_reg[7]) is unused and will be removed from module DemoTop.
-WARNING: [Synth 8-3332] Sequential element (scriptMode/out/dataIn_bits_reg[7]) is unused and will be removed from module DemoTop.
+WARNING: [Synth 8-3332] Sequential element (out/dataIn_bits_reg[7]) is unused and will be removed from module ScriptMode.
 WARNING: [Synth 8-3332] Sequential element (uart_module/tx/data_reg[7]) is unused and will be removed from module DemoTop.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 726.449 ; gain = 484.852
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 729.375 ; gain = 489.309
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 ROM:
-+-------------------+--------------+---------------+----------------+
-|Module Name        | RTL Object   | Depth x Width | Implemented As | 
-+-------------------+--------------+---------------+----------------+
-|seven_segment_tube | tub_control1 | 32x8          | LUT            | 
-+-------------------+--------------+---------------+----------------+
++------------+-------------------+---------------+----------------+
+|Module Name | RTL Object        | Depth x Width | Implemented As | 
++------------+-------------------+---------------+----------------+
+|DemoTop     | tube/tub_control1 | 32x8          | LUT            | 
++------------+-------------------+---------------+----------------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP and Shift Register Reporting
@@ -650,13 +613,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 735.242 ; gain = 493.645
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 736.961 ; gain = 496.895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 736.199 ; gain = 494.602
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 737.852 ; gain = 497.785
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -668,7 +631,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 768.617 ; gain = 527.020
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 782.820 ; gain = 542.754
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -692,7 +655,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 768.617 ; gain = 527.020
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 782.820 ; gain = 542.754
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -705,7 +668,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 768.617 ; gain = 527.020
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 782.820 ; gain = 542.754
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -717,25 +680,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 768.617 ; gain = 527.020
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 782.820 ; gain = 542.754
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 768.617 ; gain = 527.020
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 782.820 ; gain = 542.754
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 768.617 ; gain = 527.020
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 782.820 ; gain = 542.754
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 768.617 ; gain = 527.020
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 782.820 ; gain = 542.754
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -755,17 +718,17 @@ Report Cell Usage:
 |1     |inst_ram |     1|
 |2     |BUFG     |     4|
 |3     |CARRY4   |    51|
-|4     |LUT1     |     9|
-|5     |LUT2     |    97|
-|6     |LUT3     |    65|
-|7     |LUT4     |    96|
-|8     |LUT5     |   111|
-|9     |LUT6     |   221|
+|4     |LUT1     |    10|
+|5     |LUT2     |    94|
+|6     |LUT3     |    64|
+|7     |LUT4     |   108|
+|8     |LUT5     |   132|
+|9     |LUT6     |   301|
 |10    |MUXF7    |     1|
 |11    |FDCE     |    26|
 |12    |FDPE     |     3|
-|13    |FDRE     |   331|
-|14    |FDSE     |     3|
+|13    |FDRE     |   336|
+|14    |FDSE     |     2|
 |15    |LD       |    31|
 |16    |LDC      |    31|
 |17    |IBUF     |    16|
@@ -777,28 +740,29 @@ Report Instance Areas:
 +------+--------------------+------------------------+------+
 |      |Instance            |Module                  |Cells |
 +------+--------------------+------------------------+------+
-|1     |top                 |                        |  1167|
+|1     |top                 |                        |  1281|
 |2     |  clock             |clock_frequency_divider |   133|
-|3     |  func              |Output                  |    35|
+|3     |  func              |Output                  |    34|
 |4     |  nolabel_line98    |modeJudger              |     1|
-|5     |  receiver          |Receiver                |    18|
-|6     |  scriptMode        |ScriptMode              |   543|
-|7     |    out             |Output_0                |    59|
-|8     |  script_mem_module |ScriptMem               |   100|
-|9     |  tube              |seven_segment_tube      |    28|
-|10    |  uart_module       |UART                    |    82|
-|11    |    rx              |UARTReceiver            |    38|
-|12    |    tx              |UARTTransmitter         |    24|
-|13    |  vga_inst          |vga_top                 |   152|
-|14    |    vga_inst        |vga                     |   150|
-|15    |    vga_test_inst   |vga_test                |     2|
+|5     |  receiver          |Receiver                |    17|
+|6     |  scriptMode        |ScriptMode              |   558|
+|7     |    get             |Receiver_0              |    46|
+|8     |    out             |Output_1                |    73|
+|9     |  script_mem_module |ScriptMem               |   106|
+|10    |  tube              |seven_segment_tube      |    22|
+|11    |  uart_module       |UART                    |    77|
+|12    |    rx              |UARTReceiver            |    38|
+|13    |    tx              |UARTTransmitter         |    18|
+|14    |  vga_inst          |vga_top                 |   258|
+|15    |    vga_inst        |vga                     |   256|
+|16    |    vga_test_inst   |vga_test                |     2|
 +------+--------------------+------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 768.617 ; gain = 527.020
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 782.820 ; gain = 542.754
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 92 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 768.617 ; gain = 193.680
-Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 768.617 ; gain = 527.020
+Synthesis finished with 0 errors, 0 critical warnings and 76 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 782.820 ; gain = 208.152
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 782.820 ; gain = 542.754
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 130 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -810,10 +774,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   LDC => LDCE: 31 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-161 Infos, 133 Warnings, 0 Critical Warnings and 0 Errors encountered.
+156 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 768.617 ; gain = 538.508
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 782.820 ; gain = 552.738
 INFO: [Common 17-1381] The checkpoint 'G:/Study/Genshin_Kit/HDL_Framework/GenshinKitchen.runs/synth_1/DemoTop.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file DemoTop_utilization_synth.rpt -pb DemoTop_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 768.617 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sun Dec 31 12:09:09 2023...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 782.820 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Dec 31 15:18:53 2023...

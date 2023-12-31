@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Sun Dec 31 12:09:39 2023
+| Date         : Sun Dec 31 15:19:21 2023
 | Host         : LAPTOP-I606K2C4 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file DemoTop_control_sets_placed.rpt
 | Design       : DemoTop
@@ -23,7 +23,7 @@ Table of Contents
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
 | Number of unique control sets                            |    34 |
-| Unused register locations in slices containing registers |    70 |
+| Unused register locations in slices containing registers |    66 |
 +----------------------------------------------------------+-------+
 
 
@@ -33,71 +33,70 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              90 |           38 |
-| No           | No                    | Yes                    |              18 |            9 |
-| No           | Yes                   | No                     |             160 |           45 |
-| Yes          | No                    | No                     |              74 |           26 |
-| Yes          | No                    | Yes                    |              11 |            4 |
-| Yes          | Yes                   | No                     |              73 |           24 |
+| No           | No                    | No                     |              90 |           39 |
+| No           | No                    | Yes                    |              18 |           11 |
+| No           | Yes                   | No                     |             160 |           46 |
+| Yes          | No                    | No                     |              71 |           24 |
+| Yes          | No                    | Yes                    |              11 |            5 |
+| Yes          | Yes                   | No                     |              80 |           25 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 3. Detailed Control Set Information
 -----------------------------------
 
-+--------------------------------------------+--------------------------------------------+--------------------------------------+------------------+----------------+
-|                Clock Signal                |                Enable Signal               |           Set/Reset Signal           | Slice Load Count | Bel Load Count |
-+--------------------------------------------+--------------------------------------------+--------------------------------------+------------------+----------------+
-|  clock/tube_clk                            | tube/state2[3]_i_1_n_0                     | tube/tub_control2[7]_i_1_n_0         |                1 |              1 |
-|  scriptMode/out/n_state_reg[1]_i_2_n_0     |                                            |                                      |                2 |              2 |
-|  func/n_state_reg[1]_i_2__0_n_0            |                                            |                                      |                1 |              2 |
-|  uart_module/dataOut_valid                 | uart_module/signal_reg[3]                  |                                      |                1 |              4 |
-|  slow_clk_BUFG                             |                                            | scriptMode/out/SR[0]                 |                4 |              4 |
-|  uart_clk_16_BUFG                          |                                            | uart_module/rx/spacing               |                1 |              4 |
-|  uart_clk_16_BUFG                          | uart_module/rx/state[3]_i_1__0_n_0         |                                      |                1 |              4 |
-|  scriptMode/out/dataIn_bits_reg[6]_i_2_n_0 |                                            |                                      |                3 |              7 |
-|  clk_IBUF_BUFG                             |                                            |                                      |                6 |              7 |
-|  func/dataIn_bits_reg[6]_i_2__0_n_0        |                                            |                                      |                2 |              7 |
-|  moveCounter_reg[31]_i_4_n_0               |                                            | script_mem_module/SR[0]              |                3 |              8 |
-|  moveCounter_reg[31]_i_4_n_0               | scriptMode/target_prev                     | scriptMode/out/SR[0]                 |                2 |              8 |
-|  slow_clk_BUFG                             |                                            | scriptMode/pc3[7]_i_1_n_0            |                3 |              8 |
-|  uart_clk_16_BUFG                          | uart_module/script_size                    |                                      |                1 |              8 |
-|  uart_clk_16_BUFG                          | uart_module/script_cnt_reg[7][0]           |                                      |                2 |              8 |
-|  uart_clk_16_BUFG                          | uart_module/rx/tick                        |                                      |                2 |              8 |
-|  scriptMode/pc1_reg[7]_i_1_n_0             |                                            | scriptMode/pc1_reg[7]_i_2_n_0        |                2 |              8 |
-|  scriptMode/pc_reg[7]_i_2_n_0              |                                            | script_mem_module/SR[0]              |                4 |              8 |
-|  clk_IBUF_BUFG                             | vga_inst/vga_inst/sel                      | scriptMode/out/SR[0]                 |                4 |             11 |
-|  uart_clk_16_BUFG                          | uart_module/tx/state[3]_i_1_n_0            |                                      |                4 |             11 |
-|  slow_clk_BUFG                             |                                            |                                      |                5 |             13 |
-|  scriptMode/place_reg[7]_i_2_n_0           |                                            |                                      |                4 |             13 |
-|  clk_IBUF_BUFG                             |                                            | scriptMode/out/SR[0]                 |                5 |             14 |
-|  clock/tube_clk                            | tube/state2[3]_i_1_n_0                     |                                      |                6 |             15 |
-|  clk_IBUF_BUFG                             |                                            | clock/uart_clk                       |                4 |             15 |
-|  script_mem_module/E[0]                    |                                            | script_mem_module/SR[0]              |                4 |             15 |
-|  moveCounter_reg[31]_i_4_n_0               | scriptMode/pc2[7]_i_1_n_0                  |                                      |                9 |             16 |
-|  uart_clk_16_BUFG                          |                                            |                                      |                8 |             19 |
-|  moveCounter_reg[31]_i_4_n_0               |                                            |                                      |                7 |             20 |
-|  clk_IBUF_BUFG                             |                                            | clock/tube_clk_1                     |                8 |             31 |
-|  clk_IBUF_BUFG                             |                                            | clock/slow_clk_0                     |                8 |             31 |
-|  clk_IBUF_BUFG                             | script_mem_module/clk_counter_reg[31]_0[0] | scriptMode/out/SR[0]                 |                8 |             32 |
-|  slow_clk_BUFG                             |                                            | scriptMode/waitingCounter[0]_i_1_n_0 |                8 |             32 |
-|  moveCounter_reg[31]_i_4_n_0               | scriptMode/moveCounter[31]_i_2_n_0         | scriptMode/moveCounter[31]_i_1_n_0   |               13 |             32 |
-+--------------------------------------------+--------------------------------------------+--------------------------------------+------------------+----------------+
++--------------------------------------------+------------------------------------------+--------------------------------------+------------------+----------------+
+|                Clock Signal                |               Enable Signal              |           Set/Reset Signal           | Slice Load Count | Bel Load Count |
++--------------------------------------------+------------------------------------------+--------------------------------------+------------------+----------------+
+|  scriptMode/get/state_reg[1][0]            |                                          |                                      |                1 |              2 |
+|  func/n_state_reg[1]_i_2__0_n_0            |                                          |                                      |                1 |              2 |
+|  uart_clk_16_BUFG                          |                                          | uart_module/rx/spacing[3]_i_1_n_0    |                1 |              4 |
+|  uart_module/CLK                           | uart_module/E[0]                         |                                      |                1 |              4 |
+|  uart_clk_16_BUFG                          | uart_module/rx/state[3]_i_1_n_0          |                                      |                1 |              4 |
+|  slow_clk_BUFG                             |                                          | scriptMode/out/SR[0]                 |                3 |              4 |
+|  uart_module/CLK                           | uart_module/signal_reg[0][0]             |                                      |                1 |              4 |
+|  scriptMode/out/dataIn_bits_reg[6]_i_2_n_0 |                                          |                                      |                3 |              7 |
+|  clk_IBUF_BUFG                             |                                          |                                      |                6 |              7 |
+|  func/dataIn_bits_reg[6]_i_2__0_n_0        |                                          |                                      |                2 |              7 |
+|  moveCounter_reg[31]_i_4_n_0               |                                          | script_mem_module/pc4_reg[7]         |                3 |              8 |
+|  slow_clk_BUFG                             |                                          | scriptMode/pc3[7]_i_1_n_0            |                5 |              8 |
+|  scriptMode/pc_reg[7]_i_2_n_0              |                                          | script_mem_module/pc4_reg[7]         |                3 |              8 |
+|  uart_clk_16_BUFG                          | uart_module/rx/tick                      |                                      |                3 |              8 |
+|  uart_clk_16_BUFG                          | uart_module/script_cnt_reg[0][0]         |                                      |                2 |              8 |
+|  moveCounter_reg[31]_i_4_n_0               | scriptMode/target_prev                   | scriptMode/out/SR[0]                 |                3 |              8 |
+|  scriptMode/get/E[0]                       |                                          | scriptMode/pc1_reg[7]_i_3_n_0        |                2 |              8 |
+|  uart_clk_16_BUFG                          | uart_module/script_cnt                   | uart_module/script_cnt_reg[0][0]     |                2 |              8 |
+|  clk_IBUF_BUFG                             | vga_inst/vga_inst/sel                    | scriptMode/out/SR[0]                 |                5 |             11 |
+|  uart_clk_16_BUFG                          | uart_module/tx/state[3]_i_1__0_n_0       |                                      |                4 |             11 |
+|  scriptMode/place_reg[7]_i_2_n_0           |                                          |                                      |                6 |             13 |
+|  slow_clk_BUFG                             |                                          |                                      |                6 |             13 |
+|  clk_IBUF_BUFG                             |                                          | scriptMode/out/SR[0]                 |                8 |             14 |
+|  clk_IBUF_BUFG                             |                                          | clock/uart_clk                       |                4 |             15 |
+|  script_mem_module/E[0]                    |                                          | script_mem_module/pc4_reg[7]         |                4 |             15 |
+|  moveCounter_reg[31]_i_4_n_0               | scriptMode/pc2[7]_i_1_n_0                |                                      |                8 |             16 |
+|  clock/CLK                                 | tube/state2[3]_i_1_n_0                   |                                      |                4 |             16 |
+|  uart_clk_16_BUFG                          |                                          |                                      |                7 |             19 |
+|  moveCounter_reg[31]_i_4_n_0               |                                          |                                      |                7 |             20 |
+|  clk_IBUF_BUFG                             |                                          | clock/tube_clk                       |                8 |             31 |
+|  clk_IBUF_BUFG                             |                                          | clock/slow_clk_0                     |                8 |             31 |
+|  clk_IBUF_BUFG                             | script_mem_module/clk_counter_reg[31][0] | scriptMode/out/SR[0]                 |                7 |             32 |
+|  moveCounter_reg[31]_i_4_n_0               | scriptMode/moveCounter[31]_i_2_n_0       | scriptMode/moveCounter[31]_i_1_n_0   |               13 |             32 |
+|  slow_clk_BUFG                             |                                          | scriptMode/waitingCounter[0]_i_1_n_0 |                8 |             32 |
++--------------------------------------------+------------------------------------------+--------------------------------------+------------------+----------------+
 
 
 +--------+-----------------------+
 | Fanout | Number of ControlSets |
 +--------+-----------------------+
-| 1      |                     1 |
 | 2      |                     2 |
-| 4      |                     4 |
+| 4      |                     5 |
 | 7      |                     3 |
 | 8      |                     8 |
 | 11     |                     2 |
 | 13     |                     2 |
 | 14     |                     1 |
-| 15     |                     3 |
-| 16+    |                     8 |
+| 15     |                     2 |
+| 16+    |                     9 |
 +--------+-----------------------+
 
 

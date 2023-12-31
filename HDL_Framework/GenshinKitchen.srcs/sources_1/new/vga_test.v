@@ -136,6 +136,70 @@ always @(posedge clk or negedge nrst) begin
                     if(pc[0]) data <= white;
                     else data <= black;
                 end
+        else if(x > startx & x <= startx + swide & y > line4 & y <= line4 + hight) begin
+                    if(script[15]) data <= white;
+                    else data <= black;
+               end
+        else if(x > startx + swide + sspace & x <= startx + swide*2 + sspace & y > line4 & y <= line4 + hight) begin
+                    if(script[14]) data <= white;
+                    else data <= black;
+                end
+        else if(x > startx + swide*2 + sspace*2 & x <= startx + swide*3 + sspace*2 & y > line4 & y <= line4 + hight) begin
+                    if(script[13]) data <= white;
+                    else data <= black;
+                end
+        else if(x > startx + swide*3 + sspace*3 & x <= startx + swide*4 + sspace*3 & y > line4 & y <= line4 + hight) begin
+                    if(script[12]) data <= white;
+                    else data <= black;
+                end
+        else if(x > startx + swide*4 + sspace*4 & x <= startx + swide*5 + sspace*4 & y > line4 & y <= line4 + hight) begin
+                    if(script[11]) data <= white;
+                    else data <= black;
+                end
+        else if(x > startx + swide*5 + sspace*5 & x <= startx + swide*6 + sspace*5 & y > line4 & y <= line4 + hight) begin
+                    if(script[10]) data <= white;
+                    else data <= black;
+                 end
+        else if(x > startx + swide*6 + sspace*6 & x <= startx + swide*7 + sspace*6 & y > line4 & y <= line4 + hight) begin
+                    if(script[9]) data <= white;
+                    else data <= black;
+                end
+        else if(x > startx + swide*7 + sspace*7 & x <= startx + swide*8 + sspace*7 & y > line4 & y <= line4 + hight) begin
+                    if(script[8]) data <= white;
+                    else data <= black;
+                end
+        else if(x > startx + swide*8 + sspace*8 & x <= startx + swide*9 + sspace*8 & y > line4 & y <= line4 + hight) begin
+                    if(script[7]) data <= white;
+                    else data <= black;
+                end
+        else if(x > startx + swide*9 + sspace*9 & x <= startx + swide*10 + sspace*9 & y > line4 & y <= line4 + hight) begin
+                    if(script[6]) data <= white;
+                    else data <= black;
+                end
+        else if(x > startx + swide*10 + sspace*10 & x <= startx + swide*11 + sspace*10 & y > line4 & y <= line4 + hight) begin
+                    if(script[5]) data <= white;
+                    else data <= black;
+                end
+        else if(x > startx + swide*11 + sspace*11 & x <= startx + swide*12 + sspace*11 & y > line4 & y <= line4 + hight) begin
+                    if(script[4]) data <= white;
+                    else data <= black;
+                end
+        else if(x > startx + swide*12 + sspace*12 & x <= startx + swide*13 + sspace*12 & y > line4 & y <= line4 + hight) begin
+                    if(script[3]) data <= white;
+                    else data <= black;
+                end
+        else if(x > startx + swide*13 + sspace*13 & x <= startx + swide*14 + sspace*13 & y > line4 & y <= line4 + hight) begin
+                    if(script[2]) data <= white;
+                    else data <= black;
+                 end
+        else if(x > startx + swide*14 + sspace*14 & x <= startx + swide*15 + sspace*14 & y > line4 & y <= line4 + hight) begin
+                    if(script[1]) data <= white;
+                    else data <= black;
+                end
+        else if(x > startx + swide*15 + sspace*15 & x <= startx + swide*16 + sspace*15 & y > line4 & y <= line4 + hight) begin
+                    if(script[0]) data <= white;
+                    else data <= black;
+                end
 		else
 			data <= 12'b1111_0000_0000;
 	end

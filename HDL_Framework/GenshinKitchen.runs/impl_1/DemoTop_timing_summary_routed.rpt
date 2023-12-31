@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Sun Dec 31 12:09:57 2023
+| Date         : Sun Dec 31 15:19:37 2023
 | Host         : LAPTOP-I606K2C4 running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file DemoTop_timing_summary_routed.rpt -rpx DemoTop_timing_summary_routed.rpx -warn_on_violation
 | Design       : DemoTop
@@ -92,19 +92,25 @@ Table of Contents
 
  There are 9 register/latch pins with no clock driven by root clock pin: func/state_reg[1]/Q (HIGH)
 
- There are 18 register/latch pins with no clock driven by root clock pin: receiver/signal_reg[0]/Q (HIGH)
+ There are 9 register/latch pins with no clock driven by root clock pin: receiver/signal_reg[0]/Q (HIGH)
 
- There are 18 register/latch pins with no clock driven by root clock pin: receiver/signal_reg[1]/Q (HIGH)
+ There are 9 register/latch pins with no clock driven by root clock pin: receiver/signal_reg[1]/Q (HIGH)
 
- There are 8 register/latch pins with no clock driven by root clock pin: receiver/signal_reg[2]/Q (HIGH)
-
- There are 18 register/latch pins with no clock driven by root clock pin: receiver/signal_reg[3]/Q (HIGH)
+ There are 9 register/latch pins with no clock driven by root clock pin: receiver/signal_reg[3]/Q (HIGH)
 
  There are 29 register/latch pins with no clock driven by root clock pin: scriptMode/func_reg[0]/Q (HIGH)
 
  There are 29 register/latch pins with no clock driven by root clock pin: scriptMode/func_reg[1]/Q (HIGH)
 
- There are 9 register/latch pins with no clock driven by root clock pin: scriptMode/movement_reg[0]/Q (HIGH)
+ There are 9 register/latch pins with no clock driven by root clock pin: scriptMode/get/signal_reg[0]/Q (HIGH)
+
+ There are 9 register/latch pins with no clock driven by root clock pin: scriptMode/get/signal_reg[1]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: scriptMode/get/signal_reg[2]/Q (HIGH)
+
+ There are 9 register/latch pins with no clock driven by root clock pin: scriptMode/get/signal_reg[3]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: scriptMode/movement_reg[0]/Q (HIGH)
 
  There are 9 register/latch pins with no clock driven by root clock pin: scriptMode/movement_reg[1]/Q (HIGH)
 
@@ -206,7 +212,7 @@ Table of Contents
 
  There are 28 register/latch pins with no clock driven by root clock pin: script_mem_module/script_size_reg[7]/Q (HIGH)
 
- There are 4 register/latch pins with no clock driven by root clock pin: uart_module/io_dataOut_valid_reg/Q (HIGH)
+ There are 8 register/latch pins with no clock driven by root clock pin: uart_module/io_dataOut_valid_reg/Q (HIGH)
 
 
 2. checking constant_clock
@@ -221,7 +227,7 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 863 pins that are not constrained for maximum delay. (HIGH)
+ There are 878 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
