@@ -21,29 +21,29 @@
 
 
 module DemoTop(
-    input           [4:0] button,
-    input           [7:0] switches,
+    input [4:0] button,
+    input [7:0] switches,
 
-    output          [7:0] led,
-    output          [7:0] led2,
+    output [7:0] led,
+    output [7:0] led2,
     
-    input           clk,
-    input           rst_n,
-    input           rx,
-    output          tx,
-    output          [3:0]tub_sel1,
-    output          [3:0]tub_sel2,
-    output          [7:0] tub_control1,
-    output          [7:0] tub_control2,
-    output 					[11:0]vga,
-    output 					vga_hs,
-    output 					vga_vs
+    input clk,
+    input rst_n,
+    input rx,
+    output tx,
+    output [3:0]tub_sel1,
+    output [3:0]tub_sel2,
+    output [7:0] tub_control1,
+    output [7:0] tub_control2,
+    output [11:0]vga,
+    output vga_vs,
+    output vga_hs
     );
 
 
 // The wire below is useful!
 wire uart_clk_16;
-
+wire vga_clk;
 wire [7:0] dataIn_bits;
 wire dataIn_ready;
 wire [7:0] dataOut_bits;
@@ -63,23 +63,12 @@ wire [7:0]dataIn_script;
 wire switchMode;
 // Self-Defined wires
 
-<<<<<<< HEAD
 // assign led = script[15:8];
 // assign led2 = script[7:0];
 
 // assign end
 
-    vga_top vga_inst (
-      .clk(clk),
-      .nrst(rst_n),
-      .dataIn_bits(dataIn_bits),
-      .vga(vga),
-      .vga_hs(vga_hs),
-      .vga_vs(vga_vs)
-    );
 
-=======
->>>>>>> parent of f23bb53 (script DONE!!!!!)
     clock_frequency_divider clock(
     .clk(clk),
     .uart_clk(uart_clk_16),
@@ -87,16 +76,27 @@ wire switchMode;
     .tube_clk(tube_clk)
     );
     
-    modeSwitcher(
+     modeSwitcher(
     .dataIn_user(dataIn_user),
     .dataIn_script(dataIn_script),
     .switchMode(switchMode),
     .dataIn_bits(dataIn_bits)
     );
     
-    modeJudger(
+    vga_top vga_inst(
+    .clk(clk),
+    .nrst(rst_n),
+    .dataIn_bits(dataIn_bits),
+    .signal(signal),
+    .pc(pc),
+    .script(script),
+    .vga(vga),
+    .vga_hs(vga_hs),
+    .vga_vs(vga_vs)
+    );
+    
+     modeJudger(
     .dataIn_bits(dataIn_script),
-    .dataOut_bits(dataOut_bits),
     .clk(clk),
     .rst_n(rst_n),
     .switchMode(switchMode)
@@ -118,40 +118,18 @@ wire switchMode;
     .switches(switches), 
     .button(button),
     .rst_n(rst_n),
-<<<<<<< HEAD
     .led(signal),
     .dataIn_bits(dataIn_user) // client signal
       );
     
-=======
-    .dataOut_bits(dataOut_bits),
-    .dataOut_valid(dataOut_valid), 
-    .dataIn_bits(dataIn_bits) // client signal
-      );*/
-      
->>>>>>> parent of f23bb53 (script DONE!!!!!)
     Receiver receiver(
       .clk(uart_clk_16),
       .dataOut_bits(dataOut_bits),
       .dataOut_ready(dataOut_valid),
       .led(led),
+      .signal(signal),
       .size(size)
     );
-<<<<<<< HEAD
-=======
-  
-  /*
-    Led1 output1(
-    .dataIn_bits(dataIn_bits),
-    .led(led)
-    );
-    
-    Led2 output2(
-     .dataIn_ready(dataIn_ready),
-     .dataOut_ready(dataOut_valid),//feedback signal
-    .led2(led2)
-    );*/
->>>>>>> parent of f23bb53 (script DONE!!!!!)
 
     ScriptMode scriptMode(
       .reset(rst_n),

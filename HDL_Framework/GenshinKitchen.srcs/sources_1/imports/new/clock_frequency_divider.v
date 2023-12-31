@@ -1,4 +1,5 @@
 `timescale 1ns / 1ps
+`include "constants.vh"
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
 // Engineer: 
@@ -18,7 +19,6 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
-
 //transfer clk into uart_clk
 module clock_frequency_divider(
 input clk,
@@ -27,7 +27,6 @@ output reg slow_clk,
 output reg tube_clk
 //maybe write other clks here
     );
-parameter period1 = 650, period2 = 10000000,period3 = 500000;    // 100000000/650 Hz stable and 10Hz stable
 reg [15:0] count1;// 16 bits counter for dividing frequency
 reg [31:0] count2; 
 reg [31:0] count3; 
@@ -36,7 +35,7 @@ count1<=0;
 uart_clk<=0;
 end
 always @ (posedge clk) begin
-if(count1==(period1>>1)-1) begin
+if(count1==(`period1>>1)-1) begin
 uart_clk <= ~uart_clk; // invert clock
 count1<=0;
 end 
@@ -50,7 +49,7 @@ count2<=0;
 slow_clk<=0;
 end
 always @ (posedge clk) begin
-if(count2==(period2>>1)-1) begin
+if(count2==(`period2>>1)-1) begin
 slow_clk <= ~slow_clk; // invert clock
 count2<=0;
 end 
@@ -64,7 +63,7 @@ count3<=0;
 tube_clk<=0;
 end
 always @ (posedge clk) begin
-if(count3==(period3>>1)-1) begin
+if(count3==(`period3>>1)-1) begin
 tube_clk <= ~tube_clk; // invert clock
 count3<=0;
 end 
@@ -72,5 +71,8 @@ else begin
 count3 <= count3+1;
 end
 end
+
 endmodule
+
+
 

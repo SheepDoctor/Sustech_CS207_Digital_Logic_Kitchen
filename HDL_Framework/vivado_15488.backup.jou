@@ -1,0 +1,51 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Sat Dec 30 23:17:08 2023
+# Process ID: 15488
+# Current directory: C:/Users/86153/Desktop/NEW/DL-kitchen/HDL_Framework
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18256 C:\Users\86153\Desktop\NEW\DL-kitchen\HDL_Framework\GenshinKitchen.xpr
+# Log file: C:/Users/86153/Desktop/NEW/DL-kitchen/HDL_Framework/vivado.log
+# Journal file: C:/Users/86153/Desktop/NEW/DL-kitchen/HDL_Framework\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/86153/Desktop/NEW/DL-kitchen/HDL_Framework/GenshinKitchen.xpr
+update_compile_order -fileset sources_1
+add_files -norecurse C:/Users/86153/Desktop/NEW/DL-kitchen/HDL_Framework/GenshinKitchen.srcs/sources_1/new/vga_top.v
+update_compile_order -fileset sources_1
+create_bd_design "pll108MHz"
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:5.4 clk_wiz_0
+endgroup
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:board -config {rst_polarity "ACTIVE_HIGH" }  [get_bd_pins clk_wiz_0/reset]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config {Clk "New External Port (100 MHz)" }  [get_bd_pins clk_wiz_0/clk_in1]
+endgroup
+set_property name nrst [get_bd_ports reset_rtl_0]
+startgroup
+create_bd_port -dir O -type clk clk_out1
+connect_bd_net [get_bd_pins /clk_wiz_0/clk_out1] [get_bd_ports clk_out1]
+endgroup
+startgroup
+create_bd_port -dir O locked
+connect_bd_net [get_bd_pins /clk_wiz_0/locked] [get_bd_ports locked]
+endgroup
+set_property synth_checkpoint_mode None [get_files  C:/Users/86153/Desktop/NEW/DL-kitchen/HDL_Framework/GenshinKitchen.srcs/sources_1/bd/pll108MHz/pll108MHz.bd]
+generate_target all [get_files  C:/Users/86153/Desktop/NEW/DL-kitchen/HDL_Framework/GenshinKitchen.srcs/sources_1/bd/pll108MHz/pll108MHz.bd]
+export_ip_user_files -of_objects [get_files C:/Users/86153/Desktop/NEW/DL-kitchen/HDL_Framework/GenshinKitchen.srcs/sources_1/bd/pll108MHz/pll108MHz.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/86153/Desktop/NEW/DL-kitchen/HDL_Framework/GenshinKitchen.srcs/sources_1/bd/pll108MHz/pll108MHz.bd] -directory C:/Users/86153/Desktop/NEW/DL-kitchen/HDL_Framework/GenshinKitchen.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/86153/Desktop/NEW/DL-kitchen/HDL_Framework/GenshinKitchen.ip_user_files -ipstatic_source_dir C:/Users/86153/Desktop/NEW/DL-kitchen/HDL_Framework/GenshinKitchen.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/86153/Desktop/NEW/DL-kitchen/HDL_Framework/GenshinKitchen.cache/compile_simlib/modelsim} {questa=C:/Users/86153/Desktop/NEW/DL-kitchen/HDL_Framework/GenshinKitchen.cache/compile_simlib/questa} {riviera=C:/Users/86153/Desktop/NEW/DL-kitchen/HDL_Framework/GenshinKitchen.cache/compile_simlib/riviera} {activehdl=C:/Users/86153/Desktop/NEW/DL-kitchen/HDL_Framework/GenshinKitchen.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+open_bd_design {C:/Users/86153/Desktop/NEW/DL-kitchen/HDL_Framework/GenshinKitchen.srcs/sources_1/bd/pll108MHz/pll108MHz.bd}
+reset_run synth_1
+launch_runs synth_1 -jobs 20
+wait_on_run synth_1
+startgroup
+set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {108} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_CLKFBOUT_MULT_F {10.125} CONFIG.MMCM_CLKOUT0_DIVIDE_F {9.375} CONFIG.CLKOUT1_JITTER {127.691} CONFIG.CLKOUT1_PHASE_ERROR {97.646}] [get_bd_cells clk_wiz_0]
+endgroup
+startgroup
+endgroup
+save_bd_design
+reset_run synth_1
+launch_runs synth_1 -jobs 20
+wait_on_run synth_1

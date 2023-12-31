@@ -1,7 +1,10 @@
 module vga_top(
 input 					clk,
 input 					nrst,
-input					[7:0]dataIn_bits,
+input                   [7:0]dataIn_bits,
+input [3:0]             signal,
+input [7:0]             pc,
+input [15:0]            script,
 output 					[11:0]vga,
 output 					vga_hs,
 output 					vga_vs
@@ -13,8 +16,8 @@ wire [10:0] y;
 wire clk_108M;
 wire locked;
 vga vga_inst(
-	.clk(clk_108M),
-	.nrst(locked&nrst),
+	.clk(clk),
+	.nrst(nrst),
 	.data(data),//RGB565
 	.x(x),
 	.y(y),
@@ -24,18 +27,15 @@ vga vga_inst(
 );
 
 vga_test vga_test_inst(
-	.clk(clk_108M),
-	.nrst(locked&nrst),
+	.clk(clk),
+	.nrst(nrst),
+	.signal(signal),
+	.pc(pc),
+	.script(script),
+	.dataIn_bits(dataIn_bits),
 	.x(x),
 	.y(y),
-	.data(data),
-	.dataIn_bits(dataIn_bits)
+	.data(data)
 );
 
-pll108MHz	pll_108M_inst (
-	.reset (!nrst),
-	.clk_in1 (clk),
-	.clk_out1 (clk_108M),
-	.locked (locked)
-	);
 endmodule 
