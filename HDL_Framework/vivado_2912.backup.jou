@@ -2,10 +2,13 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Sun Dec 31 21:02:48 2023
-# Process ID: 4444
+# Start of session at: Sun Dec 31 21:00:05 2023
+# Process ID: 2912
 # Current directory: G:/Study/Genshin_Kit/HDL_Framework
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent20376 G:\Study\Genshin_Kit\HDL_Framework\GenshinKitchen.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18940 G:\Study\Genshin_Kit\HDL_Framework\GenshinKitchen.xpr
 # Log file: G:/Study/Genshin_Kit/HDL_Framework/vivado.log
 # Journal file: G:/Study/Genshin_Kit/HDL_Framework\vivado.jou
 #-----------------------------------------------------------
+start_gui
+open_project G:/Study/Genshin_Kit/HDL_Framework/GenshinKitchen.xpr
+update_compile_order -fileset sources_1
