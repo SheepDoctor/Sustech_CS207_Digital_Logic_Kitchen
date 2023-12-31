@@ -1,3 +1,7 @@
+/*
+Author: Zhao
+Description: The top module of the vga block.
+*/
 module vga_top(
 input 					clk,
 input 					nrst,
@@ -15,7 +19,7 @@ wire [10:0] x;
 wire [10:0] y;
 wire clk_108M;
 wire locked;
-vga vga_inst( //vga控制模块
+vga vga_inst( //vga control block
 	.clk(clk),
 	.nrst(nrst),
 	.data(data),//BGR
@@ -26,7 +30,7 @@ vga vga_inst( //vga控制模块
 	.vga(vga)
 );
 
-vga_test vga_test_inst( //vga图像传输模块
+vga_test vga_test_inst( //vga data transform block
 	.clk(clk),
 	.nrst(nrst),
 	.signal(signal),
