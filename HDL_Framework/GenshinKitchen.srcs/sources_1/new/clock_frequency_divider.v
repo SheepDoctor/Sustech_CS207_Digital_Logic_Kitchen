@@ -19,15 +19,17 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
-//transfer clk into uart_clk
+/*
+this module aims to transfer (100MHz)clk into uart_clk and other clks
+*/
 module clock_frequency_divider(
 input clk,
-output reg uart_clk, 
-output reg slow_clk,
-output reg tube_clk
-//maybe write other clks here
+output reg uart_clk,// clk for uart and script module(about 153800Hz)
+output reg slow_clk,// clk for output module(10Hz)
+output reg tube_clk // clk for seven segment tube(200Hz)
     );
-reg [15:0] count1;// 16 bits counter for dividing frequency
+// 16 or 32 bits counter for dividing frequency    
+reg [15:0] count1;
 reg [31:0] count2; 
 reg [31:0] count3; 
 initial begin
