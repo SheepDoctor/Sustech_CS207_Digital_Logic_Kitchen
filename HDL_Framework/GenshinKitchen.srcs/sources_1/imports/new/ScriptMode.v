@@ -9,13 +9,13 @@ module ScriptMode(
     input dataOut_ready,
     input [7:0] dataOut_bits,
     input dataIn_ready,
-    input [7:0] size, // size of the script file
     input script_mode,
     input [15:0] script, // contains instructions
     input uart_clk_16,
-
     output [7:0] dataIn_bits,
-    output reg [7:0] pc
+    output reg [7:0] pc,
+    output [7:0] led,
+    output [7:0] led2
     );
     reg [15:0] inst; // the ready-to-decode signal
     always @(*) begin
@@ -31,15 +31,16 @@ module ScriptMode(
     reg [4:0] movement;
     reg [7:0] place;
 
+    // get data from software
     Receiver get(
         .clk(uart_clk_16), 
         .dataOut_ready(dataOut_ready), 
         .dataOut_bits(dataOut_bits), 
         .verify(verify),
         .channal(channal),
-        .signal(signal));
-
-    // send data to the software
+        .signal(signal)
+        );
+    // send data to software
     /*
     movement:
         get 00001
@@ -60,99 +61,155 @@ module ScriptMode(
         .led(signal),
         .dataIn_bits(dataIn_bits)
     );
-
-    reg [7:0] i_num;
-    reg [2:0] i_sign, op_code;
-    reg [1:0] func;
-    reg [1:0] start;
-    reg io; // io == 0, from software; io == 1, to software
-    reg s_clk;
-
-    // setting status
-    // data changes when the dataflow mode change
-    // always @(*) begin
-    //     if(dataIn_ready)
-    //         io = 1;
-    //     else if(dataOut_ready)
-    //         io = 0;
-    // end
+    
 
     // dealing with inst, encode
-    // data only chage when pc changes
-    reg [7:0] pc5;
-    always @(*) begin
-        if(~reset) begin
-            pc5 = 0;
-            func = 0;
-            op_code = 0;
-            i_num = 0;
-            i_sign = 0;
+    // data only changes when pc changes
+    reg [1:0] func;      // Assuming 2 bits for func
+    reg [2:0] op_code;   // Assuming 3 bits for op_code
+    reg [7:0] i_num;
+    reg [2:0] i_sign; 
+    reg [1:0] state;
+    reg wait_1, wait_2;
+
+    always @(posedge uart_clk_16, negedge reset) begin
+        if (~reset || script_mode) begin
+            state <= 2'b00;
+            func <= 2'b0;
+            op_code <= 3'b0;
+            i_num <= 8'b0;
+            i_sign <= 3'b0;
         end
         else begin
-            if(script_mode) begin
-                pc5 = 8'b0000_0000;
-                func = 2'b0;
-                op_code = 3'b0;
-                i_num = 8'b0;
-                i_sign = 3'b0;     
-            end
-            else begin
-                if(inst != 0) begin
-                    func = inst[4:3];
-                    op_code = inst[2:0];
-                    i_num = inst[15:8];
-                    i_sign = inst[7:5];
+            case (state)
+                2'b00: begin  // Idle state
+                    if (inst) begin
+                        func <= func;
+                        op_code <= op_code;
+                        i_num <= i_num;
+                        i_sign <= i_sign;
+                        state <= 2'b01;  // Transition to the next state
+                    end
+                    else begin
+                        func <= func;
+                        op_code <= op_code;
+                        i_num <= i_num;
+                        i_sign <= i_sign;
+                        state <= 2'b00;
+                    end
+                    // Additional logic for handling when inst is 0 if needed
                 end
-                else begin
-                    //null
+                2'b01: begin  // Update state
+                    func <= inst[4:3];
+                    op_code <= inst[2:0];
+                    i_num <= inst[15:8];
+                    i_sign <= inst[7:5];
+                    state <= 2'b00;  // Transition back to idle state
                 end
-            end
+                default: begin
+                    func <= func;
+                    op_code <= op_code;
+                    i_num <= i_num;
+                    i_sign <= i_sign;
+                    state <= 00;
+                end
+            endcase
         end
     end
 
+
+
+    reg [1:0] start;
+    reg s_clk;
     integer clk_counter = 1;
     always @(posedge clk) begin
-        if(~reset) begin
+        if(~reset || script_mode) begin
             clk_counter <= 1;
         end
         else begin
-            if(script_mode) 
-                s_clk <= 1'b0;
+            if(clk_counter == 15000050) begin
+                // if(clk_counter == 75000050) begin
+                clk_counter <= 1;
+                s_clk <= ~s_clk;
+            end
             else begin
-                if(clk_counter == 15000050) begin
-                // if(clk_counter == 100000000) begin
-                    clk_counter <= 1;
-                    s_clk <= ~s_clk;
-                end
-                else begin
-                    clk_counter <= clk_counter + 1;
-                end
+                clk_counter <= clk_counter + 1;
             end
         end 
     end
 
     reg [7:0] pc1, pc2, pc3, pc4;
-    // jump instruction and game start and end
-    always @(*) begin
-        if(~reset) begin
+    // jump instruction
+    reg [1:0] jump;
+    always @(posedge clk) begin
+        if(~reset || script_mode) begin
             pc1 = 0;
+            jump <= 2'b00;
         end
         else begin 
-            if(script_mode) begin
-                pc1 = 0;
+            if({op_code, func, wait_2} == 6'b010000) begin
+                case(jump)
+                    2'b00: begin // where the jump is not yet triggered and now it is triggered
+                        if(signal[i_sign] == 1) begin
+                            jump <= 2'b01;
+                            pc1 <= pc;
+                        end
+                        else begin
+                            jump <= 2'b10;
+                            pc1 <= pc;
+                        end
+                    end
+                    2'b01: begin // where jump is triggered and excution needed
+                        jump <= 2'b11;
+                        pc1 <= pc + i_num * 2;
+                    end
+                    2'b10: begin
+                        jump <= 2'b11;
+                        pc1 <= pc + 2;
+                    end
+                    2'b11: begin // maintain the state til the next inst coming
+                        jump <= 2'b11;
+                        pc1 <= pc;
+                    end
+                    default: begin
+                        jump <= 2'b10;
+                        pc1 <= pc;
+                    end
+                endcase
             end
-            else if({op_code, func} == 5'b01000) begin
-                if(signal[2] == 1) begin
-                    pc1 = pc + i_num;
-                end
-            end
-            else if({op_code, func} == 5'b01001) begin
-                if(signal[2] == 0) begin
-                    pc1 = pc + i_num;
-                end
+            else if({op_code, func, wait_2} == 6'b010010) begin
+                case(jump)
+                    2'b00: begin // where the jump is not yet triggered and now it is triggered
+                        if(signal[i_sign] == 0) begin
+                            jump <= 2'b01;
+                            pc1 <= pc;
+                        end
+                        else begin
+                            jump <= 2'b10;
+                            pc1 <= pc;
+                        end
+                    end
+                    2'b01: begin // where jump is triggered and excution needed
+                        jump <= 2'b11;
+                        pc1 <= pc + i_num * 2;
+                    end
+                    2'b10: begin
+                        jump <= 2'b11;
+                        pc1 <= pc + 2;
+                    end
+                    2'b11: begin // maintain the state til the next inst coming
+                        jump <= 2'b11;
+                        pc1 <= pc;
+                    end
+                    default: begin
+                        jump <= 2'b10;
+                        pc1 <= pc;
+                    end
+                endcase
             end
             else begin
-                pc1 = 0;
+                pc1 <= pc;
+                jump <= 2'b00;
             end
         end
     end
@@ -164,12 +221,12 @@ module ScriptMode(
     integer target_prev = 25;
     integer moveCounter = 1;
     always @(posedge s_clk) begin
-        if(~reset) begin
+        if(~reset || script_mode) begin
             movement1 <= 0; place1 <= 0; pc2 <= 0; target_prev <= 0; moveCounter <= 1;
         end
         else begin
-            if(~script_mode) begin // to software ready
-                if({op_code, func} == 5'b00100) begin
+            case({op_code, func, wait_2})
+                6'b001000 : begin
                     if(target_prev != i_num) begin
                         movement1 <= 5'b00000; place1 <= {2'b00, i_num[5:0]}; pc2 <= pc; //select
                         target_prev <= i_num;
@@ -183,7 +240,7 @@ module ScriptMode(
                         end// get the item
                     end
                 end
-                else if({op_code, func} == 5'b00101) begin
+                6'b001010 : begin
                     if(target_prev != i_num) begin
                         movement1 <= 5'b00000; place1 <= {2'b00, i_num[5:0]}; pc2 <= pc;
                         target_prev <= i_num; 
@@ -197,7 +254,7 @@ module ScriptMode(
                         end // put the item
                     end
                 end
-                else if({op_code, func} == 5'b00110) begin
+                6'b001100 : begin
                     if(target_prev != i_num) begin
                         movement1 <= 5'b00000; place1 <= {2'b00, i_num[5:0]}; pc2 <= pc; 
                         target_prev <= i_num;
@@ -211,7 +268,7 @@ module ScriptMode(
                         end // interact the item
                     end
                 end
-                else if({op_code, func} == 5'b00111) begin
+                6'b001110 : begin
                     if(target_prev != i_num) begin
                         movement1 <= 5'b00000; place1 <= {2'b00, i_num[5:0]}; moveCounter <= moveCounter + 1; pc2 <= pc; // select of neccessory
                         target_prev <= i_num;
@@ -220,155 +277,147 @@ module ScriptMode(
                         movement1 <= 5'b10000; place1 <= {2'b00, i_num[5:0]}; moveCounter <= 1; pc2 <= pc + 2; // throw
                     end
                 end
-                else if({op_code, func} == 5'b10001) begin
+                6'b100010 : begin
                     case (moveCounter) 
                         1: begin movement1 <= 5'b00000; start <= 2'b01; place1 <= {start, 6'b000000}; moveCounter <= moveCounter + 1; pc2 <= pc;end
                         2: begin movement1 <= 5'b00000; start <= 2'b01; place1 <= {start, 6'b000000}; moveCounter <= moveCounter + 1; pc2 <= pc;end
                         3: begin movement1 <= 5'b00000; place1 <= 8'b00000000; moveCounter <= 1;pc2 <= pc + 2; end
+                        default: begin movement1 <= 5'b00000; place1 <= 8'b00000000; moveCounter <= 1; pc2 <= pc; end
                     endcase
                 end
-                else if({{op_code, func} == 5'b10010}) begin
+                6'b100100 : begin
                     case (moveCounter) 
                         1: begin movement1 <= 5'b00000; start <= 2'b10; place1 <= {start, 6'b000000}; moveCounter <= moveCounter + 1; pc2 <= pc; end
                         2: begin movement1 <= 5'b00000; place1 <= 8'b00000000; moveCounter <= 1; pc2 <= pc; end
+                        default: begin movement1 <= 5'b00000; place1 <= 8'b00000000; moveCounter <= 1; pc2 <= pc; end
                     endcase
                 end
-                else begin
+                default : begin
                     movement1 <= movement; place1 <= place; pc2 <= pc; moveCounter <= 1;
                 end
-            end
-            else begin
-                movement1 <= 0; place1 <= 0; moveCounter <= 1; pc2 <= 0;
-            end
+            endcase
         end
     end
 
-    reg [4:0] movement2;
-    reg [7:0] place2;
-    // wating mode 1
+
+    reg wait_1_f;
     integer waitingCounter;
+    // waiting mode 1
     always @(posedge slow_clk) begin
-        if(~reset) begin
+        if(~reset || script_mode) begin
             pc3 <= 0;
-            waitingCounter <= 0;
-            movement2 <= movement;
-            place2 <= place;
+            wait_1 <= 0;
+            wait_1_f <= 0;
         end
         else begin
-            if(~script_mode && {op_code, func} == 5'b01100 && i_num > 0) begin
-                if(waitingCounter == i_num) begin
-                    pc3 <= pc + 2;
-                    waitingCounter <= 0;
-                    movement2 <= movement;
-                    place2 <= place;
-                end
-                else begin
-                    pc3 <= pc;
-                    waitingCounter <= waitingCounter + 1;
-                    movement2 <= movement;
-                    place2 <= place;
-                end
-            end
-            else begin
-                pc3 <= 0;
-                waitingCounter <= 0;
-                movement2 <= movement;
-                place2 <= place;
-            end
-        end
-    end
-
-    reg [4:0] movement4;
-    reg [7:0] place4;
-    integer judge;
-    // waiting mode 2
-    always @(posedge s_clk) begin
-        if(~reset) begin
-            pc4 <= 0;
-            movement4 <= movement;
-            place4 <= place;
-            judge <= 0;
-        end
-        else begin
-            if(~script_mode) begin
-                case ({op_code, func})
-                    5'b01101: begin // wait until player has item -- 1
-                        if(~judge && signal[i_sign] == 1) begin
-                            judge <= 1;
-                            pc4 <= pc + 2;
-                            movement4 <= movement;
-                            place4 <= place;
+            if({op_code, func} == 5'b01100) begin
+                casex({wait_1_f, wait_1}) 
+                    3'b00: begin // state 00 means it was not triggered at first, here it triggered
+                        {wait_1_f, wait_1} <= 2'b01;
+                        pc3 <= pc;
+                        waitingCounter <= 1; // reset the waitingCounter
+                    end
+                    3'b01: begin // the state is an idle state, when time is up, it moves to next state
+                        if(waitingCounter == i_num) begin // if time is up
+                            pc3 <= pc + 2;
+                            waitingCounter <= 1; // reset the waitingCounter
                         end
-                        else begin
-                            pc4 <= pc;
-                            movement4 <= movement;
-                            place4 <= place;
-                            judge <= judge;
+                        else begin // still counting
+                            waitingCounter <= waitingCounter + 1;
                         end
                     end
-                    default: begin
-                        pc4 <= pc;
-                        movement4 <= movement;
-                        place4 <= place;
-                        judge <= 0;
+                    3'b11: begin // waitutil is done, waiting the next inst coming and the case would break
+                        {wait_1_f, wait_1} <= 2'b11;
+                        pc3 <= pc;
+                    end
+                    default: begin // defalut state when waitutil is triggered
+                        {wait_1_f, wait_1} <= 2'b00;
+                        pc3 <= pc;
                     end
                 endcase
             end
             else begin
-                pc4 <= 0;
-                movement4 <= movement;
-                place4 <= place;
-                judge <= 0;
+                {wait_1_f, wait_1} <= 2'b00;
+                pc3 <= pc;
             end
         end
     end
 
-    reg[7:0] pc6;
-    reg [4:0] movement3;
-    reg [7:0] place3;
-    always@(*) begin
-        pc6 = pc;
-        movement3 = movement;
-        place3 = place;
+
+    reg wait_2_f;
+    // waiting mode 2
+    always @(posedge clk) begin
+        if(~reset || script_mode) begin
+            pc4 <= 0;
+            wait_2 <= 0;
+            wait_2_f <= 0;
+        end
+        else begin
+            if({op_code, func} == 5'b01101) begin
+                casex({wait_2_f, wait_2, signal[i_sign]}) 
+                    3'b00x: begin // state 00 means it was not triggered at first
+                        {wait_2_f, wait_2} <= 2'b01;
+                        pc4 <= pc;
+                    end
+                    3'b010: begin // state 01 means waitutil is triggered but the mission is still processing
+                        {wait_2_f, wait_2} <= 2'b01;
+                        pc4 <= pc;
+                    end
+                    3'b011: begin // the signal gets ready and ready to add pc
+                        {wait_2_f, wait_2} <= 2'b11;
+                        pc4 <= pc + 2;
+                    end
+                    3'b11x: begin // waitutil is done, waiting the next inst coming and the case would break
+                        {wait_2_f, wait_2} <= 2'b11;
+                        pc4 <= pc;
+                    end
+                    default: begin // defalut state when waitutil is triggered
+                        {wait_2_f, wait_2} <= 2'b00;
+                        pc4 <= pc;
+                    end
+                endcase
+            end
+            else begin
+                {wait_2_f, wait_2} <= 2'b00;
+                pc4 <= pc;
+            end
+        end
     end
+
+    wire [7:0] pc5, movement2;
+    wire [4:0] place2;
+    assign pc5 = pc;
+    assign movement2 = movement;
+    assign place2 = place;
 
     always @(*) begin
         if(~reset) begin
             pc = 0;
+            movement = 0; 
+            place = 0;
         end
         else begin
             if(script_mode) begin
                 pc = 0;
             end
             else begin
-                case({op_code, func})
-                    5'b01000: begin pc = pc1; movement = movement1; place = place1; end
-                    5'b01001: begin pc = pc1; movement = movement1; place = place1; end
-                    5'b10001: begin pc = pc2; movement = movement1; place = place1; end
-                    5'b10010: begin pc = pc2; movement = movement1; place = place1; end
-                    5'b00100: begin pc = pc2; movement = movement1; place = place1; end
-                    5'b00101: begin pc = pc2; movement = movement1; place = place1; end
-                    5'b00110: begin pc = pc2; movement = movement1; place = place1; end
-                    5'b00111: begin pc = pc2; movement = movement1; place = place1; end
-                    5'b01100: begin pc = pc3; movement = movement2; place = place2; end
-                    5'b01101: begin pc = pc4; movement = movement4; place = place4; end
-                    default: begin pc = pc6; movement = movement3; place = place3; end
+                casex({op_code, func, wait_2})
+                    6'b010000: begin pc = pc1; movement = movement2; place = place2; end // jumpif
+                    6'b010010: begin pc = pc1; movement = movement2; place = place2; end // jumpifnot
+                    6'b100010: begin pc = pc2; movement = movement1; place = place1; end // game start
+                    6'b100100: begin pc = pc2; movement = movement1; place = place1; end // game end
+                    6'b001000: begin pc = pc2; movement = movement1; place = place1; end // get
+                    6'b001010: begin pc = pc2; movement = movement1; place = place1; end // put
+                    6'b001100: begin pc = pc2; movement = movement1; place = place1; end // interact
+                    6'b001110: begin pc = pc2; movement = movement1; place = place1; end // throw
+                    6'b01100x: begin pc = pc3; movement = movement2; place = place2;end // wait signal
+                    6'b01101x: begin pc = pc4; movement = movement2; place = place2;end // waitutil signal
+                    default: begin pc = pc5; movement = movement2; place = place2;end // other inst
                 endcase
             end
         end
     end
-    
 
-
-
-    // assign
-    // assign led = i_num;
-    // assign led = {pc[7:1], script_mode};
-    // assign led = place;
-    // assign led = moveCounter;
-    // assign led = pc;
-    // assign led = script[15:8];
-    // assign led2 = script[7:0];
-    // assign led2 = {signal[2], judge, i_sign, 2'b0, s_clk};
-    // assign led2 = waitingCounter;
+assign led = i_num;
+assign led2 = pc;
 endmodule
