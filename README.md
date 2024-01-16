@@ -13,8 +13,8 @@ GenshinKitchen_Windows目录下包含客户端可执行文件，HDL_Framework中
 2. 用状态机实现交合功能
 
 ## BONUS IDEA
-1.分频器优化
-2.滑动变阻器调节目标位置
+1. 分频器优化
+2. 滑动变阻器调节目标位置
 
 ## VScode中git命令
 
