@@ -18,7 +18,7 @@ GenshinKitchen_Windows目录下包含客户端可执行文件，HDL_Framework中
 
 2.滑动变阻器调节目标位置
 
-### VScode中git命令
+## VScode中git命令
 
 往git中增加所有文件：git add .
 
