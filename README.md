@@ -5,7 +5,7 @@
 南方科技大学CS203数字逻辑23年秋季项目，项目文档见《简介中/英文版》
 
 ## Project sturcture
-GenshinKitchen_Windows目录下包含客户端可执行文件，HDL_Framework中有可运行的vivado工程。
+GenshinKitchen_Windows目录下包含客户端可执行文件，HDL_Framework中有可运行的vivado工程。 
 项目实现了开发板对游戏的控制、开发板自动脚本控制，详情见DemoTop模块。
 
 ## NOTES
@@ -13,9 +13,7 @@ GenshinKitchen_Windows目录下包含客户端可执行文件，HDL_Framework中
 2. 用状态机实现交合功能
 
 ## BONUS IDEA
-
 1.分频器优化
-
 2.滑动变阻器调节目标位置
 
 ## VScode中git命令
