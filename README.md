@@ -1,26 +1,16 @@
 # Welcome to Genshin Kitchen!
 
-## 小组成员
-
-董炳闻 12211111
-赵伟栋 12210833
-祝林枫 12211626
-
 ## Project introduction
 
-数字逻辑项目，待补充
+南方科技大学CS203数字逻辑23年秋季项目，项目文档见《简介中/英文版》
 
 ## Project sturcture
-
-待补充
+GenshinKitchen_Windows目录下包含客户端可执行文件，HDL_Framework中有可运行的vivado工程。
+项目实现了开发板对游戏的控制、开发板自动脚本控制，详情见DemoTop模块。
 
 ## NOTES
-
-## WEEK 12 WORK
-
-董 Output Led 显示
-
-赵、祝 Input 各个函数操作
+1. if-else以及case语句一定闭环
+2. 用状态机实现交合功能
 
 ## BONUS IDEA
 
@@ -37,11 +27,3 @@ commit操作：git commit -m "版本号、注释"
 push操作：git push [-u origin]
 
 pull操作：git pull [origin]
-
-注意及时更新项目内容
-
-## 日志
-
-### 0.0.5
-
-路径HDL_Framework/GenshinKitchen.srcs/sources_1/new下增加input、output文件
