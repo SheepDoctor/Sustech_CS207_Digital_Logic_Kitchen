@@ -2,7 +2,7 @@
 
 ## Project introduction
 
-南方科技大学CS203数字逻辑23年秋季项目，项目文档见《简介中/英文版》
+南方科技大学CS207数字逻辑23年秋季项目，项目文档见《简介中/英文版》
 
 ## Project sturcture
 GenshinKitchen_Windows目录下包含客户端可执行文件，HDL_Framework中有可运行的vivado工程。 
